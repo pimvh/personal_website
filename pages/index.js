@@ -1,18 +1,26 @@
 import Layout from '../components/MyLayout'
 import React from 'react'
-import { Nav, NavItem, NavLink } from 'reactstrap'
-import { Card, Button, CardBody, CardTitle, CardText} from 'reactstrap'
+import Markdown from 'react-markdown';
+import {
+    Container, Row, Col } from 'reactstrap';
 
 export default () => (
         <Layout>
 
-        <Card>
-            <CardBody>
-              <CardTitle>Special Title Treatment</CardTitle>
-              <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-              <Button>Go somewhere</Button>
-            </CardBody>
-        </Card>
+        <Container fluid className='main'>
+
+            <Col>
+            <Row className='row'>
+            <Markdown
+              source={`
+Dit is mijn persoonlijke website. Je vindt hierop links naar mijn social media profielen en mijn blogposts!
+Je vindt [mijn contactpagina hier](/contact)!
+           `} />
+            </Row>
+            </Col>
+
+        </Container>
+
         {/*
         <div>
             <p>The standard Lorem Ipsum passage, used since the 1500 s</p>

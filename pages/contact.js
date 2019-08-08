@@ -1,64 +1,70 @@
 import Layout from '../components/MyLayout.js'
-import { Form, FormGroup, Label, Input, FormText, Button, FormFeedback} from 'reactstrap'
+// import Email from '../server/email.js'
+import Markdown from 'react-markdown';
+import { Container, Row, Col } from 'reactstrap';
+import { Table } from 'reactstrap'
 
 export default () => {
 
     return (
 
     <Layout title='Contact'>
-        <Form className="form" onSubmit={ (e) => this.submitForm(e)} >
-            <FormGroup>
-            <Label for="exampleEmail">Email</Label>
-            <Input type="email" name="email" id="exampleEmail" placeholder="iemand@iets.nl" />
 
-            {/* <FormFeedback valid>
-                That's a tasty looking email you've got there.
-            </FormFeedback>
-            <FormFeedback>
-                Uh oh! Looks like there is an issue with your email. Please input a correct email.
-            </FormFeedback>
+        <Container fluid className='main'>
 
-            <FormText>Your username is most likely your email.</FormText>
-            */}
+            <Col>
+            <Row className='row'>
+            <div>
+            Hieronder zijn mijn contact gegevens te vinden op verschillende platformen te vinden. Ik ben niet te vinden op Facebook of Instagram.
+            </div>
 
-            </FormGroup>
-            <FormGroup>
-            <Label for="exampleText">Text Area</Label>
-            <Input type="textarea" name="text" id="exampleText" />
-            </FormGroup>
-            <Button>Submit</Button>
-        </Form>
+            <Table className='table'>
+
+            {getContactDetails().map(contact => (
+                <ContactRow key={contact.service} contact={contact} />
+            ))}
+
+            </Table>
+
+        </Row>
+        </Col>
+
+        </Container>
+        <div>
+
+        </div>
     </Layout>
 
 );
 }
 
-function validateEmail(e) {
-    const emailRex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const { validate } = this.state
-    if (emailRex.test(e.target.value)) {
-        validate.emailState = 'has-success'
-    } else {
-        validate.emailState = 'has-danger'
-    }
-    return { validate }
+function getContactDetails() {
+    return [
+        {service: 'Linked-in', link: 'https://nl.linkedin.com/in/pim-van-helvoirt', text: 'pim-van-helvoirt'},
+        {service: 'Email', link: 'mailto:pim.van.helvoirt@home.nl', text: 'pim.van.helvoirt@home.nl'},
+        {service: 'Github', link: 'https://github.com/pimvh', text: 'pimvh'}
+    ];
 }
 
+const ContactRow = ({ contact }) => (
 
-async function handleChange (event) {
-    const { target } = event;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    const { name } = target;
-    await this.setState({
-        [ name ]: value,
-    });
-}
+    <tr>
+    <td>
+    {contact.service}:
+    </td>
+    <td>
+    <a href={`${contact.link}`} >{contact.text}</a>
+    </td>
 
-function submitForm(e) {
-  e.preventDefault();
-  console.log(`Email: ${ this.state.email }`)
+    <style jsx>{`
+      a {
+          text-decoration: none;
+          color: blue;
+      }
 
-  const nodemailer = require('nodemailer');
-
-
-}
+      a:hover {
+          opacity: 0.6;
+      }
+    `}</style>
+    </tr>
+);
