@@ -44,14 +44,15 @@ export default function ({children, title='Pim van Helvoirt'}) {
 
         </Jumbotron>
 
-        <Nav className="nav-menu">
+        <Nav pills className="nav-menu">
 
-            <img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="nav_icon" />
+            <a href="/eenhoorn"><img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="nav_icon" /></a>
             {getPosts().map(post => (
                 <PostLink key={post.id} post={post} />
             ))}
 
         </Nav>
+
 
         {children}
 

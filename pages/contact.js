@@ -1,9 +1,10 @@
 import Layout from '../components/MyLayout.js'
 // import Email from '../server/email.js'
 import Markdown from 'react-markdown';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Tooltip} from 'reactstrap';
 import { Table } from 'reactstrap'
 
+// op Facebook of Instagram.
 export default () => {
 
     return (
@@ -15,8 +16,11 @@ export default () => {
             <Col>
             <Row className='row'>
             <div>
-            Hieronder zijn mijn contact gegevens te vinden op verschillende platformen te vinden. Ik ben niet te vinden op Facebook of Instagram.
+            Hieronder zijn mijn contact gegevens te vinden op verschillende platformen te vinden. Ik ben niet te vinden op Facebook en Instagram.
             </div>
+
+
+
 
             <Table className='table'>
 

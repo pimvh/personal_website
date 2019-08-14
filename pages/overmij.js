@@ -1,7 +1,9 @@
 import Layout from '../components/MyLayout.js'
 import Markdown from 'react-markdown';
 import {
-    Container, Row, Col } from 'reactstrap';
+    Container, Row, Col,
+    Card, CardTitle, CardBody, CardText
+} from 'reactstrap';
 
 export default () => (
     <Layout title='About'>
@@ -11,13 +13,19 @@ export default () => (
         <Col>
         <Row className='row'>
         <div>
-
+        <Card className="aboutme_card">
+        <CardBody>
+        <CardText>
         <Markdown
           source={`
-Ik ben Pim van Helvoirt, een student Beta-gamma met Kunstmatige Intelligentie aan de Universiteit van Amsterdam.
-Je vindt [mijn contactpagina hier](/contact)!
+Deze website is van mij, Pim van Helvoirt, een student Beta-gamma met Kunstmatige Intelligentie aan de Universiteit van Amsterdam.
+Je vindt [mijn contactpagina hier](/contact)! Stuur me gerust een e-mail!
 
-       `} />
+`} />
+        </CardText>
+        </CardBody>
+        </Card>
+
 
         </div>
     </Row>

@@ -42,7 +42,13 @@ Bekijk, als firefox-gebruiker, zeker het onderdeel waarin verschillende add-ons 
     {id: '2', title: 'Rank a Brand - Merken vergelijken qua duurzaamheid',
     content: `De website [Rank a Brand](https://rankabrand.org/) is een website, grotendeels op basis van vrijwilligers, die de duurzaamheid van allerlei merken test.
 De rankings kloppen niet altijd, maar mocht je van plan zijn om nieuwe spullen te kopen, dan is dit altijd een goede website om van tevoren te controleren.
-    `}
+    `},
+
+    {id: '3', title: 'Todoist - Handige takenlijst',
+    content: `De Takenlijst app [Todoist](https://todoist.com), is handig om je taken bij te houden. Ook de kosten blijven erg beperkt (15 eu per jaar). De app is ook multiplatform en via het internet beschikbaar. Wat allemaal erg handig is.
+Hiernaast heeft de website verschillende tutorials voor het maken van lijstjes om doelen te behalen.`
+
+    }
 
     ];
 }

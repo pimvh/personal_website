@@ -20,10 +20,11 @@ export default function Layout(props) {
     }
 
     .main {
-        margin: 10px;
-        padding: 10px;
-        // border: 1px solid #DDD;
+        margin: 10px 10px 20px 20px;
+        padding: 10px 10px 10px 10px;
+        # border: 1px solid #DDD;
         align-text: left;
+        max-width: 80%;
     }
 
     .row {
@@ -36,7 +37,7 @@ export default function Layout(props) {
     }
 
     .resource_card {
-        margin: 10px;
+        margin-bottom: 20px;
     }
 
     /***************************

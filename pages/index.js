@@ -2,7 +2,9 @@ import Layout from '../components/MyLayout'
 import React from 'react'
 import Markdown from 'react-markdown';
 import {
-    Container, Row, Col } from 'reactstrap';
+    Tooltip,
+    Container, Row, Col,
+    Card, CardTitle, CardBody, CardText} from 'reactstrap';
 
 export default () => (
         <Layout>
@@ -11,11 +13,15 @@ export default () => (
 
             <Col>
             <Row className='row'>
+            <Card className="aboutme_card">
+            <CardBody><CardText>
             <Markdown
               source={`
-Dit is mijn persoonlijke website. Je vindt hierop links naar mijn social media profielen en mijn blogposts!
+Dit is mijn persoonlijke website. Je vindt hierop links naar mijn social media, mijn blogposts en mijn projecten!
 Je vindt [mijn contactpagina hier](/contact)!
            `} />
+           </CardText></CardBody>
+           </Card>
             </Row>
             </Col>
 
