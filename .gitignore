@@ -5,3 +5,4 @@ package.json.save
 .next/*
 static/
 out/*
+yarn.lock
