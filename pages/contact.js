@@ -16,11 +16,10 @@ export default () => {
             <Col>
             <Row className='row'>
             <div>
-            Hieronder zijn mijn contact gegevens te vinden op verschillende platformen te vinden. Ik ben niet te vinden op Facebook en Instagram.
+            Hieronder zijn mijn contactgegevens te vinden op verschillende platformen te vinden. Ik ben niet te vinden op Facebook en Instagram.
+
+            Stuur me gerust een email!
             </div>
-
-
-
 
             <Table className='table'>
 

@@ -10,9 +10,16 @@ export default () => (
     <Container fluid className='main'>
 
         <Col><Row className='row'>
-        <div>
-
-        </div>
+        <Card className="aboutme_card">
+        <CardBody>
+        <CardText>
+        <Markdown
+          source={`
+Hier komt nog een blog. Wacht rustig af!
+`} />
+        </CardText>
+        </CardBody>
+        </Card>
 
         </Row></Col>
 

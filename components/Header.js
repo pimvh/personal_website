@@ -30,18 +30,6 @@ export default function ({children, title='Pim van Helvoirt'}) {
         </Head>
 
         <Jumbotron fluid className="jumbo"  >
-        {/*
-            background-color: blue;
-            <img src=" alt="my image" />
-            // TODO: Achtergrond plaatje fixen
-            {console.log(bgimg)}
-            https://stackoverflow.com/questions/34582405/react-wont-load-local-images
-            style= {{ backgroundImage: require()}}
-
-            < img src={bgimg} alt="Asdf"/>
-
-        */}
-
         </Jumbotron>
 
         <Nav pills className="nav-menu">
@@ -59,7 +47,9 @@ export default function ({children, title='Pim van Helvoirt'}) {
         </div>
     );
 }
-
+/*
+helper functions for creating an index
+*/
 function getPosts() {
     return [
         { id: '/', title: 'Home'},
