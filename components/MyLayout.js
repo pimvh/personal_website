@@ -43,7 +43,6 @@ export default function Layout(props) {
     .carousel-item > img {
         width: 100%;
         min-height: 100px;
-        height: 350px;
         max-height: 400px;
         align-items:center;
     }
