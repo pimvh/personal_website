@@ -8,28 +8,66 @@ export default function Layout(props) {
 
     <style jsx global>{`
 
+    .root {
+        # position: absolute;
+        top: 0;
+        left: 0;
+        heigth: 100%;
+        width: 100%;
+    }
+    /***************************
+    Header
+    ***************************/
+
+    # .jumbo {
+        # width: 100%;
+        # background-image: url('/static/photo_header_crop.jpg');
+        # background-repeat: no-repeat;
+        # background-size: cover;
+        # max-height: 200px;
+    # }
+
+    .headCarousel {
+        # nothing here yet
+        # background-image: cover;
+        # background-repeat: repeat;
+        margin: 0px 30px 0px 0px;
+        border: 3px solid #FFF;
+
+    }
+    .nav {
+        margin: 10px 10 10px;
+        padding: 20px 0px 0px;
+
+    }
+    .carousel-item > img {
+        width: 100%;
+        min-height: 100px;
+        height: 350px;
+        max-height: 400px;
+        align-items:center;
+    }
+
+    .carousel-control-prev,.carousel-control-next {
+        cursor:pointer;
+    }
+
     /***************************
     Main container
     ***************************/
 
-    .jumbo {
-        background-image: url('/static/photo_header_crop.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 180px;
     }
-
     .main {
-        margin: 10px 10px 20px 20px;
+        margin: 10px 10px 20px 10px;
         padding: 10px 10px 10px 10px;
         # border: 1px solid #DDD;
         align-text: left;
-        max-width: 80%;
     }
 
     .row {
         align-text: left;
         margin-bottom: 10px;
+        max-width: 80%;
     }
 
     .cardtitle {

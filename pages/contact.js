@@ -1,5 +1,4 @@
 import Layout from '../components/MyLayout.js'
-// import Email from '../server/email.js'
 import Markdown from 'react-markdown';
 import { Container, Row, Col, Tooltip} from 'reactstrap';
 import { Table } from 'reactstrap'
