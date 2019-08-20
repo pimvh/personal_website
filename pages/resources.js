@@ -14,7 +14,7 @@ export default () => (
 
     <Markdown
       source={`
-Onderstaand zijn verschillende resources te vinden die ik over de tijd heen verzameld heb. Klik op een van de buttons om een catergorie te openen.
+Onderstaand zijn verschillende resources te vinden die ik over de tijd heen verzameld heb.
    `} />
     </div>
 
@@ -26,7 +26,6 @@ Onderstaand zijn verschillende resources te vinden die ik over de tijd heen verz
 
     </Container>
     </Layout>
-
  )
 
  function getResources() {

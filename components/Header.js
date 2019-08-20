@@ -77,18 +77,18 @@ const PostLink = ({ post }) => (
 
 const items = [
   {
-    src: '/static/achtergrond.png',
+    src: '/static/garden.png',
     altText: 'Garden',
     caption: ''
   },
   {
-    src: '/static/snow-back.png',
+    src: '/static/snowymountains.png',
     altText: 'Sneeuwbergen',
     caption: ''
   },
   {
-    src: '/static/dune-back.png',
-    altText: 'Dunes',
+    src: '/static/dunes.png',
+    altText: 'Duinen',
     caption: ''
   }
 ];

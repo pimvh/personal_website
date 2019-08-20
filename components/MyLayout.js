@@ -29,7 +29,7 @@ export default function Layout(props) {
 
     .headCarousel {
         # nothing here yet
-        # background-image: cover;
+        # background-size: contain;
         # background-repeat: repeat;
         margin: 0px 30px 0px 0px;
         border: 3px solid #FFF;
@@ -43,7 +43,8 @@ export default function Layout(props) {
     .carousel-item > img {
         width: 100%;
         min-height: 100px;
-        max-height: 400px;
+        object-fit: cover;
+        max-height: 300px;
         align-items:center;
     }
 
@@ -66,7 +67,7 @@ export default function Layout(props) {
     .row {
         align-text: left;
         margin-bottom: 10px;
-        max-width: 80%;
+        max-width: 1300px;
     }
 
     .cardtitle {
@@ -118,6 +119,15 @@ export default function Layout(props) {
 
     a:hover {
         opacity: 0.6;
+    }
+
+    /***************************
+    Images
+    ***************************/
+
+    .ProjImg {
+        max-width: 80px;
+        max-heidth: auto;
     }
     `}</style>
 

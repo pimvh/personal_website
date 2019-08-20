@@ -3,7 +3,7 @@ import Markdown from 'react-markdown';
 import {
     Container, Row, Col,
     UncontrolledCollapse,
-    Card, Button, CardBody, CardTitle, CardText} from 'reactstrap'
+    Card, CardImg, Button, CardBody, CardTitle, CardText} from 'reactstrap'
 
 export default () => (
     <Layout title='Projecten'>
@@ -23,10 +23,11 @@ export default () => (
         </Button>
         <UncontrolledCollapse toggler="#toggler_next">
         <Card>
+          <CardImg src="static/nextjs.png" alt="Next.js" className="ProjImg"/>
           <CardBody>
           <Markdown
             source={`
-Met behulp van [Next.js][1] heb ik deze website gemaakt. Deze website is geschreven in JavaScript met behulp van [React][2] en [Reactstrap (Bootstrap voor React)][3].
+Met behulp van [Next.js][1], een react.js framework, heb ik deze website gemaakt. Deze website is geschreven in JavaScript met behulp van [React][2] en [Reactstrap (Bootstrap voor React)][3].
 [1]: <https://nextjs.org/> "Next.js"
 [2]: <https://reactjs.org/> "React.js"
 [3]: <https://reactstrap.github.io/> "Reactstrap"
@@ -47,6 +48,7 @@ Met behulp van [Next.js][1] heb ik deze website gemaakt. Deze website is geschre
         </Button>
         <UncontrolledCollapse toggler="#toggler_telgrm">
         <Card>
+          <CardImg src="static/pythontelegrambot.png" alt="Python Telegram wrapper" className="ProjImg"/>
           <CardBody>
           <Markdown
             source={`
