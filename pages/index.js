@@ -17,7 +17,7 @@ export default () => (
             <CardBody><CardText>
             <Markdown
               source={`
-Dit is mijn persoonlijke website. Op deze website vindt je mijn blog _(in aanbouw)_, mijn programmeerprojecten en resources die ik over de tijd heb verzameld.
+Dit is mijn persoonlijke website. Op deze website vind je mijn blog _(in aanbouw)_, mijn programmeerprojecten en resources die ik over de tijd heb verzameld.
 
 Op zoek naar mijn contactgevens? Deze zijn [hier](/contact) te vinden!
            `} />

@@ -58,15 +58,15 @@ export default function Layout(props) {
 
     }
     .main {
-        margin: 10px 10px 20px 10px;
-        padding: 10px 10px 10px 10px;
+
         # border: 1px solid #DDD;
-        align-text: left;
+        # align-text: left;
     }
 
     .row {
         align-text: left;
-        margin-bottom: 10px;
+        #border: 1px solid #DDD;
+        margin: 20px 10px 20px;
         max-width: 1300px;
     }
 
