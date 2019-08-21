@@ -14,7 +14,7 @@ export default () => (
 
     <Markdown
       source={`
-Onderstaand zijn verschillende resources te vinden die ik over de tijd heen verzameld heb.
+Hieronder is een lijst van verschillende resources die ik tot nu toe vezameld heb te vinden. De lijst is op alfabetische volgorde. Heb je vragen over deze lijst? Neem dan [contact](/contact) met mij op.
    `} />
     </div>
 
@@ -31,21 +31,21 @@ Onderstaand zijn verschillende resources te vinden die ik over de tijd heen verz
  function getResources() {
      return [
     {id: '1', title: 'Privacytools.io - Bron voor online privacy',
-    content: `De website [privacytools.io](https://PrivacyTools.io) is een goede start om je internet privacy te verhogen en worden verschillende argumenten (zoals "Maar ik heb niets te verbergen") tegen privacy tegengesproken.
-Op deze website vindt je verschillende tips voor welke services (browsers, emailclients, messaging apps, etc.) beter zijn om te gebruiken wat betreft privacy.
+    content: `De website [privacytools.io](https://PrivacyTools.io) is een goede start om je internetprivacy naar een hoger niveau te brengen. Verder worden op deze website verschillende argumenten geven waarom internetprivacy van belang is (e.g. een antwoord op "Maar ik heb niets te verbergen").
+Je vindt op deze website een gedetailleerde lijst van services/tips over verschillende services (browsers, emailclients, messaging apps, etc.) die beter rekening houden met je privacy.
 
-Bekijk, als firefox-gebruiker, zeker het onderdeel waarin verschillende add-ons voor firefox worden aangeraden. Deze zijn allemaal vrij eenvoudig aan je browser toe te voegen.`
+Bekijk, als je gebruiker van een firefoxbrowser bent, zeker het onderdeel waar verschillende add-ons voor firefox worden aangeraden. Deze zijn allemaal vrij eenvoudig aan je browser toe te voegen.`
     },
 
     {id: '2', title: 'Rank a Brand - Merken vergelijken qua duurzaamheid',
-    content: `De website [Rank a Brand](https://rankabrand.org/) is een website, grotendeels op basis van vrijwilligers, die de duurzaamheid van allerlei merken test.
-De rankings kloppen niet altijd, maar mocht je van plan zijn om nieuwe spullen te kopen, dan is dit altijd een goede website om van tevoren te controleren.`
+    content: `De website [Rank a Brand](https://rankabrand.org/) is een website, grotendeels op basis van vrijwilligers, die de duurzaamheid van allerlei soorten merken test.
+De labels kloppen niet altijd (of zijn niet altijd beschikbaar), maar mocht je van plan zijn om nieuwe spullen te kopen, dan is dit altijd een goede website om van tevoren te even te controleren.`
     },
 
 
     {id: '3', title: 'Todoist - Handige takenlijst',
-    content: `De Takenlijst app [Todoist](https://todoist.com), is handig om je taken bij te houden. Ook de kosten blijven erg beperkt (15 eu per jaar). De app is ook multiplatform en via het internet beschikbaar. Wat allemaal erg handig is.
-Hiernaast heeft de website verschillende tutorials voor het maken van lijstjes om doelen te behalen.`
+    content: `De Takenlijst app [Todoist](https://todoist.com), is handig om je taken bij te houden. De kosten van deze app blijven erg beperkt (~15 eu per jaar). De app is ook multiplatform (helaas niet op Ubuntu) en via het internet beschikbaar.
+Hiernaast heeft de website verschillende tutorials/templates voor het maken van lijstjes om je gestelde doelen te behalen.`
     }
 
     ];

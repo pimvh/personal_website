@@ -11,7 +11,11 @@ export default () => (
     <Container fluid className='main'>
     <Col><Row className='row'>
     <div>
-    Onderstaand zijn verschillende projecten die ik tot nu toe gecodeerd heb te vinden.
+    <Markdown
+      source={`
+Hieronder is een lijst van verschillende projecten die ik tot nu toe gecodeerd heb te vinden. Klik op een van de buttons om een project te openen.
+`} />
+
     </div>
     </Row></Col>
 
@@ -52,7 +56,7 @@ Met behulp van [Next.js][1], een react.js framework, heb ik deze website gemaakt
           <CardBody>
           <Markdown
             source={`
-Op Telegram heb ik een bot gemaakt, met behulp van de [Python-telegram-bot wrapper][1]. Op het moment kan deze o.a. het weer opzoeken. De code is [open-source beschikbaar][2]. De bot is bereikbaar op [@Rob_Ot][3].
+Op Telegram heb ik een bot gemaakt, met behulp van de [Python-telegram-bot wrapper][1]. Op het moment kan deze ondere andere het weer opzoeken. De bot is bereikbaar met Telegram op [@Rob_Ot][3]. Verder is de code [beschikbaar via Github][2].
 [1]: <https://python-telegram-bot.org/> "Python Telegram Wrapper"
 [2]: <https://github.com/pimvh/telegrambot_simple> "Simple Telegram Bot"
 [3]: <https://t.me/Rob_Ot_bot> "@Rob_Ot_bot"
