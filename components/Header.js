@@ -40,7 +40,7 @@ export default function ({children, title='Pim van Helvoirt'}) {
 
         <Nav pills className="nav-menu">
 
-            <a href="/eenhoorn"><img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="nav_icon" /></a>
+            <a href="/index"><img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="nav_icon" /></a>
             {getPosts().map(post => (
                 <PostLink key={post.id} post={post} />
             ))}

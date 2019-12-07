@@ -1,5 +1,6 @@
 import Layout from '../components/MyLayout.js'
 import Markdown from 'react-markdown';
+import * as _ from "lodash";
 import {
     Container, Row, Col,
     Card, CardTitle, CardBody, CardText
@@ -29,7 +30,7 @@ Hieronder is een lijst van verschillende resources die ik tot nu toe vezameld he
  )
 
  function getResources() {
-     return [
+    var arr = [
     {id: '1', title: 'Privacytools.io - Bron voor online privacy',
     content: `De website [privacytools.io](https://PrivacyTools.io) is een goede start om je internetprivacy naar een hoger niveau te brengen. Verder worden op deze website verschillende argumenten geven waarom internetprivacy van belang is (e.g. een antwoord op "Maar ik heb niets te verbergen").
 Je vindt op deze website een gedetailleerde lijst van services/tips over verschillende services (browsers, emailclients, messaging apps, etc.) die beter rekening houden met je privacy.
@@ -46,9 +47,17 @@ De labels kloppen niet altijd (of zijn niet altijd beschikbaar), maar mocht je v
     {id: '3', title: 'Todoist - Handige takenlijst',
     content: `De Takenlijst app [Todoist](https://todoist.com), is handig om je taken bij te houden. De kosten van deze app blijven erg beperkt (~15 eu per jaar). De app is ook multiplatform (helaas niet op Ubuntu) en via het internet beschikbaar.
 Hiernaast heeft de website verschillende tutorials/templates voor het maken van lijstjes om je gestelde doelen te behalen.`
-    }
+    },
 
+    {id: '4', title: 'Mozilla Privacy Not Included - Een gids om privacyveilig aankopen te doen.',
+    content: `[De Mozilla Privacy buyer guide](https://foundation.mozilla.org/en/privacynotincluded/) laat een ander perspectief zien op een aantal aankopen. In deze gids kun je met verschillende filters verschillende soorten koptelefoons, camera's en andere apparaten laten zien.
+De website hanteert een creepy-schaal voor hoe angstaanjagend andere gebruikers een product vinden.`
+    }
     ];
+
+    const sorted = _.sortBy(arr, 'title');
+
+    return sorted;
 }
 
  const Resource = ({ resource }) => (
