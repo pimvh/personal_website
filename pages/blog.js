@@ -15,7 +15,7 @@ export default () => (
         <CardText>
         <Markdown
           source={`
-Hier komt nog een blog. Wacht rustig af!
+Hier komt nog een blog. Wacht rustig af! Ik ben er mee bezig...
 `} />
         </CardText>
         </CardBody>
