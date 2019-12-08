@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Footer from './Footer'
+
 import React from 'react'
 import {
     Jumbotron, Container,
@@ -47,9 +49,9 @@ export default function ({children, title='Pim van Helvoirt'}) {
 
         </Nav>
 
-        {children}
-
+        
         </div>
+
     );
 }
 

@@ -1,11 +1,11 @@
-import Layout from '../components/MyLayout.js'
+import Main from '../components/Main'
 import Markdown from 'react-markdown'
 import {
 Container, Row, Col,
 Card, CardBody, CardTitle, CardText} from 'reactstrap'
 
 export default () => (
-    <Layout title='About'>
+    <Main title='About'>
 
     <Container fluid className='main'>
 
@@ -24,6 +24,6 @@ Hier komt nog een blog. Wacht rustig af! Ik ben er mee bezig...
         </Row></Col>
 
         </Container>
-    </Layout>
+    </Main>
 
 );

@@ -1,11 +1,11 @@
-import Layout from '../components/MyLayout.js'
+import Main from '../components/Main'
 import Markdown from 'react-markdown'
 import {
 Container, Row, Col,
 Card, CardBody, CardTitle, CardText} from 'reactstrap'
 
 export default () => (
-    <Layout title='Eenhoorn'>
+    <Main title='Eenhoorn'>
 
     <Container fluid className='main'>
 
@@ -26,5 +26,5 @@ lees [hier](https://www.thesprucepets.com/are-unicorns-real-1885833) meer over d
         </Row></Col>
 
     </Container>
-    </Layout>
+    </Main>
 );

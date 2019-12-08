@@ -1,4 +1,4 @@
-import Layout from '../components/MyLayout.js'
+import Main from '../components/Main'
 import Markdown from 'react-markdown';
 import * as _ from "lodash";
 import {
@@ -7,7 +7,7 @@ import {
 } from 'reactstrap'
 
 export default () => (
-    <Layout title='Resources'>
+    <Main title='Resources'>
 
     <Container fluid className='main'>
     <Col><Row className='row'>
@@ -26,7 +26,7 @@ Hieronder is een lijst van verschillende resources die ik tot nu toe vezameld he
     </Row></Col>
 
     </Container>
-    </Layout>
+    </Main>
  )
 
  function getResources() {

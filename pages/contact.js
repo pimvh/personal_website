@@ -1,4 +1,4 @@
-import Layout from '../components/MyLayout.js'
+import Main from '../components/Main'
 import Markdown from 'react-markdown';
 import { Container, Row, Col, Tooltip} from 'reactstrap';
 import { Table } from 'reactstrap'
@@ -8,7 +8,7 @@ export default () => {
 
     return (
 
-    <Layout title='Contact'>
+    <Main title='Contact'>
 
         <Container fluid className='main'>
 
@@ -35,7 +35,7 @@ export default () => {
         <div>
 
         </div>
-    </Layout>
+    </Main>
 
 );
 }

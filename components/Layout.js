@@ -1,11 +1,7 @@
-import Header from './Header'
+import React from 'react';
 
-export default function Layout(props) {
+export default function Layout() {
   return (
-    <div className='body'>
-      <Header />
-      {props.children}
-
     <style jsx global>{`
 
     .root {
@@ -130,7 +126,5 @@ export default function Layout(props) {
         max-heidth: auto;
     }
     `}</style>
-
-    </div>
 );
 }

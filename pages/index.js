@@ -1,4 +1,4 @@
-import Layout from '../components/MyLayout'
+import Main from '../components/Main'
 import React from 'react'
 import Markdown from 'react-markdown';
 import {
@@ -7,7 +7,7 @@ import {
     Card, CardTitle, CardBody, CardText} from 'reactstrap';
 
 export default () => (
-        <Layout>
+        <Main>
 
         <Container fluid className='main'>
 
@@ -40,5 +40,5 @@ Op zoek naar mijn contactgevens? Deze zijn [hier](/contact) te vinden!
         </div>
         */}
 
-        </Layout>
+        </Main>
 )

@@ -8,7 +8,7 @@ export default () => {
 
     return (
 
-    <Layout title={router.query.title}>
+    <Main title={router.query.title}>
     <Card>
         <CardBody>
           <CardTitle>Helaas!</CardTitle>
@@ -43,6 +43,6 @@ Error 404: De pagina waar je op gezocht heb bestaat niet. Ga [terug naar de home
           padding: 0;
         }
       `}</style>
-    </Layout>
+    </Main>
   );
 };

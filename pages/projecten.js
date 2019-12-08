@@ -1,4 +1,4 @@
-import Layout from '../components/MyLayout.js'
+import Main from '../components/Main'
 import Markdown from 'react-markdown';
 import {
     Container, Row, Col,
@@ -6,7 +6,7 @@ import {
     Card, CardImg, Button, CardBody, CardTitle, CardText} from 'reactstrap'
 
 export default () => (
-    <Layout title='Projecten'>
+    <Main title='Projecten'>
 
     <Container fluid className='main'>
     <Col><Row className='row'>
@@ -70,6 +70,6 @@ Op Telegram heb ik een bot gemaakt, met behulp van de [Python-telegram-bot wrapp
     </Col>
 
     </Container>
-    </Layout>
+    </Main>
 
  )
