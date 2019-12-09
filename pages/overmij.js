@@ -15,9 +15,6 @@ export default () => (
         <Markdown
           source={`
 Deze website is van mij, Pim van Helvoirt, een student Beta-gamma met Kunstmatige Intelligentie aan de Universiteit van Amsterdam.
-
-Je vindt [mijn contactpagina hier](/contact)! Stuur me gerust een e-mail!!
-
 `} />
         </CardText>
         </CardBody>

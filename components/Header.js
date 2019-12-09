@@ -46,7 +46,6 @@ export default function ({title}) {
             {getPosts().map(post => (
                 <PostLink key={post.id} post={post} />
             ))}
-
         </Nav>
         </div>
     );
