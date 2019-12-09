@@ -1,8 +1,7 @@
 import { useRouter } from 'next/router';
 import Markdown from 'react-markdown';
-import Layout from '../components/MyLayout';
+import Main from '../components/Main'
 import { Card, Button, CardBody, CardTitle, CardText} from 'reactstrap'
-
 export default () => {
     const router = useRouter();
 

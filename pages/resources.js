@@ -9,7 +9,7 @@ import {
 export default () => (
     <Main title='Resources'>
 
-    <Container fluid className='main'>
+    <Container fluid className='resourcescontainer'>
     <Col><Row className='row'>
     <div>
 

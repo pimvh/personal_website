@@ -9,9 +9,9 @@ import {
     Carousel, CarouselItem, CarouselControl, CarouselIndicators,  CarouselCaption
 } from 'reactstrap';
 
-export default function ({children, title='Pim van Helvoirt'}) {
+export default function ({title}) {
         return (
-        <div className='root'>
+        <div className = 'root'>
         <Head>
             <meta charSet="UTF-8" />
             <meta name="description" content="Persoonlijke website van mij" />
@@ -48,10 +48,7 @@ export default function ({children, title='Pim van Helvoirt'}) {
             ))}
 
         </Nav>
-
-        
         </div>
-
     );
 }
 

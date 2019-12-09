@@ -5,9 +5,9 @@ Container, Row, Col,
 Card, CardBody, CardTitle, CardText} from 'reactstrap'
 
 export default () => (
-    <Main title='About'>
+    <Main title='Blog'>
 
-    <Container fluid className='main'>
+    <Container className='main'>
 
         <Col><Row className='row'>
         <Card className="aboutme_card">

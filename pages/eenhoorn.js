@@ -7,9 +7,6 @@ Card, CardBody, CardTitle, CardText} from 'reactstrap'
 export default () => (
     <Main title='Eenhoorn'>
 
-    <Container fluid className='main'>
-
-        <Col><Row className='row'>
         <div>
         <Markdown
           source={`
@@ -22,9 +19,5 @@ export default () => (
 lees [hier](https://www.thesprucepets.com/are-unicorns-real-1885833) meer over de krachten van de eenhoorn.
 `} />
         </div>
-
-        </Row></Col>
-
-    </Container>
     </Main>
 );

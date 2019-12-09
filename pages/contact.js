@@ -8,32 +8,21 @@ export default () => {
 
     return (
 
-    <Main title='Contact'>
-
-        <Container fluid className='main'>
-
-            <Col>
-            <Row className='row'>
-            <div>
-            Hieronder zijn mijn contactgegevens te vinden op verschillende platformen te vinden. Ik ben niet te vinden op Facebook en Instagram.
-
-            Stuur me gerust een email!
-            </div>
-
-            <Table className='table'>
-
-            {getContactDetails().map(contact => (
-                <ContactRow key={contact.service} contact={contact} />
-            ))}
-
-            </Table>
-
-        </Row>
-        </Col>
-
-        </Container>
+    <Main title='Contact' showFooter={true}>
         <div>
+        Hieronder zijn mijn contactgegevens te vinden op verschillende platformen te vinden. Ik ben niet te vinden op Facebook en Instagram.
 
+        Stuur me gerust een email!
+        </div>
+
+        <Table className='table'>
+
+        {getContactDetails().map(contact => (
+            <ContactRow key={contact.service} contact={contact} />
+        ))}
+
+        </Table>
+        <div>
         </div>
     </Main>
 

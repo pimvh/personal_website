@@ -52,26 +52,39 @@ export default function Layout() {
     Main container
     ***************************/
 
-    }
-    .main {
-
-        # border: 1px solid #DDD;
-        # align-text: left;
+    .MainContainer, .FooterContainer {
+        align-text: center;
     }
 
-    .row {
-        align-text: left;
-        #border: 1px solid #DDD;
-        margin: 20px 10px 20px;
-        max-width: 1300px;
+    .ContentContainer {
+        margin: 10px 10px 10px;
+        text-align: left;
+    }
+
+    .aboutme_card {
+        border: 0px;
     }
 
     .cardtitle {
         font-weight: bold;
     }
 
+    .ProjectText {
+        margin-top: 0px;
+    }
+
     .resource_card {
         margin-bottom: 20px;
+    }
+
+    /***************************
+    Footer
+    ***************************/
+    .FooterCard {
+        padding-bottom: 10px;
+        border: 0px;
+        width: 100%;
+        align-content: center;
     }
 
     /***************************
@@ -80,6 +93,7 @@ export default function Layout() {
 
     .nav {
         margin-left: 10px;
+        margin-bottom: 30px;
         font: 'Open Sans';
         font-size: 120%;
     }

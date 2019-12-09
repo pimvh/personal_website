@@ -6,12 +6,8 @@ import {
 } from 'reactstrap';
 
 export default () => (
-    <Main title='About'>
+    <Main title='Over mij'>
 
-    <Container fluid className='main'>
-
-        <Col>
-        <Row className='row'>
         <div>
         <Card className="aboutme_card">
         <CardBody>
@@ -19,6 +15,7 @@ export default () => (
         <Markdown
           source={`
 Deze website is van mij, Pim van Helvoirt, een student Beta-gamma met Kunstmatige Intelligentie aan de Universiteit van Amsterdam.
+
 Je vindt [mijn contactpagina hier](/contact)! Stuur me gerust een e-mail!!
 
 `} />
@@ -28,10 +25,6 @@ Je vindt [mijn contactpagina hier](/contact)! Stuur me gerust een e-mail!!
 
 
         </div>
-    </Row>
-    </Col>
-
-    </Container>
     </Main>
 
  )
