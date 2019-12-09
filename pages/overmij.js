@@ -7,9 +7,9 @@ import {
 
 export default () => (
     <Main title='Over mij'>
-
-        <div>
-        <Card className="aboutme_card">
+        <Row>
+        <Col className = 'upper_page_text'>
+        <Card className="general_card">
         <CardBody>
         <CardText>
         <Markdown
@@ -20,8 +20,8 @@ Deze website is van mij, Pim van Helvoirt, een student Beta-gamma met Kunstmatig
         </CardBody>
         </Card>
 
-
-        </div>
+        </Col>
+        </Row>
     </Main>
 
  )

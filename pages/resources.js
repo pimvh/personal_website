@@ -8,28 +8,24 @@ import {
 
 export default () => (
     <Main title='Resources'>
-
-    <Container fluid className='resourcescontainer'>
-    <Col><Row className='row'>
-    <div>
-
+    <Container>
+    <Row>
+    <Col className='upper_page_text'>
     <Markdown
       source={`
 Hieronder is een lijst van verschillende resources die ik tot nu toe vezameld heb te vinden. De lijst is op alfabetische volgorde. Heb je vragen over deze lijst? Neem dan [contact](/contact) met mij op.
    `} />
-    </div>
-
+    </Col></Row>
+    <Row>
     {getResources().map(resource => (
         <Resource key={resource.id} resource={resource} />
     ))}
-
-    </Row></Col>
-
+    </Row>
     </Container>
     </Main>
- )
+);
 
- function getResources() {
+function getResources() {
     var arr = [
     {id: '1', title: 'Privacytools.io - Bron voor online privacy',
     content: `De website [privacytools.io](https://PrivacyTools.io) is een goede start om je internetprivacy naar een hoger niveau te brengen. Verder worden op deze website verschillende argumenten geven waarom internetprivacy van belang is (e.g. een antwoord op "Maar ik heb niets te verbergen").
@@ -58,7 +54,7 @@ De website hanteert een creepy-schaal voor hoe angstaanjagend andere gebruikers 
     const sorted = _.sortBy(arr, 'title');
 
     return sorted;
-}
+};
 
  const Resource = ({ resource }) => (
      <Card className="resource_card">
@@ -71,4 +67,5 @@ De website hanteert een creepy-schaal voor hoe angstaanjagend andere gebruikers 
      </Card>
  );
 
- // TODO: Categorieen toevoegen, nadenken wat je hier op je website wil hebben staan.
+// TODO: Categorieen toevoegen, nadenken wat je hier op je website wil hebben staan.
+// TODO:  marge fixen.

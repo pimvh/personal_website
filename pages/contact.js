@@ -1,29 +1,36 @@
 import Main from '../components/Main'
 import Markdown from 'react-markdown';
-import { Container, Row, Col, Tooltip} from 'reactstrap';
+import { Container, Row, Col,
+         Card, CardBody, CardText} from 'reactstrap';
 import { Table } from 'reactstrap'
 
 // op Facebook of Instagram.
 export default () => {
 
     return (
+    <Main title='Contact' hideFooter={true}>
+    <Row>
+    <Col className = 'upper_page_text'>
+    <Card className="general_card">
+    <CardBody>
+    <CardText>
+    <Markdown
+      source={`
+Hieronder zijn mijn contactgegevens te vinden op verschillende platformen te vinden. Ik ben niet te vinden op Facebook en Instagram.
 
-    <Main title='Contact' showFooter={true}>
-        <div>
-        Hieronder zijn mijn contactgegevens te vinden op verschillende platformen te vinden. Ik ben niet te vinden op Facebook en Instagram.
-
-        Stuur me gerust een email!
-        </div>
+Stuur me gerust een email!
+`} />
+    </CardText>
+    </CardBody>
+    </Card>
 
         <Table className='table'>
-
         {getContactDetails().map(contact => (
             <ContactRow key={contact.service} contact={contact} />
         ))}
-
         </Table>
-        <div>
-        </div>
+    </Col>
+    </Row>
     </Main>
 
 );

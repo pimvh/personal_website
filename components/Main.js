@@ -13,7 +13,7 @@ export default class Main extends Component {
     constructor(props) {
         super(props);
         this.title = props.title;
-        this.showFooter = !props.showFooter;
+        this.showFooter = !props.hideFooter;
         this.state = {
             isShow: true,
         };
@@ -23,8 +23,7 @@ export default class Main extends Component {
         return (
         <div className='root'>
             <Header title={this.title || 'Pim van Helvoirt'} />
-
-            <Container className = 'MainContainer'>
+            <Container fluid className = 'MainContainer'>
                 <Row className ='ContentContainer'>
                     {this.props.children}
                 </Row>

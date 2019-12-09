@@ -6,24 +6,17 @@ Card, CardBody, CardTitle, CardText} from 'reactstrap'
 
 export default () => (
     <Main title='Blog'>
-
-    <Container className='main'>
-
-        <Col><Row className='row'>
-        <Card className="aboutme_card">
-        <CardBody>
-        <CardText>
+    <Row>
+    <Col className='upper_page_text'>
+        <Card className="general_card">
+        <CardBody><CardText>
         <Markdown
-          source={`
-Hier komt nog een blog. Wacht rustig af! Ik ben er mee bezig...
-`} />
-        </CardText>
-        </CardBody>
-        </Card>
-
-        </Row></Col>
-
-        </Container>
+          source={`Hier komt nog een blog. Wacht rustig af! Ik ben er mee bezig...
+        `} />
+       </CardText></CardBody>
+       </Card>
+     </Col>
+     </Row>
     </Main>
 
 );

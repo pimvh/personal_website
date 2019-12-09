@@ -6,12 +6,13 @@ import {
     Jumbotron, Container,
     Row, Col,
     Nav, NavItem, NavLink,
+    Card,
     Carousel, CarouselItem, CarouselControl, CarouselIndicators,  CarouselCaption
 } from 'reactstrap';
 
 export default function ({title}) {
         return (
-        <div className = 'root'>
+        <Container fluid className = "Header_container">
         <Head>
             <meta charSet="UTF-8" />
             <meta name="description" content="Persoonlijke website van mij" />
@@ -30,24 +31,25 @@ export default function ({title}) {
             // Latest compiled JavaScript
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-            <title>{title}</title>
+            <title>Pim van Helvoirt {(title == 'Home') ? "" : ("- ").concat(title)} </title>
 
         </Head>
+        <Row>
+        <Col fluid className = "carousel_col" >
+        <HeadCarousel className="carousel" />
+        </Col>
+        </Row>
 
-        <HeadCarousel className="headCarousel" />
-
-        {/*
-        <Jumbotron fluid className="jumbo" ></Jumbotron>
-        */}
-
+        <Row className="nav_row"><Col className="nav_col">
         <Nav pills className="nav-menu">
-
-            <a href="/index"><img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="nav_icon" /></a>
+            <a href="/Home"><img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="nav_icon" /></a>
             {getPosts().map(post => (
-                <PostLink key={post.id} post={post} />
+                <PostLink key={post.id} post={post} highlight={title}/>
             ))}
         </Nav>
-        </div>
+        </Col>
+        </Row>
+        </Container>
     );
 }
 
@@ -57,7 +59,7 @@ helper functions for creating an index
 function getPosts() {
     return [
         { id: '/', title: 'Home'},
-        {id: '/blog', title: 'Blog'},
+        { id: '/blog', title: 'Blog'},
         { id: '/projecten', title: 'Projecten'},
         { id: '/resources', title: 'Resources'},
         { id: '/overmij', title: 'Over mij'},
@@ -65,11 +67,10 @@ function getPosts() {
     ];
 }
 
-const PostLink = ({ post }) => (
+const PostLink = ({ post, highlight}) => (
 
     <NavItem>
-        <NavLink href={`${post.id}`} >{post.title}</NavLink>
-
+        <NavLink href={`${post.id}`} className = {`${(post.title == highlight) ? "nav_active" : "nav_item"}`} > {post.title} </NavLink>
     </NavItem>
 );
 

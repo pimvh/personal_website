@@ -10,42 +10,31 @@ export default function Layout() {
         left: 0;
         heigth: 100%;
         width: 100%;
+        font: 'Open Sans';
     }
+
     /***************************
     Header
     ***************************/
 
-    # .jumbo {
-        # width: 100%;
-        # background-image: url('/static/photo_header_crop.jpg');
-        # background-repeat: no-repeat;
-        # background-size: cover;
-        # max-height: 200px;
-    # }
-
-    .headCarousel {
-        # nothing here yet
-        # background-size: contain;
-        # background-repeat: repeat;
-        margin: 0px 30px 0px 0px;
-        border: 3px solid #FFF;
-
+    .Header_container {
+        padding: 0px;
     }
-    .nav {
-        margin: 10px 10 10px;
-        padding: 20px 0px 0px;
 
+    .carousel_col {
+        padding: 0px;
     }
+
     .carousel-item > img {
         width: 100%;
         min-height: 100px;
         object-fit: cover;
         max-height: 300px;
-        align-items:center;
+        align-items: center;
     }
 
     .carousel-control-prev,.carousel-control-next {
-        cursor:pointer;
+        cursor: pointer;
     }
 
     /***************************
@@ -53,15 +42,23 @@ export default function Layout() {
     ***************************/
 
     .MainContainer, .FooterContainer {
-        align-text: center;
+        padding: 30px 30px;
     }
 
     .ContentContainer {
-        margin: 10px 10px 10px;
         text-align: left;
+        margin-left: 10px;
     }
 
-    .aboutme_card {
+    .project_container {
+        padding: 0;
+    }
+
+    .upper_page_text {
+        margin-bottom: 50px;
+    }
+
+    .general_card {
         border: 0px;
     }
 
@@ -69,12 +66,12 @@ export default function Layout() {
         font-weight: bold;
     }
 
-    .ProjectText {
-        margin-top: 0px;
+    .resource_card, .project_card {
+        margin-bottom: 20px;
     }
 
-    .resource_card {
-        margin-bottom: 20px;
+    .project_button {
+        margin-bottom: 30px;
     }
 
     /***************************
@@ -91,15 +88,36 @@ export default function Layout() {
     Navigation Menu
     ***************************/
 
+    .nav_row {
+        margin: 60px 0px 60px 0px;
+    }
+
+    .nav_col {
+    }
+
     .nav {
-        margin-left: 10px;
-        margin-bottom: 30px;
         font: 'Open Sans';
         font-size: 120%;
+        padding-left: 30px;
+
+    }
+
+    .nav_item, .nav_active {
+        color: black;
+        border: 1px;
+        max-width: 150px;
+        border-style: solid;
+        margin-left: 10px;
+    }
+
+    .nav_active {
+        font-weight: bold;
+        color: blue;
+        text-decoration: underline;
     }
 
     .nav_icon {
-        height: 30px;
+        height: 40px;
         width: auto;
         margin-top: 10px;
     }
@@ -135,7 +153,7 @@ export default function Layout() {
     Images
     ***************************/
 
-    .ProjImg {
+    .project_img {
         max-width: 80px;
         max-heidth: auto;
     }

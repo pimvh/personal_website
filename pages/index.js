@@ -7,16 +7,22 @@ import {
     Card, CardTitle, CardBody, CardText} from 'reactstrap';
 
 export default () => (
-        <Main>
-            <Card className="aboutme_card">
+        <Main title = 'Home'>
+        <Row>
+        <Col>
+            <Card className="general_card">
             <CardBody><CardText>
             <Markdown
               source={`
-Dit is mijn persoonlijke website. Op deze website vind je mijn blog _(in aanbouw)_, mijn programmeerprojecten en resources die ik over de tijd heb verzameld.
-           `} />
+Dit is mijn persoonlijke website. Op deze website vind je mijn [programmeerprojecten][1], [resources][2] en [mijn blog][3] _(in aanbouw)_, die ik over de tijd heb verzameld.
+[1]: </projecten> "Projecten"
+[2]: </resources> "Resources"
+[3]: </blog> "Blog"
+`} />
            </CardText></CardBody>
-           </Card>
-
+           </Card>     
+         </Col>
+         </Row>
         {/*
         <div>
             <p>The standard Lorem Ipsum passage, used since the 1500 s</p>

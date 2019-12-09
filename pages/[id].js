@@ -8,7 +8,7 @@ export default () => {
     return (
 
     <Main title={router.query.title}>
-    <Card>
+    <Card className = "general_card">
         <CardBody>
           <CardTitle>Helaas!</CardTitle>
           <CardText>
@@ -22,26 +22,6 @@ Error 404: De pagina waar je op gezocht heb bestaat niet. Ga [terug naar de home
 </CardText>
         </CardBody>
     </Card>
-
-      <style jsx global>{`
-        .markdown {
-          font-family: 'Arial';
-        }
-
-        .markdown a {
-          text-decoration: none;
-          color: blue;
-        }
-
-        .markdown a:hover {
-          opacity: 0.6;
-        }
-
-        .markdown h3 {
-          margin: 0;
-          padding: 0;
-        }
-      `}</style>
     </Main>
   );
 };
