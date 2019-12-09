@@ -50,9 +50,7 @@ export default function Layout() {
         margin-left: 10px;
     }
 
-    .project_container {
-        padding: 0;
-    }
+
 
     .upper_page_text {
         margin-bottom: 50px;
@@ -68,10 +66,18 @@ export default function Layout() {
 
     .resource_card, .project_card {
         margin-bottom: 20px;
+        margin-left: 10px;
+    }
+
+    /* projecten */
+
+    .project_container {
+        padding: 0;
     }
 
     .project_button {
         margin-bottom: 30px;
+        margin-left: 20px;
     }
 
     /***************************

@@ -8,7 +8,7 @@ import {
 
 export default () => (
     <Main title='Resources'>
-    <Container>
+    <Container fluid className='resources_container'>
     <Row>
     <Col className='upper_page_text'>
     <Markdown
