@@ -1,22 +1,19 @@
 import Head from 'next/head'
 import Footer from './Footer'
-import useWindowDimensions from '../hooks/useWindowDimensions'
-
 import React from 'react'
 import {
     Jumbotron, Container,
     Row, Col,
-    Nav, NavItem, NavLink,
     Card,
     Carousel, CarouselItem, CarouselControl, CarouselIndicators,  CarouselCaption
 } from 'reactstrap';
 
-export default function ({title}) {
+export default function Header ({title}) {
 
-        const {height, width} = useWindowDimensions();
+    /* https://nextjs.org/docs#fetching-data-and-component-lifecycle */
 
         return (
-        <Container fluid className = "Header_container">
+        <div>
         <Head>
             <meta charSet="UTF-8" />
             <meta name="description" content="Persoonlijke website van mij" />
@@ -36,53 +33,17 @@ export default function ({title}) {
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
             <title>Pim van Helvoirt {(title == 'Home') ? "" : ("- ").concat(title)} </title>
-
         </Head>
+
+        <Container fluid className = "Header_container">
         <Row>
         <Col className = "carousel_col" >
         <HeadCarousel className="carousel" />
         </Col>
         </Row>
-
-        <Row className="nav_row"><Col className="nav_col">
-        <Nav vertical = {fitsPage(width)} className="nav-menu">
-            <a href="/Home"><img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="nav_icon" /></a>
-            {getPosts().map(post => (
-                <PostLink key={post.id} post={post} highlight={title}/>
-            ))}
-        </Nav>
-        </Col>
-        </Row>
         </Container>
+        </div>
     );
-}
-
-/*
-helper functions for creating an index
-*/
-function getPosts() {
-    return [
-        { id: '/', title: 'Home'},
-        { id: '/blog', title: 'Blog'},
-        { id: '/projecten', title: 'Projecten'},
-        { id: '/resources', title: 'Resources'},
-        { id: '/overmij', title: 'Over mij'},
-        { id: '/contact', title: 'Contact'}
-    ];
-}
-
-const PostLink = ({ post, highlight}) => (
-
-    <NavItem>
-        <NavLink href={`${post.id}`} className = {`${(post.title == highlight) ? "nav_active" : "nav_item"}`} > {post.title} </NavLink>
-    </NavItem>
-);
-
-function fitsPage(window_width){
-    if (window_width < 785){
-        return true;
-    }
-    return false;
 }
 
 const items = [
