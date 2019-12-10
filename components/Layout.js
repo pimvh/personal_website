@@ -23,6 +23,8 @@ export default function Layout() {
 
     .carousel_col {
         padding: 0px;
+        width: 100%;
+        margin: 0px;
     }
 
     .carousel-item > img {
@@ -113,6 +115,7 @@ export default function Layout() {
         border: 1px;
         max-width: 150px;
         border-style: solid;
+        border-radius: 10px;
         margin-left: 10px;
     }
 

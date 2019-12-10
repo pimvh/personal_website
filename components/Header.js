@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Footer from './Footer'
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 import React from 'react'
 import {
@@ -11,6 +12,9 @@ import {
 } from 'reactstrap';
 
 export default function ({title}) {
+
+        const {height, width} = useWindowDimensions();
+
         return (
         <Container fluid className = "Header_container">
         <Head>
@@ -35,13 +39,13 @@ export default function ({title}) {
 
         </Head>
         <Row>
-        <Col fluid className = "carousel_col" >
+        <Col className = "carousel_col" >
         <HeadCarousel className="carousel" />
         </Col>
         </Row>
 
         <Row className="nav_row"><Col className="nav_col">
-        <Nav pills className="nav-menu">
+        <Nav vertical = {fitsPage(width)} className="nav-menu">
             <a href="/Home"><img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="nav_icon" /></a>
             {getPosts().map(post => (
                 <PostLink key={post.id} post={post} highlight={title}/>
@@ -73,6 +77,13 @@ const PostLink = ({ post, highlight}) => (
         <NavLink href={`${post.id}`} className = {`${(post.title == highlight) ? "nav_active" : "nav_item"}`} > {post.title} </NavLink>
     </NavItem>
 );
+
+function fitsPage(window_width){
+    if (window_width < 785){
+        return true;
+    }
+    return false;
+}
 
 const items = [
   {
