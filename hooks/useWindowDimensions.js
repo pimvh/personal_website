@@ -9,7 +9,7 @@ export default function useWindowDimensions() {
     const height = hasWindow ? window.innerHeight : null;
     return {
       width,
-      height,
+      height
     };
   }
 

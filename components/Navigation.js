@@ -5,53 +5,45 @@ import {
 } from 'reactstrap';
 import React from 'react'
 
-export default class Navigation extends React.Component {
-    constructor(props) {
-        super(props);
-        this.title = props.title;
-    }
+export default function Navigation (props) {
 
-    render() {
-        return (<Row className="nav_row"><Col className="nav_col">
-        <Nav className="nav-menu">
-        {/*<Nav vertical = {fitsPage()} className="nav-menu">*/}
-            <a href="/"><img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="nav_icon" /></a>
-            {getPosts().map(post => (
-                <PostLink key={post.id} post={post} highlight={this.title}/>
+    const PostLink = ({href, title, highlight}) => (
+        <div className = {`${(title == highlight) ? "nav_active" : "nav_item"}`} >
+        <a className="nav_link" href={`${href}`} > {title} </a>
+        </div>
+    );
+
+
+    const {width, height} = useWindowDimensions();
+
+    function fitsPage(width) {
+        if (width > 785) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    function getPosts() {
+        return [
+            { id: '1', link: '/', title: 'Home'},
+            { id: '2', link: '/blog', title: 'Blog'},
+            { id: '3', link: '/projecten', title: 'Projecten'},
+            { id: '4', link: '/resources', title: 'Resources'},
+            { id: '5', link: '/overmij', title: 'Over mij'},
+            { id: '6', link: '/contact', title: 'Contact'}
+        ];
+    };
+
+    return (
+            <div className="nav-menu">
+            <div>
+            <a href="/">
+            <img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="nav_icon" />
+            </a></div>
+            {   getPosts().map(post => (
+                <PostLink key={post.id} href={post.link} title={post.title} highlight={props.title}/>
             ))}
-        </Nav>
-        </Col>
-        </Row>);
-    }
+            </div>
+        );
 }
-
-/*
-helper functions for creating an index
-*/
-function getPosts() {
-    return [
-        { id: '/', title: 'Home'},
-        { id: '/blog', title: 'Blog'},
-        { id: '/projecten', title: 'Projecten'},
-        { id: '/resources', title: 'Resources'},
-        { id: '/overmij', title: 'Over mij'},
-        { id: '/contact', title: 'Contact'}
-    ];
-}
-
-function fitsPage(){
-
-    const {height, width} = useWindowDimensions();
-
-    if (width < 785){
-        return true;
-    }
-    return false;
-}
-
-const PostLink = ({ post, highlight}) => (
-
-    <NavItem>
-        <NavLink href={`${post.id}`} className = {`${(post.title == highlight) ? "nav_active" : "nav_item"}`} > {post.title} </NavLink>
-    </NavItem>
-);

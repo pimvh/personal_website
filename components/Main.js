@@ -1,9 +1,11 @@
 import Head from 'next/head'
+import React from 'react';
+
 import Header from './Header'
+import HeadCarousel from './Carousel'
 import Navigation from './Navigation'
 import Footer from './Footer'
 import Layout from './Layout'
-import React from 'react';
 
 import {
     Container,
@@ -16,14 +18,14 @@ export default class Main extends React.Component {
         this.title = props.title;
         this.showFooter = !props.hideFooter;
     }
-
     render(){
         return (
         <div className='root'>
-            <Container fluid className = "Header_container">
+            <div className = "Header_container">
             <Header title={this.title || 'Pim van Helvoirt'} />
+            <HeadCarousel />
             <Navigation title={this.title} />
-            </Container>
+            </div>
             <Container fluid className = 'MainContainer'>
                 <Row className ='ContentContainer'>
                     {this.props.children}

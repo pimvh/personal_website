@@ -21,24 +21,6 @@ export default function Layout() {
         padding: 0px;
     }
 
-    .carousel_col {
-        padding: 0px;
-        width: 100%;
-        margin: 0px;
-    }
-
-    .carousel-item > img {
-        width: 100%;
-        min-height: 100px;
-        object-fit: cover;
-        max-height: 300px;
-        align-items: center;
-    }
-
-    .carousel-control-prev,.carousel-control-next {
-        cursor: pointer;
-    }
-
     /***************************
     Main container
     ***************************/
@@ -50,9 +32,8 @@ export default function Layout() {
     .ContentContainer {
         text-align: left;
         margin-left: 10px;
+        margin-right: 10px;
     }
-
-
 
     .upper_page_text {
         margin-bottom: 50px;
@@ -96,27 +77,36 @@ export default function Layout() {
     Navigation Menu
     ***************************/
 
-    .nav_row {
-        margin: 60px 0px 60px 0px;
+    .nav_col {
+        margin-left: 5px;
     }
 
-    .nav_col {
+    .nav_menu {
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px 200px 200px 200px;
+        grid-gap: 10px;
     }
 
     .nav {
-        font: 'Open Sans';
-        font-size: 120%;
-        padding-left: 30px;
 
     }
 
     .nav_item, .nav_active {
-        color: black;
+        font-color: black;
+        grid-span: 1;
         border: 1px;
-        max-width: 150px;
+        text-align: center;
+        min-width: 120px;
+        max-width: 180px;
+        padding: 10px 10px;
         border-style: solid;
         border-radius: 10px;
-        margin-left: 10px;
+    }
+
+    .nav_link {
+        color: black;
+        font: 'Open Sans';
+        font-size: 120%;
     }
 
     .nav_active {
@@ -125,8 +115,18 @@ export default function Layout() {
         text-decoration: underline;
     }
 
+    .nav_link {
+    }
+
+    .nav_icon_col {
+        margin-right: 30px;
+        max-width: 150px;
+        min-width: 80px;
+        align: center;
+    }
+
     .nav_icon {
-        height: 40px;
+        height: 45px;
         width: auto;
         margin-top: 10px;
     }
@@ -137,6 +137,7 @@ export default function Layout() {
 
     .table {
         margin-top: 25px;
+        margin-left: 10px;
         align-content: left;
     }
 
@@ -149,10 +150,10 @@ export default function Layout() {
         margin: 5px 0;
     }
 
-    a {
-        text-decoration: none;
-        color: blue;
-    }
+    // a {
+    //     text-decoration: none;
+    //     color: blue;
+    // }
 
     a:hover {
         opacity: 0.6;

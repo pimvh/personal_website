@@ -48,7 +48,10 @@ Hiernaast heeft de website verschillende tutorials/templates voor het maken van 
     {id: '4', title: 'Mozilla Privacy Not Included - Een gids om privacyveilig aankopen te doen.',
     content: `[De Mozilla Privacy buyer guide](https://foundation.mozilla.org/en/privacynotincluded/) laat een ander perspectief zien op een aantal aankopen. In deze gids kun je met verschillende filters verschillende soorten koptelefoons, camera's en andere apparaten laten zien.
 De website hanteert een creepy-schaal voor hoe angstaanjagend andere gebruikers een product vinden.`
-    }
+    },
+
+    // {id: '5', title: '',
+    // content: ``}
     ];
 
     const sorted = _.sortBy(arr, 'title');
