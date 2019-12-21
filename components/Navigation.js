@@ -1,28 +1,14 @@
 import useWindowDimensions from '../hooks/useWindowDimensions'
-import {
-    Row, Col,
-    Nav, NavItem, NavLink
-} from 'reactstrap';
 import React from 'react'
 
 export default function Navigation (props) {
 
     const PostLink = ({href, title, highlight}) => (
-        <div className = {`${(title == highlight) ? "nav_active" : "nav_item"}`} >
-        <a className="nav_link" href={`${href}`} > {title} </a>
-        </div>
+        <a href className={`${(title == highlight) ? "active" : ""}`} href={`${href}`} > {title} </a>
     );
 
 
     const {width, height} = useWindowDimensions();
-
-    function fitsPage(width) {
-        if (width > 785) {
-            return false;
-        } else {
-            return true;
-        }
-    };
 
     function getPosts() {
         return [
@@ -36,14 +22,34 @@ export default function Navigation (props) {
     };
 
     return (
-            <div className="nav-menu">
+        // TODO: http://purecssframework.com/components.php
             <div>
-            <a href="/">
-            <img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="nav_icon" />
-            </a></div>
-            {   getPosts().map(post => (
-                <PostLink key={post.id} href={post.link} title={post.title} highlight={props.title}/>
-            ))}
-            </div>
-        );
+            <header className="main-container header fixed ">
+    		{/* <!-- Nav Bar with Logo Area --> */}
+    		<div className="flex-grid  navbar">
+    			{/* <!-- Mobile Menu --> */ }
+    			<input type="checkbox" id="mobileMenu" className="hide"></input>
+    			<label id="mobileMenuLabel" className="mobile-menu left-side" htmlFor="mobileMenu">
+    				<i className="hamburger"></i>
+    				<label className="full-screen" htmlFor="mobileMenu"></label>
+    			</label>
+    			<div className="col-2 col-12-md logo">
+                    <a href="/">
+                    <img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="logo" />
+                    </a>
+    			</div>
+    			<nav className="col-7 col-12-md navbar-right" id="topMenuNav">
+    				<div className="navbar-links">
+    					<input type="radio" className="hide" name="navbar-menu" id="navbarDropHide" defaultChecked></input>
+                        {   getPosts().map(post => (
+                            <PostLink key={post.id} href={post.link} title={post.title} highlight={props.title}
+                             className=''/>
+                        ))}
+    				</div>
+    			</nav>
+    		</div>
+    	</header>
+        <div className="fixed-nav-space" id="top"></div>
+        </div>);
+
 }

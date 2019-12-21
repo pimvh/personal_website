@@ -1,13 +1,11 @@
 import Main from '../components/Main'
 import Markdown from 'react-markdown'
-import {
-Container, Row, Col,
-Card, CardBody, CardTitle, CardText} from 'reactstrap'
 
 export default () => (
     <Main title='Eenhoorn'>
 
-        <div>
+        <div className = "flex-grid">
+        <div className = "col-12 padding-xl">
         <Markdown
           source={`
 #### Numeri 23:22
@@ -18,6 +16,7 @@ export default () => (
 
 lees [hier](https://www.thesprucepets.com/are-unicorns-real-1885833) meer over de krachten van de eenhoorn.
 `} />
+        </div>
         </div>
     </Main>
 );

@@ -1,16 +1,11 @@
 import Head from 'next/head'
 import React from 'react';
 
+import '../styles.scss'
 import Header from './Header'
 import HeadCarousel from './Carousel'
 import Navigation from './Navigation'
 import Footer from './Footer'
-import Layout from './Layout'
-
-import {
-    Container,
-    Row, Col
-} from 'reactstrap';
 
 export default class Main extends React.Component {
     constructor(props) {
@@ -21,22 +16,20 @@ export default class Main extends React.Component {
     render(){
         return (
         <div className='root'>
-            <div className = "Header_container">
             <Header title={this.title || 'Pim van Helvoirt'} />
-            <HeadCarousel />
             <Navigation title={this.title} />
-            </div>
-            <Container fluid className = 'MainContainer'>
-                <Row className ='ContentContainer'>
+            <HeadCarousel />
+            <div className= "panel padding-xm">
+                <div className = "panel-body padding-xm">
+                    <div className = 'main-container'>
                     {this.props.children}
-                </Row>
-            </Container>
-            <Container className = 'FooterContainer' >
-                <Row className = 'ContentContainer'>
-                        {this.showFooter && <Footer />}
-                </Row>
-            </Container>
-            <Layout />
+                </div>
+                </div>
+            <div className='panel-footer' >
+                {this.showFooter && <Footer />}
+            </div>
+
+            </div>
         </div>
     );
     }

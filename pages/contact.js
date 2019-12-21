@@ -1,36 +1,29 @@
 import Main from '../components/Main'
 import Markdown from 'react-markdown';
-import { Container, Row, Col,
-         Card, CardBody, CardText} from 'reactstrap';
-import { Table } from 'reactstrap'
 
 // op Facebook of Instagram.
 export default () => {
 
     return (
     <Main title='Contact' hideFooter={true}>
-    <Row>
-    <Col className = 'upper_page_text'>
-    <Card className="general_card">
-    <CardBody>
-    <CardText>
-    <Markdown
-      source={`
+    <div className = "flex-grid">
+        <div className = "col-12 padding-xl">
+        <div>
+        <Markdown
+          source={`
 Hieronder zijn mijn contactgegevens te vinden op verschillende platformen te vinden. Ik ben niet te vinden op Facebook en Instagram.
 
 Stuur me gerust een email!
-`} />
-    </CardText>
-    </CardBody>
-    </Card>
-
-        <Table className='table'>
+    `} />
+        </div>
+        <table className='tbl striped-odd'>
         {getContactDetails().map(contact => (
             <ContactRow key={contact.service} contact={contact} />
         ))}
-        </Table>
-    </Col>
-    </Row>
+        </table>
+        </div>
+        </div>
+
     </Main>
 
 );

@@ -17,12 +17,19 @@ export default function HeadCarousel () {
         caption: ''
       },
       {
+        id: 3,
         src: '/static/dunes.png',
         altText: 'Duinen',
         caption: ''
       },
       {
-        id: 3,
+        id: 4,
+        src: '/static/dog-back.png',
+        altText: 'Dog',
+        caption: ''
+      },
+      {
+        id: 5,
         src: '/static/garden.png',
         altText: 'Garden',
         caption: ''
@@ -39,7 +46,7 @@ export default function HeadCarousel () {
       );
 
     return (
-        <div className="pcf-carousel items-3">
+        <div className="pcf-carousel items-4">
         <style global jsx>{`
             /*
             * Pure CSS Framework (http://purecssframework.com)
@@ -54,9 +61,8 @@ export default function HeadCarousel () {
                 // TODO: change relative postion of carousel header
                 position: relative;
                 width:100%;
-                height:auto;
                 #box-sizing: border-box;
-                height: 400px;
+                height: 350px;
             }
 
             .pcf-carousel > input {
@@ -811,6 +817,7 @@ export default function HeadCarousel () {
         	<input type="radio" id="carousel-start-1" name="pcf-carousel-3"></input>
         	<input type="radio" id="carousel-start-2" name="pcf-carousel-3"></input>
             <input type="radio" id="carousel-start-3" name="pcf-carousel-3"></input>
+            <input type="radio" id="carousel-start-4" name="pcf-carousel-3"></input>
 
         	{/* <!-- Pause/play button --> */}
         	<label htmlFor="carousel-play" className="btn-play" title="Play"></label>
@@ -820,11 +827,13 @@ export default function HeadCarousel () {
         		<label htmlFor="carousel-start-1"></label>
         		<label htmlFor="carousel-start-2"></label>
                 <label htmlFor="carousel-start-3"></label>
+                <label htmlFor="carousel-start-4"></label>
         	</div>
 
         	<div className="pcf-carousel-anime-dots">
         		<div></div>
         		<div></div>
+                <div></div>
                 <div></div>
         	</div>
 

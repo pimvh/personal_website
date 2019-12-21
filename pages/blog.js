@@ -1,22 +1,15 @@
 import Main from '../components/Main'
 import Markdown from 'react-markdown'
-import {
-Container, Row, Col,
-Card, CardBody, CardTitle, CardText} from 'reactstrap'
 
 export default () => (
     <Main title='Blog'>
-    <Row>
-    <Col className='upper_page_text'>
-        <Card className="general_card">
-        <CardBody><CardText>
+    <div className = "flex-grid">
+        <div className = "col-12 padding-xl">
         <Markdown
           source={`Hier komt nog een blog. Wacht rustig af! Ik ben er mee bezig...
         `} />
-       </CardText></CardBody>
-       </Card>
-     </Col>
-     </Row>
+        </div>
+        </div>
     </Main>
 
 );

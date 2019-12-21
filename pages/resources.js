@@ -1,27 +1,16 @@
 import Main from '../components/Main'
 import Markdown from 'react-markdown';
 import * as _ from "lodash";
-import {
-    Container, Row, Col,
-    Card, CardTitle, CardBody, CardText
-} from 'reactstrap'
 
 export default () => (
     <Main title='Resources'>
-    <Container fluid className='resources_container'>
-    <Row>
-    <Col className='upper_page_text'>
     <Markdown
       source={`
 Hieronder is een lijst van verschillende resources die ik tot nu toe vezameld heb te vinden. De lijst is op alfabetische volgorde. Heb je vragen over deze lijst? Neem dan [contact](/contact) met mij op.
    `} />
-    </Col></Row>
-    <Row>
     {getResources().map(resource => (
         <Resource key={resource.id} resource={resource} />
     ))}
-    </Row>
-    </Container>
     </Main>
 );
 
@@ -60,14 +49,13 @@ De website hanteert een creepy-schaal voor hoe angstaanjagend andere gebruikers 
 };
 
  const Resource = ({ resource }) => (
-     <Card className="resource_card">
-     <CardBody>
-     <CardTitle className="cardtitle"> {resource.title}</CardTitle>
-     <CardText>
+     <div className="panel">
+
+     <div className="panel-header"> {resource.title}</div>
+      <div className="panel-body">
      <Markdown source={resource.content} />
-     </CardText>
-     </CardBody>
-     </Card>
+     </div>
+     </div>
  );
 
 // TODO: Categorieen toevoegen, nadenken wat je hier op je website wil hebben staan.

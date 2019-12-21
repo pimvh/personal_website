@@ -1,27 +1,16 @@
 import Main from '../components/Main'
 import Markdown from 'react-markdown';
-import {
-    Container, Row, Col,
-    Card, CardTitle, CardBody, CardText
-} from 'reactstrap';
 
 export default () => (
     <Main title='Over mij'>
-        <Row>
-        <Col className = 'upper_page_text'>
-        <Card className="general_card">
-        <CardBody>
-        <CardText>
+    <div className = "flex-grid">
+        <div className = "col-12 padding-xl">
         <Markdown
           source={`
-Deze website is van mij, Pim van Helvoirt, een student Beta-gamma met Kunstmatige Intelligentie aan de Universiteit van Amsterdam.
+Deze website is van mij, Pim van Helvoirt, een Bachelorstudent Beta-gamma met Kunstmatige Intelligentie aan de Universiteit van Amsterdam.
 `} />
-        </CardText>
-        </CardBody>
-        </Card>
-
-        </Col>
-        </Row>
+        </div>
+        </div>
     </Main>
 
  )
