@@ -3,6 +3,8 @@ package.json
 package-lock.json
 package.json.save
 .next/*
-static/
 out/*
+*.png
+*.jpg
 yarn.lock
+v1-master
