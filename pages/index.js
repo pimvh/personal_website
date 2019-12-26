@@ -6,7 +6,7 @@ export default () => (
         <Main title = 'Home'>
             <div className = "flex-grid">
                 <div className="col-4">
-                    <img src="/static/me.jpg" alt="Pim van Helvoirt" className='picture' />
+                    <img src="/static/me.jpg" alt="Pim met plant" className='picture' />
                 </div>
                 <div className="col-4">
 

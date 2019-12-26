@@ -6,11 +6,18 @@ export default function Projecten (){
 
     const Project = ({ project }) => (
         <div className="panel">
-        <div className="panel-header"> {project.title}</div>
-        <img src = {project.img_link} alt = {project.img_alt} className="project-img" />
-         <div className="panel-body">
-        <Markdown source={project.content} />
-        </div>
+            <div className="panel-header"> {project.title}</div>
+
+            <div className="panel-body">
+                <div className= "flex-grid">
+                    <div className="col-3">
+                        <img src = {project.img_link} alt = {project.img_alt} className="project-img" />
+                    </div>
+                    <div className="col-8">
+                    <Markdown source={project.content} />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 
@@ -38,7 +45,10 @@ export default function Projecten (){
         <Main title='Projecten'>
             <div className = 'project_container'>
             <Markdown
-              source={`Hieronder heb ik een lijst gemaakt van verschillende projecten die ik tot nu toe gecodeerd/gemaakt heb te vinden. Heb je een vraag over een van de projecten? Schroom dan niet om mij te [emailen](/contact).
+              source={
+`Hieronder heb ik een lijst gemaakt van verschillende projecten die ik tot nu toe gecodeerd/gemaakt heb te vinden.
+
+Heb je een vraag over een van de projecten? Schroom dan niet om mij te [e-mailen](/contact).
         `} />
             {getProjects().map(project => (
                 <Project key={project.id} project={project} />

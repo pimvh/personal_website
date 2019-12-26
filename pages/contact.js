@@ -33,7 +33,7 @@ function getContactDetails() {
     return [
         {service: 'MeetMe', link: 'https://doodle.com/pimvanhelvoirt', text: 'Maak hier een afspraak met mij.'},
         {service: 'Linked-in', link: 'https://nl.linkedin.com/in/pim-van-helvoirt', text: 'pim-van-helvoirt'},
-        {service: 'Email', link: 'mailto:pim.van.helvoirt@home.nl', text: 'pim.van.helvoirt@home.nl'},
+        {service: 'E-mail', link: 'mailto:pim.van.helvoirt@home.nl', text: 'pim.van.helvoirt@home.nl'},
         {service: 'Github', link: 'https://github.com/pimvh', text: 'pimvh'}
     ];
 }

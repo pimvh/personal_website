@@ -1,0 +1,26 @@
+{
+"data": [
+{"id" : 1, "title" : "Privacytools.io - Bron voor online privacy.", "categorie" : "privacy",
+"content": "De website [privacytools.io](https://PrivacyTools.io) is een goede start om je internetprivacy naar een hoger niveau te brengen. Verder worden op deze website verschillende argumenten geven waarom internetprivacy van belang is (e.g. een antwoord op 'Maar ik heb niets te verbergen').  \n\nJe vindt op deze website een gedetailleerde lijst van services/tips over verschillende services (browsers, emailclients, messaging apps, etc.) die beter rekening houden met je privacy.  \n\nBekijk, als je gebruiker van een firefoxbrowser bent, zeker het onderdeel waar verschillende add-ons voor firefox worden aangeraden. Deze zijn allemaal vrij eenvoudig aan je browser toe te voegen."
+},
+
+{"id" : 2, "title" : "Rank a Brand - Merken vergelijken qua duurzaamheid.", "categorie" : "duurzaamheid",
+"content": "De website [Rank a Brand](https://rankabrand.org/) is een website, grotendeels op basis van vrijwilligers, die de duurzaamheid van allerlei soorten merken test.  \n\nDe labels kloppen niet altijd (of zijn niet altijd beschikbaar), maar mocht je van plan zijn om nieuwe spullen te kopen, dan is dit altijd een goede website om van tevoren te even te controleren."
+},
+
+{"id" : 3, "title" : "Todoist - Handige takenlijst.", "categorie" : "productiviteit",
+"content": "De Takenlijst app [Todoist](https://todoist.com), is handig om je taken bij te houden. De kosten van deze app blijven erg beperkt (~15 eu per jaar). De app is ook multiplatform (helaas niet op Ubuntu) en via het internet beschikbaar.  \n\nHiernaast heeft de website verschillende tutorials/templates voor het maken van lijstjes om je gestelde doelen te behalen."
+},
+
+{"id" : 4, "title" : "Mozilla Privacy Not Included - Een gids voor privacyveilige aankopen.", "categorie" : "privacy",
+"content": "[De Mozilla Privacy buyer guide](https://foundation.mozilla.org/en/privacynotincluded/) laat een ander perspectief zien op een aantal aankopen. In deze gids kun je met verschillende filters verschillende soorten koptelefoons, camera's en andere apparaten laten zien.  \n\nDe website hanteert een creepy-schaal voor hoe angstaanjagend andere gebruikers een product vinden."
+},
+
+{"id" : 5, "title" : "Firefox Send - een gratis veilige bestand verstuurder.", "categorie" : "productiviteit",
+"content": "Middels [Firefox Send](https://send.firefox.com/) kun je bestanden ter grootte van maximaal 1GB (2.5GB als je inlogt op je firefox account) veilig versturen naar anderen via een link.  \n\nDe meeste bestand verstuurders bieden opties als, automatisch verwijderen na x dagen of x downloads niet standaard aan, dat maakt deze bestandverstuurder erg handig."
+},
+{"id" : 7, "title" : "Security Checklist - Wees veilig op het internet.", "categorie" : "privacy",
+"content": "Met [Security Checklist](https://securitycheckli.st/) loop je een simpele afvinklijst door om je internetervaring beter te beveiligen, evenals privacytools.io raden zij verschillende passwordmangers, 2-factor authentication en verschillende apps aan. Daarnaast staan er bronnen onder elke stap, met verdere uileg over bijvoorbeeld het instellen van toegangsrechten voor verschillende apps."
+}
+    ]
+}

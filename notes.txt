@@ -1,4 +1,4 @@
-Voor het schrijven van deze website had ik geen ervaring met Javascript, hiervoor heb ik vooral met Python gewerkt. 
+Voor het schrijven van deze website had ik geen ervaring met Javascript, hiervoor heb ik vooral met Python gewerkt.
 
 Voor deze website heb ik gebruikt gemaakt van Next.js (https://nextjs.org/learn/)
 
@@ -12,3 +12,49 @@ Hoe je bootstrap gebruikt in Next.js: https://www.youtube.com/watch?v=L0uNai3XyK
 url loader en file loader miste om images in js te laden (https://stackoverflow.com/questions/45848055/image-you-may-need-an-appropriate-loader-to-handle-this-file-type)
 
 Je kunt gewoon met behulp van Next.js images laden (zet images in een dir genaamd /static/), gebruik met url(/path-to/img.png)
+
+Toe te voegen aan resources:
+https://www.openstreetmap.org/ --> still active
+
+http://programmingexcuses.com/
+
+
+http://www.phrasebank.manchester.ac.uk/
+http://www.fipradio.fr/player
+
+https://beta.doodle.com/pimvanhelvoirt#
+http://www.nationalemediasite.nl/rss-feeds.php
+https://www.samharris.org/
+http://learnyouahaskell.com/
+https://www.libreoffice.org/about-us/who-are-we/
+http://www.muji.eu/pages/online.asp?Sec=14
+
+https://lmgtfy.com/
+https://www.vpro.nl/programmas/de-snijtafel.html
+http://www.textreverse.com/
+http://www.tablesgenerator.com/
+
+http://www.madebyevan.com/fsm/ - Finite State Machine
+https://www.bellingcat.com/
+
+https://ninite.com/
+http://www.scientistswarning.org/
+
+https://meet.jit.si/
+
+https://www.opensans.com/
+
+https://matrixcalc.org/en/ http://www.integral-calculator.com/
+
+https://protonmail.com/
+https://zapier.com/
+http://www.moleskine.com/en/
+
+http://woordenlijst.org/#/
+
+https://alternativeto.net/
+https://www.2doc.nl/
+
+https://www.bitbuzz.online/ ???
+
+https://jsonchecker.com/
