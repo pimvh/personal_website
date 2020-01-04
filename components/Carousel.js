@@ -62,7 +62,7 @@ export default function HeadCarousel () {
                 position: relative;
                 width:100%;
                 #box-sizing: border-box;
-                height: 350px;
+                height: 300px;
             }
 
             .pcf-carousel > input {

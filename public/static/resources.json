@@ -21,6 +21,9 @@
 },
 {"id" : 7, "title" : "Security Checklist - Wees veilig op het internet.", "categorie" : "privacy",
 "content": "Met [Security Checklist](https://securitycheckli.st/) loop je een simpele afvinklijst door om je internetervaring beter te beveiligen, evenals privacytools.io raden zij verschillende passwordmangers, 2-factor authentication en verschillende apps aan. Daarnaast staan er bronnen onder elke stap, met verdere uileg over bijvoorbeeld het instellen van toegangsrechten voor verschillende apps."
+},
+{"id" : 8, "title" : "Programmeertaal - Haskell", "categorie" : "programeertalen",
+"content": "Op [Learn you a haskell](http://learnyouahaskell.com/) is een gratis boek (ook te kopen) te vinden waarmee je Haskell online kunt leren. Haskell is een lui-evaluerende pure functionele programmeertaal. \n\nHet is bijvoorbeeld mogelijk om een eindeloze lange lijst (i.e. van 1 tot oneindig) te definiëren, maar ook meervoudige list-comprehension te schrijven om rechthoekige driehoeken te zoeken met een omtrek van 24 cm: `let triangles = [(a, b, c) | a <- [1..20], b <- [1..20], c <- [1..20], a + b + c == 24, a^2 + b^2 == c^2]` \n\nAl met al een interessante programmeertaal."
 }
-    ]
+]
 }

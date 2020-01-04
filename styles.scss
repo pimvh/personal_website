@@ -16,7 +16,7 @@ button {  width:auto; overflow:visible; }
 table { border:0; padding:0; border-spacing:0; }
 
 $font-stack: 'Open Sans', sans-serif, helvetica;
-$font-size: calc(12px + .1vw);
+$font-size: calc(12.5px + .05vw);
 $line-height: 1.4em;
 $font-size-small: calc(.5em + .1vw);
 $link-decoration: none;
@@ -55,6 +55,8 @@ $info-color-25: rgba(206,237,252,.25);
 $success-color-25: rgba(57,181,74,.25);
 $warning-color-25: rgba(248,185,87,.25);
 $danger-color-25: rgba(154,22,12,.25);
+
+$primary-color-12:  rgba(28,107,228,.12);
 
 $primary-text-in:  rgba(255,255,255,1);
 $secondary-text-in: rgba(255,255,255,1);
@@ -3949,7 +3951,7 @@ header .navbar nav#topMenuNav2 {
 
 .panel-header {
 	padding: 0 10px 0px 10px;
-	background-color: $primary-color-50;
+	background-color: $primary-color-12;
 	min-height: 40px;
 	line-height: 40px;
 	position: relative;
