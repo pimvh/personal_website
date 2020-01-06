@@ -10,7 +10,9 @@ export default () => (
                 </div>
                 <div className="col-6">
 
-<Markdown source={`Deze website is van mij, Pim van Helvoirt is een bachelorstudent Beta-gamma met Kunstmatige Intelligentie aan de Universiteit van Amsterdam.  \n\nOp de foto zie je mij met mijm favoriete plant, _de agave potatorum_.
+<Markdown source={`Deze website is van mij, Pim van Helvoirt is een bachelorstudent Beta-gamma met Kunstmatige Intelligentie aan de Universiteit van Amsterdam.
+
+Op de foto zie je mij met mijn favoriete plant, _de agave potatorum_.
 
 Op deze website vind je mijn [programmeerprojecten][1] en [resources][2], die ik over de tijd heb verzameld.
 [1]: </projecten> "Projecten"
@@ -21,8 +23,3 @@ Op deze website vind je mijn [programmeerprojecten][1] en [resources][2], die ik
                 </div>
         </Main>
 )
-
-/*
-en [mijn blog][3] _(in aanbouw)_
-[3]: </blog> "Blog"
-*/
