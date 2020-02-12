@@ -6,7 +6,9 @@ export default () => (
     <Main title='Resources'>
     <Markdown
       source={`
-Hieronder is een lijst van verschillende resources die ik tot nu toe vezameld heb te vinden. De lijst is op alfabetische volgorde. Heb je vragen over deze lijst? Neem dan [contact](/contact) met mij op.
+Hieronder is een lijst van verschillende resources die ik tot nu toe vezameld heb te vinden. Deze lijst update ik nog steeds _(laatst op: 12 februari)_.
+
+De lijst is op alfabetische volgorde. Heb je vragen over deze lijst? Neem dan [contact](/contact) met mij op.
    `} />
     {getResources().map(resource => (
         <Resource key={resource.id} resource={resource} />
