@@ -8,3 +8,4 @@ out/*
 *.jpg
 yarn.lock
 v1-master
+*.txt

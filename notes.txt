@@ -18,11 +18,11 @@ https://www.openstreetmap.org/ --> still active
 
 http://programmingexcuses.com/
 
-
 http://www.phrasebank.manchester.ac.uk/
+"De [__phrasebank__ van de universiteit van Manchester](http://www.phrasebank.manchester.ac.uk/) heeft verschillende "
+
 http://www.fipradio.fr/player
 
-https://beta.doodle.com/pimvanhelvoirt#
 http://www.nationalemediasite.nl/rss-feeds.php
 https://www.samharris.org/
 http://learnyouahaskell.com/
@@ -40,7 +40,7 @@ https://www.bellingcat.com/
 https://ninite.com/
 http://www.scientistswarning.org/
 
-https://meet.jit.si/
+
 
 https://www.opensans.com/
 
@@ -55,6 +55,7 @@ http://woordenlijst.org/#/
 https://alternativeto.net/
 https://www.2doc.nl/
 
-https://www.bitbuzz.online/ ???
-
 https://jsonchecker.com/
+
+https://haveibeenpwned.com/
+"Website "
