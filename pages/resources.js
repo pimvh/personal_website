@@ -5,8 +5,7 @@ import * as _ from "lodash";
 export default () => (
     <Main title='Resources'>
     <Markdown
-      source={`Deze lijst update ik nog steeds _(laatst op: 12 februari)_.
-Hieronder is een lijst van verschillende resources die ik tot nu toe verzameld heb te vinden. Deze lijst is op alfabetische volgorde en update ik nog steeds _(laatst op: 12 februari)_.
+      source={`Hieronder is een lijst van verschillende resources die ik tot nu toe verzameld heb te vinden. Deze lijst is op alfabetische volgorde en update ik nog steeds _(laatst op: 12 februari)_.
 
 Heb je vragen over deze lijst? Neem dan [contact](/contact) met mij op.
    `} />

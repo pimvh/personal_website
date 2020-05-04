@@ -15,22 +15,26 @@ export default class Main extends React.Component {
     }
     render(){
         return (
-        <div className='root'>
-            <Header title={this.title || 'Pim van Helvoirt'} />
-            <Navigation title={this.title} />
-            <HeadCarousel />
-            <div className= "panel padding-xm">
-                <div className = "panel-body padding-xm">
-                    <div className = 'main-container'>
-                    {this.props.children}
+        <html lang='nl'>
+        <Header title={this.title || 'Pim van Helvoirt'} />
+        <body>
+            <div className='root'>
+                <Navigation title={this.title} />
+                <HeadCarousel />
+                <div className= "panel padding-xm">
+                    <div className = "panel-body padding-xm">
+                        <div className = 'main-container'>
+                        {this.props.children}
+                    </div>
+                    </div>
+                <div className='panel-footer' >
+                    {this.showFooter && <Footer />}
                 </div>
-                </div>
-            <div className='panel-footer' >
-                {this.showFooter && <Footer />}
-            </div>
 
+                </div>
             </div>
-        </div>
+        </body>
+        </html>
     );
     }
 }

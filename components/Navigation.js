@@ -10,15 +10,14 @@ export default function Navigation (props) {
 
     const {width, height} = useWindowDimensions();
 
-    // { id: '2', link: '/blog', title: 'Blog'},
-
     function getPosts() {
         return [
             { id: '1', link: '/', title: 'Home'},
-
-            { id: '3', link: '/projecten', title: 'Projecten'},
-            { id: '4', link: '/resources', title: 'Resources'},
-            { id: '5', link: '/contact', title: 'Contact'}
+            { id: '2', link: '/overmij', title: 'Over mij'},
+            { id: '3', link: '/blog', title: 'Blog'},
+            { id: '4', link: '/projecten', title: 'Projecten'},
+            { id: '5', link: '/resources', title: 'Resources'},
+            { id: '6', link: '/contact', title: 'Contact'}
         ];
     };
 
