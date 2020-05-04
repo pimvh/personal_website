@@ -4,6 +4,7 @@
   "description": "My own personal website!",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "dev": "next",
     "build": "next build && next export",
     "start": "next start"
@@ -13,19 +14,19 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "core-js": "^3.1.4",
-    "file-loader": "^4.1.0",
-    "image-webpack-loader": "^5.0.0",
+    "core-js": "^3.6.5",
+    "file-loader": "^4.3.0",
+    "image-webpack-loader": "^5.1.0",
     "minimist": "^1.2.5",
     "next": "^9.3.6",
     "node-sass": "^4.14.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-markdown": "^4.1.0",
-    "reactstrap": "^8.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-markdown": "^4.3.1",
+    "reactstrap": "^8.4.1",
     "yarn": "^1.22.4"
   },
   "devDependencies": {
-    "webpack": "^4.39.1"
+    "webpack": "^4.43.0"
   }
 }
