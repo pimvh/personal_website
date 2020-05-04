@@ -3,7 +3,6 @@ package.json
 package-lock.json
 package.json.save
 .next/*
-out/*
 *.png
 *.jpg
 yarn.lock
