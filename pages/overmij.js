@@ -2,6 +2,7 @@ import Main from '../components/Main'
 import Markdown from 'react-markdown'
 
 export default function Overmij () {
+
     return (
     <Main title='Projecten'>
         <div className = 'project_container'>
@@ -14,8 +15,24 @@ Onderstaand is mijn CV te vinden.
               `} />
         </div>
 
-        <iframe src="static/200609_Pim_van_Helvoirt__Curriculum_Vitae.pdf#toolbar=0" width="90%" height='800px'>
-        </iframe>
+    <CVdisplay />
 
     </Main>
 );}
+
+const CVdisplay = ({ shown }) => {
+
+    const [open, setOpen] = React.useState(false);
+
+    if(!open) {
+        return (
+          <button onClick={() => {setOpen(!open);}} className={open ? "open" : null}>
+            Klik hier om mijn CV te zien.
+          </button>
+        );
+    } else {
+        return (
+            <embed src="static/200609_Pim_van_Helvoirt__Curriculum_Vitae.pdf#toolbar=0" type="application/pdf" width="100%" height='800px' />
+        );
+    }
+};
