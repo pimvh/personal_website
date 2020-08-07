@@ -30,8 +30,8 @@ const CVdisplay = () => {
         );
     } else {
         return (
-            <object data="static/200609_Pim_van_Helvoirt__Curriculum_Vitae.pdf#toolbar=0" type="application/pdf" width="100%" height='auto'>
-            <p>Your browser does not support this, this is <a href="http://africau.edu/images/default/sample.pdf">the link to the PDF!</a></p>
+            <object data="static/200801_Pim_van_Helvoirt__Curriculum_Vitae.pdf#toolbar=0" type="application/pdf" width="100%" height='600px'>
+            <p>Uw browser ondersteund dit niet, dit is de <a href="static/200801_Pim_van_Helvoirt__Curriculum_Vitae.pdf">directe link naar de PDF</a>.</p>
             </object>
         );
     }

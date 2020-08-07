@@ -16,6 +16,7 @@
     "chokidar": "^3.4.0",
     "core-js": "^3.6.5",
     "file-loader": "^6.0.0",
+    "gray-matter": "^4.0.2",
     "image-webpack-loader": "^6.0.0",
     "mkdirp": "^1.0.4",
     "next": "^9.3.6",
