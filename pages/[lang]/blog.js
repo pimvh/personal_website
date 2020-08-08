@@ -1,14 +1,28 @@
-import Main from '../components/Main'
+import Main from '../../components/main'
 import Markdown from 'react-markdown'
-import { getSortedPostsData } from '../lib/posts'
+import WithLocale from '../../components/withLocale'
+import useTranslation from '../../hooks/useTranslation'
+
+import { getSortedPostsData } from '../../lib/posts'
 
 export default function Blog ( { allPostsData }) {
+
+    async function getStaticProps() {
+      const allPostsData = getSortedPostsData()
+      return {
+        props: {
+          allPostsData
+        }
+      }
+    }
+
+    const { translate, locale } = useTranslation();
+
     return (<Main title='Blog'>
         <div className = "flex-grid">
             <div className = "col-12 padding-xl">
             <Markdown
-              source={`Hieronder is een overzicht te vinden van al mijn posts tot nu toe. Er volgen er meer!
-            `} />
+              source={translate('blog')['topmessage']} />
             <ul>
             {allPostsData.map(({ id, date, title }) => (
                 <li key={id}>
@@ -20,13 +34,4 @@ export default function Blog ( { allPostsData }) {
             </div>
         </Main>
     );
-}
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
 }

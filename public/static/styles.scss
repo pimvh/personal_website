@@ -3144,6 +3144,10 @@ font-size: calc(11px + .2vw);
 	height: 40px;
 }
 
+.flag {
+	float: right;
+}
+
 .navbar .logo a {
 text-decoration: none;
 color: #333;
@@ -3163,7 +3167,6 @@ box-sizing: border-box;
 display: inline-block;
 height: 100%;
 }
-
 
 .navbar-links > a,
 .navbar-search,
@@ -3190,6 +3193,7 @@ clear: both;
 .navbar .text-right > .navbar-links {
 width: auto;
 }
+
 .navbar-links > a,
 .navbar-links > .has-drop-menu,
 .has-drop-menu label a {

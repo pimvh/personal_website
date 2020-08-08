@@ -15,7 +15,7 @@
     "@zeit/next-sass": "^1.0.1",
     "chokidar": "^3.4.0",
     "core-js": "^3.6.5",
-    "file-loader": "^6.0.0",
+    "file-system": "^2.2.2",
     "gray-matter": "^4.0.2",
     "image-webpack-loader": "^6.0.0",
     "mkdirp": "^1.0.4",

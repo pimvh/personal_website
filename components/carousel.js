@@ -58,7 +58,6 @@ export default function HeadCarousel () {
             .pcf-carousel {
 
                 overflow: hidden;
-                // TODO: change relative postion of carousel header
                 position: relative;
                 width:100%;
                 #box-sizing: border-box;
@@ -155,7 +154,7 @@ export default function HeadCarousel () {
                 animation-timing-function: ease-in-out;
                 animation-iteration-count: infinite;
                 animation-name: pcf-carousel-play-btn;
-                animation-duration: 5s;
+                animation-duration: 30s;
             }
 
             .pcf-carousel label.btn-play:hover {
@@ -265,187 +264,6 @@ export default function HeadCarousel () {
                 animation-name: pcf-carousel-clear;
             }
 
-
-            /* 2 Items*/
-            .pcf-carousel.items-2 .moving-strip {
-                width: 300%;
-            }
-
-            #carousel-start-1:checked ~ .moving-strip {
-                animation-name: pcf-carousel-2;
-                transform: translateX(0);
-            }
-
-            .pcf-carousel.items-2 .moving-strip {
-                animation-name: pcf-carousel-2;
-                animation-duration: 10s;
-            }
-
-            @keyframes pcf-carousel-2 {
-                0% { transform: translateX(0); }
-                40% { transform: translateX(0); }
-                50% { transform: translateX(-33.33%); }
-                90% { transform: translateX(-33.33%); }
-                100% { transform: translateX(-66.6%); }
-            }
-
-            #carousel-start-2:checked ~ .moving-strip {
-                animation-name: pcf-carousel;
-                transform: translateX(-33.33%);
-
-            }
-
-            .pcf-carousel.items-2 .pcf-carousel-anime-dots div:nth-child(1) {
-                animation-name: pcf-carousel-2-items-dots-1;
-                animation-duration: 10s;
-                animation-timing-function: ease-in-out;
-                animation-iteration-count: infinite;
-            }
-
-            @keyframes pcf-carousel-2-items-dots-1 {
-                0% { background-color: white; }
-                40% { background-color: white; }
-
-                50% { background-color: transparent; }
-                99% { background-color: transparent; }
-
-                100% { background-color: white; }
-            }
-
-            .pcf-carousel.items-2 .pcf-carousel-anime-dots div:nth-child(2) {
-                animation-name: pcf-carousel-2-items-dots-2;
-                animation-duration: 10s;
-                animation-timing-function: ease-in-out;
-                animation-iteration-count: infinite;
-            }
-
-            @keyframes pcf-carousel-2-items-dots-2 {
-                0% { background-color: transparent; }
-                40% { background-color: transparent; }
-
-                50% { background-color: white; }
-                90% { background-color: white; }
-
-                100% { background-color: transparent; }
-            }
-
-            #carousel-start-1:checked ~ .pcf-carousel.items-2 .pcf-carousel-anime-dots div:nth-child(1),
-            #carousel-start-2:checked ~ .pcf-carousel.items-2 .pcf-carousel-anime-dots div:nth-child(2) {
-                animation-name: pcf-carousel-clear;
-            }
-
-            /* 3 Items*/
-            .pcf-carousel.items-3 .moving-strip {
-                width: 400%;
-            }
-
-            .pcf-carousel.items-3 #carousel-start-1:checked ~ .moving-strip {
-                animation-name: pcf-carousel-clear;
-                transform: translateX(0);
-            }
-
-            .pcf-carousel.items-3 #carousel-start-2:checked ~ .moving-strip {
-                animation-name: pcf-carousel-clear;
-                transform: translateX(-25%);
-            }
-
-            .pcf-carousel.items-3 #carousel-start-3:checked ~ .moving-strip {
-                animation-name: pcf-carousel-clear;
-                transform: translateX(-50%);
-            }
-
-            .pcf-carousel.items-3 .moving-strip {
-                animation-name: pcf-carousel-3;
-                animation-duration: 15s;
-            }
-
-
-            @keyframes pcf-carousel-3 {
-                0% { transform: translateX(0); }
-                15% { transform: translateX(0); }
-
-                20% { transform: translateX(-25%); }
-                50% { transform: translateX(-25%); }
-
-                55% { transform: translateX(-50%); }
-                85% { transform: translateX(-50%); }
-
-                90% { transform: translateX(-75%); }
-                100% { transform: translateX(-75%); }
-            }
-
-
-            .pcf-carousel.items-3 .pcf-carousel-anime-dots div:nth-child(1) {
-                animation-name: pcf-carousel-dots-3-items-dots-1;
-                animation-duration: 15s;
-                animation-timing-function: ease-in-out;
-                animation-iteration-count: infinite;
-            }
-
-            @keyframes pcf-carousel-dots-3-items-dots-1 {
-                0% { background-color: white; }
-                15% { background-color: white; }
-
-                20% { background-color: transparent; }
-                50% { background-color: transparent; }
-
-                55% { background-color: transparent; }
-                85% { background-color: transparent; }
-
-                90% { background-color: white; }
-                100% { background-color: white; }
-            }
-
-            .pcf-carousel.items-3 .pcf-carousel-anime-dots div:nth-child(2) {
-                animation-name: pcf-carousel-dots-3-items-dots-2;
-                animation-duration: 15s;
-                animation-timing-function: ease-in-out;
-                animation-iteration-count: infinite;
-            }
-
-            @keyframes pcf-carousel-dots-3-items-dots-2 {
-                0% { background-color: transparent; }
-                15% { background-color: transparent; }
-
-                20% { background-color: white; }
-                50% { background-color: white; }
-
-                55% { background-color: transparent; }
-                85% { background-color: transparent; }
-
-                90% { background-color: transparent; }
-                100% { background-color: transparent; }
-            }
-
-            .pcf-carousel.items-3 .pcf-carousel-anime-dots div:nth-child(3) {
-                animation-name: pcf-carousel-dots-3-items-dots-3;
-                animation-duration: 15s;
-                animation-timing-function: ease-in-out;
-                animation-iteration-count: infinite;
-            }
-
-            @keyframes pcf-carousel-dots-3-items-dots-3 {
-                0% { background-color: transparent; }
-                15% { background-color: transparent; }
-
-                20% { background-color: transparent; }
-                50% { background-color: transparent; }
-
-                55% { background-color: white; }
-                85% { background-color: white; }
-
-                90% { background-color: transparent; }
-                100% { background-color: transparent; }
-            }
-
-            #carousel-start-1:checked ~ .pcf-carousel.items-3 .pcf-carousel-anime-dots div:nth-child(1),
-            #carousel-start-2:checked ~ .pcf-carousel.items-3 .pcf-carousel-anime-dots div:nth-child(2),
-            #carousel-start-2:checked ~ .pcf-carousel.items-3 .pcf-carousel-anime-dots div:nth-child(3) {
-                animation-name: pcf-carousel-clear;
-            }
-
-
-
             /* 4 Items*/
             .pcf-carousel.items-4 .moving-strip {
                 width: 500%;
@@ -474,7 +292,7 @@ export default function HeadCarousel () {
 
             .pcf-carousel.items-4 .moving-strip {
                 animation-name: pcf-carousel-4;
-                animation-duration: 18s;
+                animation-duration: 60s;
             }
 
 
@@ -498,7 +316,7 @@ export default function HeadCarousel () {
 
             .pcf-carousel.items-4 .pcf-carousel-anime-dots div:nth-child(1) {
                 animation-name: pcf-carousel-dots-4-items-dots-1;
-                animation-duration: 18s;
+                animation-duration: 5s;
                 animation-timing-function: ease-in-out;
                 animation-iteration-count: infinite;
             }
@@ -570,7 +388,7 @@ export default function HeadCarousel () {
 
             .pcf-carousel.items-4 .pcf-carousel-anime-dots div:nth-child(4) {
                 animation-name: pcf-carousel-dots-4-items-dots-4;
-                animation-duration: 18s;
+                animation-duration: 30s;
                 animation-timing-function: ease-in-out;
                 animation-iteration-count: infinite;
             }
@@ -801,8 +619,6 @@ export default function HeadCarousel () {
             .pcf-carousel.items-5 #carousel-start-4:checked ~ .pcf-carousel.items-5 .pcf-carousel-anime-dots div:nth-child(5){
                 animation-name: pcf-carousel-clear;
             }
-
-
 
             @media all and (max-width: 800px) {
 

@@ -1,15 +1,15 @@
-import Main from '../../components/main'
+import Main from '../../../components/main'
 import Markdown from 'react-markdown';
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { getAllPostIds, getPostData } from '../../../lib/posts'
 
-export default function Post({ PostData }) {
+export default function Post({ PostData, lang }) {
     return (<Main title='Blog'>
             <Markdown source = {`# ${PostData.title}
 from ${PostData.date} `} />
 
             <Markdown source= {PostData.PostContent}/>
 
-            <a href='/blog'> Terug naar alle posts </a>
+            <a href=`${lang}/blog`> Terug naar alle posts </a>
             </Main>
     )
 }
