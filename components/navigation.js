@@ -1,17 +1,14 @@
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import ActiveLink from './activelink'
 import LocaleSwitcher from './localeSwitcher'
-import useTranslation from '../hooks/useTranslation'
 import React from 'react'
 import { useRouter } from 'next/router'
 
-function Navigation ({ title }) {
-
-    // console.log(lang)
+function Navigation () {
 
     // var contact = (lang == 'en' | locale == undefined) ? "Contact Info" : "Contact"
     // var aboutme = (lang == 'en' | locale == undefined) ? "About Me" : "Over Mij"
-    // var projects = (lang == 'en' | locale == undefined) ? "Projects" : "Projecten"
+    // var projects = (locale == 'en' | locale == undefined) ? "Projects" : "Projecten"
 
     return (
             <div>
@@ -33,18 +30,18 @@ function Navigation ({ title }) {
         			<nav className="col-7 col-12-md navbar-right" id="topMenuNav">
         				<div className="navbar-links">
         					<input type="radio" className="hide" name="navbar-menu" id="navbarDropHide" defaultChecked></input>
-                                <ActiveLink href="" > Home </ActiveLink>
-                                <ActiveLink href="blog" >
+                                <ActiveLink href="/" > Home </ActiveLink>
+                                <ActiveLink href="/blog" >
                                     Blog
                                 </ActiveLink>
-                                <ActiveLink href="contact" >
+                                <ActiveLink href="/contact" >
                                     Contact
                                 </ActiveLink>
-                                <ActiveLink href="aboutme" >
+                                <ActiveLink href="/aboutme" >
                                     About Me
                                 </ActiveLink>
 
-                                <ActiveLink href="projects" >
+                                <ActiveLink href="/projects" >
                                     Projecten
                                 </ActiveLink>
                         </div>

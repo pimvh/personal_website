@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import React from 'react'
 
 export default function Header ({ title }) {
 
@@ -12,7 +11,9 @@ export default function Header ({ title }) {
         <meta name="author" content="Pim van Helvoirt" />
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-        <title>Pim van Helvoirt {(title == 'Home') ? "" : ("- ").concat(title)} </title>
+        <title>
+            Pim van Helvoirt
+        </title>
     </Head>
     );
 }

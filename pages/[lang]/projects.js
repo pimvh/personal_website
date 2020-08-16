@@ -1,6 +1,5 @@
-import Main from '../../components/main'
+import Head from 'next/head'
 import Markdown from 'react-markdown'
-import WithLocale from '../../components/withLocale'
 import useTranslation from '../../hooks/useTranslation'
 import ActiveLink from '../../components/activelink'
 
@@ -48,22 +47,27 @@ function Projects () {
     )
 
     return (
-        <Main title='Projecten'>
+        <>
+        <Head>
+        <title>
+            Pim van Helvoirt - Projects
+        </title>
+        </Head>
         <div className = 'project_container'>
-        <Markdown source={translate('projects')['message']} />
+            <Markdown source={translate('projects')['message']} />
 
-        <p> {translate('projects')['linkmessage']}
-            <ActiveLink href="contact" > {(locale == 'en') ? "contact me" : "contacteren"} </ActiveLink>
-        </p>
+            <p> {translate('projects')['linkmessage']}
+                <ActiveLink href="contact" > {(locale == 'en') ? "contact me" : "contacteren"}. </ActiveLink>
+            </p>
 
-        {getProjects().map(project => (
-            <Project key={project.id} project={project} />
-                ))}
-                </div>
-            </Main>
+            {getProjects().map(project => (
+                <Project key={project.id} project={project} />
+                    ))}
+        </div>
+        </>
     );
 
 
 }
 
-export default WithLocale(Projects)
+export default Projects

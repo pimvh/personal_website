@@ -1,37 +1,52 @@
-import Main from '../../components/main'
 import Markdown from 'react-markdown'
-import WithLocale from '../../components/withLocale'
+import { useRouter } from 'next/router'
+import { getSortedPostsData, getAllPostIds } from '../../lib/posts'
 import useTranslation from '../../hooks/useTranslation'
+import Link from 'next/link'
 
-import { getSortedPostsData } from '../../lib/posts'
-
-export default function Blog ( { allPostsData }) {
-
-    async function getStaticProps() {
-      const allPostsData = getSortedPostsData()
-      return {
-        props: {
-          allPostsData
-        }
-      }
-    }
+function Blog ({ allPostsData }) {
 
     const { translate, locale } = useTranslation();
 
-    return (<Main title='Blog'>
+    return (
+        <>
         <div className = "flex-grid">
             <div className = "col-12 padding-xl">
             <Markdown
               source={translate('blog')['topmessage']} />
-            <ul>
-            {allPostsData.map(({ id, date, title }) => (
-                <li key={id}>
-                <a href={"blog/" + id}> {date} - {title} </a>
-
-                </li>))}
-            </ul>
+              <ul>
+              {allPostsData.map(({ id, date, title }) => (
+                  <li key={id}>
+                  <Link href={`/blog/${id}`} >
+                     <a> {date} - {title} </a>
+                  </Link>
+                  </li>))}
+              </ul>
             </div>
-            </div>
-        </Main>
+        </div>
+        </>
     );
 }
+
+export const getStaticProps = async () => {
+  const allPostsData = getSortedPostsData()
+
+  console.log(allPostsData)
+
+  return {
+    props: {
+      allPostsData
+    }
+  }
+}
+
+export const getStaticPaths = async (context) => {
+
+    const paths = getAllPostIds('en')
+    return {
+        paths,
+        fallback: false,
+    }
+}
+
+export default Blog

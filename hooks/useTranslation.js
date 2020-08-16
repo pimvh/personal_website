@@ -6,13 +6,14 @@ import { Strings } from '../pagecontent/strings'
 export default function useTranslation() {
     const { locale } = useContext(LocaleContext);
 
-    function translate(key) {
+    // console.log('translation locale', locale);
 
+    function translate(key) {
         if (!Strings[key][locale]) {
-        console.warn(`Translation '${key}' for locale '${locale}' not found.`)
+            console.warn(`Translation '${key}' for locale '${locale}' not found.`)
         }
 
-        return Strings[key][locale] || Strings[key][defaultlocale] || ''
+        return Strings[key][locale] || Strings[key][defaultLocale] || ''
     }
 
     return {

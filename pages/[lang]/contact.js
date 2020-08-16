@@ -1,7 +1,6 @@
-import Main from '../../components/main'
 import Markdown from 'react-markdown'
-import WithLocale from '../../components/withLocale'
 import useTranslation from '../../hooks/useTranslation'
+import Head from 'next/head'
 
 function Contact () {
 
@@ -48,7 +47,13 @@ function Contact () {
     }
 
     return (
-    <Main title='Contact' hideFooter={true}>
+    <>
+    <Head>
+    <title>
+        Pim van Helvoirt - Contact
+    </title>
+    </Head>
+
     <div className = "flex-grid">
         <div className = "col-12 padding-xl">
         <div>
@@ -56,16 +61,17 @@ function Contact () {
           source={translate('contact')['message']} />
         </div>
         <table className='tbl striped-odd'>
-        {getContactDetails().map(contact => (
-            <ContactRow key={contact.service} contact={contact} lang={locale}/>
-        ))}
+            <tbody>
+            {getContactDetails().map(contact => (
+                <ContactRow key={contact.service} contact={contact} lang={locale}/>
+            ))}
+            </tbody>
         </table>
         </div>
-        </div>
+    </div>
 
-    </Main>
-
+    </>
 );
 }
 
-export default WithLocale(Contact)
+export default Contact

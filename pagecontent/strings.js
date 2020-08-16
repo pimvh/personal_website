@@ -40,7 +40,7 @@ Feel free to email me!`,
         nl: {
             topmessage: `Ik ben Pim van Helvoirt. Op het moment ben ik net klaar met mijn studie Bètagamma met een major Kunstmatige Intelligentie aan de Universiteit van Amsterdam, en dus ik ben op zoek naar werk.
 
-In mijn studententijd ben ik veel actief geweest in de studentenvertegenwoordiging. Zo ben ik bijvoorbeeld [voorzitter van de Centrale Studenten Raad geweest](https://www.folia.nl/actueel/112180/betagamma-student-pim-van-helvoirt-nieuwe-voorzitter-studentenraad).`,
+In mijn studententijd ben ik veel actief geweest in de studentenvertegenwoordiging. Zo ben ik bijvoorbeeld [voorzitter van de Centrale Studentenraad geweest](https://www.folia.nl/actueel/112180/betagamma-student-pim-van-helvoirt-nieuwe-voorzitter-studentenraad).`,
 
             button: 'Klik hier om mijn CV te zien.',
 

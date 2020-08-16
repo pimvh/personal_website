@@ -1,34 +1,37 @@
 {
   "name": "personalwebsite-next",
   "version": "1.0.0",
+  "private": true,
   "description": "My own personal website!",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "profile": "next build --profile"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "chokidar": "^3.4.0",
+    "chokidar": "^3.4.2",
     "core-js": "^3.6.5",
     "file-system": "^2.2.2",
+    "fs": "0.0.1-security",
     "gray-matter": "^4.0.2",
     "image-webpack-loader": "^6.0.0",
     "mkdirp": "^1.0.4",
-    "next": "^9.3.6",
-    "node": "^14.0.0",
+    "next": "^9.5.2",
+    "node": "^14.8.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-markdown": "^4.3.1",
-    "sass": "^1.26.5",
+    "sass": "^1.26.10",
     "yarn": "^1.22.4"
   },
   "devDependencies": {
-    "webpack": "^4.43.0"
+    "webpack": "^4.44.1"
   }
 }

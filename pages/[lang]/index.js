@@ -1,36 +1,43 @@
-import Main from '../../components/main'
 import React from 'react'
 import Markdown from 'react-markdown'
 // import { getSortedPostsData } from '../../lib/posts'
-import WithLocale from '../../components/withLocale'
 import useTranslation from '../../hooks/useTranslation'
+import Head from 'next/head'
 
-function Index ({ allPostsData }) {
+function Index ({ lang, allPostsData }) {
 
-    const { translate, locale } = useTranslation();
+    const { locale, translate } = useTranslation();
 
-    return (<Main title = 'Home'>
-            <div className = "flex-grid">
-                <div className="col-4">
-                    <img src="/static/me.jpg" alt="Pim met plant" className='picture' />
-                </div>
-                <div className="col-6">
+    console.log('In index', locale);
 
-                <Markdown source={translate('index')['topmessage']} />
+    return (
+        <>
+        <Head>
+            <title> Pim van Helvoirt - Home </title>
+        </Head>
 
-                {/* <ul>
-                {allPostsData.map(({ id, date, title }) => (
-                    <li key={id}>
-                    <a href={"blog/" + id}> {date} - {title} </a>
-
-                    </li>))}
-                </ul> */}
-
-                <Markdown source={translate('index')['botmessage']} />
-                </div>
+        <div className = "flex-grid">
+            <div className="col-4">
+                <img src="/static/me.jpg" alt="Pim met plant" className='picture' />
             </div>
-            </Main>
-);}
+            <div className="col-6">
+
+            <Markdown source={translate('index')['topmessage']} />
+
+            <Markdown source={translate('index')['botmessage']} />
+            </div>
+        </div>
+        </>
+    );
+}
+
+// <ul>
+// {allPostsData.map(({ id, date, title }) => (
+//     <li key={id}>
+//     <a href={`${locale}/blog/` + id}> {date} - {title} </a>
+//
+//     </li>))}
+// </ul>
 
 // export async function getStaticProps() {
 //   const allPostsData = getSortedPostsData()
@@ -41,4 +48,4 @@ function Index ({ allPostsData }) {
 //   }
 // };
 
-export default WithLocale(Index)
+export default Index

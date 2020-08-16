@@ -2,8 +2,6 @@ Voor het schrijven van deze website had ik geen ervaring met Javascript, hiervoo
 
 Voor deze website heb ik gebruikt gemaakt van Next.js (https://nextjs.org/learn/)
 
-Hiervoor heb ik Now ook geinstalleerd (now dev: https://zeit.co/blog/now-dev)
-
 Eerst heb ik geprobeerd deze op bootstrap 4 te bouwen, maar er is al een lib voor next.js die beter werkt,
 namelijk react strap: https://reactstrap.github.io/
 
@@ -12,6 +10,11 @@ Hoe je bootstrap gebruikt in Next.js: https://www.youtube.com/watch?v=L0uNai3XyK
 url loader en file loader miste om images in js te laden (https://stackoverflow.com/questions/45848055/image-you-may-need-an-appropriate-loader-to-handle-this-file-type)
 
 Je kunt gewoon met behulp van Next.js images laden (zet images in een dir genaamd /static/), gebruik met url(/path-to/img.png)
+
+Next js:
+
+https://medium.com/hackernoon/how-to-use-react-context-to-build-a-multilingual-website-pt-2-81b2170ab736
+
 
 Toe te voegen aan resources:
 https://www.openstreetmap.org/ --> still active

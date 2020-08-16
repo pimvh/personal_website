@@ -1,6 +1,4 @@
-import Main from '../../components/main'
 import Markdown from 'react-markdown'
-import WithLocale from '../../components/withLocale'
 import useTranslation from '../../hooks/useTranslation'
 
 function AboutMe () {
@@ -27,15 +25,16 @@ function AboutMe () {
     };
 
     return (
-    <Main title='Projecten'>
+        <>
+
         <div className = 'project_container'>
         <Markdown
           source={translate('aboutme')['topmessage']} />
         </div>
 
-    <CVdisplay />
+        <CVdisplay />
 
-    </Main>
+        </>
 );}
 
-export default WithLocale(AboutMe)
+export default AboutMe
