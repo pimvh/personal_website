@@ -2,7 +2,7 @@ import '../styles.scss'
 import App from 'next/app'
 import Main from '../components/main.js'
 
-import { defaultLocale,  } from '../lib/translations/config';
+import { defaultLocale } from '../lib/translations/config';
 import { LocaleProvider } from "../context/localeContext";
 
 // This default export is required in a new `pages/_app.js` file.
@@ -32,8 +32,6 @@ MyApp.getInitialProps = async (appContext) => {
             console.log('setting something', appContext.query.lang)
             return { ...appProps, lang: appContext.query.lang }
         }
-
-        console.log('error, not a string')
     }
 
     // in case the value of 'lang' is not a valid locale return it as undefined

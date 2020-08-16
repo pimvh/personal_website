@@ -35,7 +35,7 @@ export function LocaleProvider ({ lang, children }) {
 
     return (
 
-        <LocaleContext.Provider value={{ lang : locale }} >
+        <LocaleContext.Provider value={{ locale, setLocale }} >
             { children }
         </LocaleContext.Provider>
     );

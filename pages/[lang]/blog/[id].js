@@ -2,6 +2,9 @@ import Markdown from 'react-markdown';
 import { getAllPostIds, getPostData } from '../../lib/posts'
 
 export default function Post({ PostData }) {
+
+    const { locale, translate } = useTranslation();
+
     return (<>
             <Markdown source = {`# ${PostData.title} from ${PostData.date} `} />
 
@@ -13,12 +16,15 @@ export default function Post({ PostData }) {
     )
 }
 
-export const getStaticPaths = async () => {
-  const paths = getAllPostIds()
-  return {
-    paths,
-    fallback: false,
-  }
+export const getStaticPaths = async ({ context }) => {
+
+    console.log(context.query.lang)
+
+    const paths = getAllPostIds()
+    return {
+        paths,
+        fallback: false,
+    }
 }
 
 export const getStaticProps = async({ params }) => {

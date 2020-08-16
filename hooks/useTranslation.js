@@ -6,8 +6,6 @@ import { Strings } from '../pagecontent/strings'
 export default function useTranslation() {
     const { locale } = useContext(LocaleContext);
 
-    // console.log('translation locale', locale);
-
     function translate(key) {
         if (!Strings[key][locale]) {
             console.warn(`Translation '${key}' for locale '${locale}' not found.`)
@@ -17,7 +15,7 @@ export default function useTranslation() {
     }
 
     return {
-        translate,
-        locale
+        locale,
+        translate
     }
 }
