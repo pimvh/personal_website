@@ -4122,6 +4122,12 @@ height: 50px;
 display: inline-block;
 }
 
+.flag {
+	margin-top: 2px;
+	float: right;
+	align-content: right;
+}
+
 .navbar-links {
 display: inline-block;
 height: 100%;
@@ -4273,6 +4279,11 @@ top: 18px;
 	margin: auto;
 	padding: 0;
 	text-align: center;
+}
+
+.navbar .flag {
+	margin: 2px;
+	float: right;
 }
 
 .mobile-menu {
@@ -4570,12 +4581,15 @@ nav.text-right {
 
 }
 
-
 @media all and (max-width: 767px) {
 
 header .navbar nav#topMenuNav,
 header .navbar nav#topMenuNav2 {
 	width: 49.5%;
+}
+
+header .navbar .flag {
+	max-height: 40px;
 }
 
 }
@@ -5048,4 +5062,13 @@ label.panel-close:hover {
 
 .open {
 	display : none;
+}
+
+img[src*="#blogimg"] {
+	border-style: solid;
+    border-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 200px;
+    max-width: auto;
 }

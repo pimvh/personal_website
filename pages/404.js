@@ -1,9 +1,7 @@
 import Markdown from 'react-markdown';
-import Main from '../components/Main'
 
-export default () => (
+const Error404 = () => (
 
-    <Main title='Error'>
     <div className = "flex-grid">
         <div className = "col-12 padding-xl">
         <Markdown
@@ -12,5 +10,6 @@ ERROR 404: De pagina waar je op gezocht, bestaat niet. Ga [terug naar de homepag
 `} />
         </div>
         </div>
-    </Main>
 );
+
+export default Error404

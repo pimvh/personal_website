@@ -1,4 +1,4 @@
-import Main from '../components/Main'
+import Main from '../components/main'
 import Markdown from 'react-markdown';
 import * as _ from "lodash";
 

@@ -1,26 +1,26 @@
-import Main from '../components/Main'
-import React from 'react'
-import Markdown from 'react-markdown';
+import React, { useEffect } from 'react'
+import Head from '../components/header'
+import { useRouter } from 'next/router'
+import getInitialLocale from '../lib/translations/getInitialLocale'
 
-export default () => (
-        <Main title = 'Home'>
-            <div className = "flex-grid">
-                <div className="col-4">
-                    <img src="/static/me.jpg" alt="Pim met plant" className='picture' />
-                </div>
-                <div className="col-6">
+export default function Refer () {
+    const router = useRouter();
 
-<Markdown source={`Deze website is van mij, Pim van Helvoirt, een bachelorstudent Beta-gamma met Kunstmatige Intelligentie aan de Universiteit van Amsterdam. Op dit moment ben ik bijna klaar met mijn studie.
+    useEffect(() => {
 
-Op de foto zie je mij met mijn favoriete plant, _de agave potatorum_. Lees hier meer [over mij][1].
+        const initLocale = getInitialLocale();
 
-Op deze website vind je mijn [programmeerprojecten][2] en [resources][3], die ik over de tijd heb verzameld.
-[1]: </overmij> "Over mij"
-[2]: </projecten> "Projecten"
-[3]: </resources> "Resources"
+        router.push(`/[lang]`, `/${initLocale}`)}
+    )
 
-                `} />
-                </div>
-                </div>
-        </Main>
-)
+    return (
+        <>
+        <Head>
+            <meta name="robots" content="noindex, nofollow" />
+        </Head>
+        <div className = "flex-grid">
+            loading...
+        </div>
+        </>
+    )
+}

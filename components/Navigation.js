@@ -35,7 +35,7 @@ export default function Navigation (props) {
     			</label>
     			<div className="col-2 col-12-md logo">
                     <a href="/">
-                    <img src="static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="logo" />
+                    <img src="/static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="logo" />
                     </a>
     			</div>
     			<nav className="col-7 col-12-md navbar-right" id="topMenuNav">
