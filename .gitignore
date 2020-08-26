@@ -3,6 +3,5 @@ package-lock.json
 .next/*
 *.png
 *.jpg
-yarn.lock
 v1-master
 *.txt
