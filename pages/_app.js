@@ -12,30 +12,32 @@ class MyApp extends App {
         const { Component, pageProps } = this.props;
 
         return (
-            <LocaleProvider >
+            <>
+            <LocaleProvider>
             <Main>
                 <Component {...pageProps} />
             </Main>
             </LocaleProvider>
+            </>
         )
     }
 }
 
-MyApp.getInitialProps = async (appContext) => {
-
-    // retrieve initial props of the wrapped component
-    const appProps = await App.getInitialProps(appContext);
-
-    if (appContext.query) {
-        if (typeof appContext.query.lang == 'string' && isLocale(appContext.query.lang)) {
-            // the locale is valid
-            console.log('setting something', appContext.query.lang)
-            return { ...appProps, lang: appContext.query.lang }
-        }
-    }
-
-    // in case the value of 'lang' is not a valid locale return it as undefined
-    return { ...appProps, lang: defaultLocale }
-}
+// MyApp.getInitialProps = async (appContext) => {
+//
+//     // retrieve initial props of the wrapped component
+//     const appProps = await App.getInitialProps(appContext);
+//
+//     if (appContext.query) {
+//         if (typeof appContext.query.lang == 'string' && isLocale(appContext.query.lang)) {
+//             // the locale is valid
+//             console.log('setting something', appContext.query.lang)
+//             return { ...appProps, lang: appContext.query.lang }
+//         }
+//     }
+//
+//     // in case the value of 'lang' is not a valid locale return it as undefined
+//     return { ...appProps, lang: defaultLocale }
+// }
 
 export default MyApp

@@ -5,32 +5,36 @@ import Footer from './footer';
 
 import { Router } from 'next/router';
 
-import { LocaleProvider } from "../context/localeContext";
-import getInitialLocale from "../lib/translations/getInitialLocale";
+export default class Main extends React.Component {
+    constructor(props) {
+        super(props);
+        this.title = props.title;
+        // TO DO
+        this.showFooter = props.hideFooter;
+    }
 
-import isLocale from "../lib/translations/isLocale";
+    render() {
 
-export default function Main ({title, children, showFooter}) {
+        return (
+            <>
+            <Header title={this.title || 'Pim van Helvoirt'} />
+            <div className='root' >
+                <Navigation title={this.title} />
+                <HeadCarousel />
+                <div className= "panel padding-xm">
+                    <div className = "panel-body padding-xm">
+                        <div className = 'main-container'>
 
-    return (
-        <>
-        <Header title={title || 'Pim van Helvoirt'} />
-        <div className='root' >
-            <Navigation title={title} />
-            <HeadCarousel />
-            <div className= "panel padding-xm">
-                <div className = "panel-body padding-xm">
-                    <div className = 'main-container'>
+                        {this.props.children}
 
-                    {children}
-
+                        </div>
                     </div>
                 </div>
+                <div className='panel-footer' >
+                    {this.showFooter && <Footer />}
+                </div>
             </div>
-            <div className='panel-footer' >
-                {showFooter && <Footer />}
-            </div>
-        </div>
-        </>
-    );
+            </>
+        );
+    }
 }

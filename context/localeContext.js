@@ -14,10 +14,6 @@ export function LocaleProvider ({ lang, children }) {
 
     // store the preference
     useEffect(() => {
-        console.log('createContext', localStorage.getItem('locale'))
-        console.log('createContext', typeof localStorage.getItem('locale'))
-        console.dir('createContext dir', localStorage.getItem('locale'));
-
         if (locale !== localStorage.getItem('locale')) {
             localStorage.setItem('locale', locale);
         }
@@ -25,8 +21,6 @@ export function LocaleProvider ({ lang, children }) {
 
     // sync locale value on client-side route changes
     useEffect(() => {
-        console.log('LocaleProvider-useEffect', query.lang);
-
         if (typeof query.lang === 'string' && isLocale(query.lang) && locale !== query.lang) {
 
             setLocale(query.lang);

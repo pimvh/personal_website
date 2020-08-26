@@ -30,7 +30,7 @@ export default function LocaleSwitcher () {
 
     function setLocale(e) {
 
-        setFlag(false);
+        setFlag(true);
         const regex = new RegExp(`^/(${locales.join('|')})`);
 
         router.push(router.pathname, router.asPath.replace(regex, `/${newlocale}`));
@@ -40,6 +40,7 @@ export default function LocaleSwitcher () {
         <div>
         <img onClick={handleLocaleChange}
          src={flagsrc} alt={flagalt} className="flag" />
+
         </div>
     );
 

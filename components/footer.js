@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import Markdown from 'react-markdown'
 
-export default function Footer ({show}) {
+export default function Footer () {
+
+    
     return (
             <div className="flex-grid">
                 <div className= "col-12 padding-xl text-center .fixed">

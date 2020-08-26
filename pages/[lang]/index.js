@@ -4,7 +4,7 @@ import Markdown from 'react-markdown'
 import useTranslation from '../../hooks/useTranslation'
 import Head from 'next/head'
 
-function Index ({ allPostsData }) {
+function Index () {
 
     const { locale, translate } = useTranslation();
 

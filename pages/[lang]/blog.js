@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 function Blog ({ allPostsData }) {
 
-    const { translate, locale } = useTranslation();
+    const { locale, translate } = useTranslation();
 
     return (
         <>
@@ -15,9 +15,11 @@ function Blog ({ allPostsData }) {
             <Markdown
               source={translate('blog')['topmessage']} />
               <ul>
-              {allPostsData.map(({ id, date, title }) => (
-                  <li key={id}>
-                  <Link href={`/blog/${id}`} >
+
+              {allPostsData.map(({locale, id, date, title }) => (
+
+                  <li key={id} >
+                  <Link href={`/[lang]/blog/${id}`} as={`/en/blog/${id}`} >
                      <a> {date} - {title} </a>
                   </Link>
                   </li>))}
@@ -28,25 +30,25 @@ function Blog ({ allPostsData }) {
     );
 }
 
-export const getStaticProps = async () => {
-  const allPostsData = getSortedPostsData()
+export async function getStaticPaths() {
 
-  console.log(allPostsData)
+    const lang = 'en';
 
-  return {
-    props: {
-      allPostsData
-    }
-  }
-}
-
-export const getStaticPaths = async (context) => {
-
-    const paths = getAllPostIds('en')
+    const paths = getAllPostIds(lang)
     return {
         paths,
         fallback: false,
     }
 }
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData()
+  return {
+    props: {
+      allPostsData
+    }
+  }
+};
+
 
 export default Blog

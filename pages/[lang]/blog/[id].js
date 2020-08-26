@@ -1,5 +1,6 @@
 import Markdown from 'react-markdown';
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { getAllPostIds, getPostData } from '../../../lib/posts'
+import useTranslation from '../../../hooks/useTranslation'
 
 export default function Post({ PostData }) {
 
@@ -16,18 +17,22 @@ export default function Post({ PostData }) {
     )
 }
 
-export const getStaticPaths = async ({ context }) => {
+export async function getStaticPaths() {
 
-    console.log(context.query.lang)
+    const lang = 'en'
 
-    const paths = getAllPostIds()
+    const paths = getAllPostIds(lang)
     return {
         paths,
         fallback: false,
     }
 }
 
-export const getStaticProps = async({ params }) => {
+export async function getStaticProps({params}) {
+
+    console.log(params)
+    console.log(params.id)
+
     const PostData = await getPostData(params.id)
 
     return {
