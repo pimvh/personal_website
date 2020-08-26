@@ -1,4 +1,4 @@
-import '../styles.scss'
+import '../styles/styles.scss'
 import App from 'next/app'
 import Main from '../components/main.js'
 
