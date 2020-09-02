@@ -1,7 +1,6 @@
 import Markdown from 'react-markdown'
 import { useRouter } from 'next/router'
 import { getSortedPostsData, getAllPostIds } from '../../lib/posts'
-import useTranslation from '../../hooks/useTranslation'
 import Link from 'next/link'
 
 function Blog ({ allPostsData }) {

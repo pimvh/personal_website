@@ -1,48 +1,42 @@
-import React, { useCallback, useContext} from 'react'
-import { useRouter } from 'next/router'
-import { locales, languageNames } from '../lib/translations/config'
-import { LocaleContext } from '../context/localeContext'
+import React from 'react';
+import { useRouter } from 'next/router';
+import {
+  useI18n, Link,
+} from '../lib/i18n';
 
-export default function LocaleSwitcher () {
+const TranslationsNeeded = '/components/localeSwitcher';
 
-    const router = useRouter();
+const localeSwitcher = () => {
+  const {
+    translations, config,
+  } = useI18n(TranslationsNeeded);
 
-    var { locale } = useContext(LocaleContext);
+  const router = useRouter();
 
-    let newlocalefunc = (locale) => {
+  return (
+    <Link href={router.pathname} language={config.prefix === 'en' ? 'nl' : 'en'}>
+      <a>
+        banana
+      </a>
+    </Link>
+  );
+};
 
-        if (locale == 'en') {
-            return 'nl'
-        }
-        return 'en'
-    }
+export const AllTranslationsNeeded = [
+  TranslationsNeeded,
+];
 
-    var newlocale = newlocalefunc(locale);
-
-    // Flip the image of the flag to the current local
-    var [dutchFlag, setFlag] = React.useState(true);
-
-    // Flip the flag and its tags according to the current local
-    var flagsrc = `/static/${dutchFlag ? "netherlands" : "united-kingdom"}-flag-icon-64.png`;
-    var flagalt = dutchFlag ? "Netherlandse vlag" : "English flag";
-
-    const handleLocaleChange = useCallback(e => (setLocale(e)), [router]);
-
-    function setLocale(e) {
-
-        setFlag(true);
-        const regex = new RegExp(`^/(${locales.join('|')})`);
-
-        router.push(router.pathname, router.asPath.replace(regex, `/${newlocale}`));
-    };
-
-    return (
-        <div>
-        <img onClick={handleLocaleChange}
-         src={flagsrc} alt={flagalt} className="flag" />
-
-        </div>
-    );
+export default localeSwitcher;
 
 
-}
+/*
+move back up later?
+
+translations.name
+
+// Flip the flag and its tags according to the current local
+var flagsrc = `/static/${dutchFlag ? "netherlands" : "united-kingdom"}-flag-icon-64.png`;
+var flagalt = dutchFlag ? "Netherlandse vlag" : "English flag";
+
+const handleLocaleChange = useCallback(e => (setLocale(e)), [router]);
+*/

@@ -1,6 +1,6 @@
 import useWindowDimensions from '../hooks/useWindowDimensions'
 import ActiveLink from './activelink'
-import LocaleSwitcher from './localeSwitcher'
+// import localeSwitcher from './localeSwitcher'
 import React from 'react'
 import { useRouter } from 'next/router'
 
@@ -47,13 +47,15 @@ function Navigation () {
                         </div>
         			</nav>
                     <div className="col-3 col-1-md flag">
-                        <LocaleSwitcher />
+                        English
                     </div>
         		</div>
 
     	    </header>
         <div className="fixed-nav-space" id="top"></div>
         </div>);
-}
+};
 
-export default Navigation
+export default Navigation;
+
+//// <LocaleSwitcher />

@@ -1,10 +1,8 @@
-import { useContext } from 'react'
-import { useRouter } from 'next/router'
-import useTranslation from '../hooks/useTranslation'
+import { useRouter } from 'next/router';
 
 function ActiveLink({children, href}) {
 
-    const { locale } = useTranslation();
+    const locale = 'en';
 
     const router = useRouter()
 
