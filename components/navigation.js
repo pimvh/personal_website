@@ -1,17 +1,14 @@
-import useWindowDimensions from '../hooks/useWindowDimensions'
-import ActiveLink from './activelink'
-// import localeSwitcher from './localeSwitcher'
-import React from 'react'
-import { useRouter } from 'next/router'
+import React from 'react';
+import Link from 'next-translate/Link';
 
-function Navigation () {
+import useTranslation from 'next-translate/useTranslation';
 
-    // var contact = (lang == 'en' | locale == undefined) ? "Contact Info" : "Contact"
-    // var aboutme = (lang == 'en' | locale == undefined) ? "About Me" : "Over Mij"
-    // var projects = (locale == 'en' | locale == undefined) ? "Projects" : "Projecten"
+export const Navigation = () => {
+
+    const { t, lang } = useTranslation();
 
     return (
-            <div>
+            <>
             <header className="main-container header fixed ">
     		{/* <!-- Nav Bar with Logo Area --> */}
         		<div className="flex-grid  navbar">
@@ -30,32 +27,46 @@ function Navigation () {
         			<nav className="col-7 col-12-md navbar-right" id="topMenuNav">
         				<div className="navbar-links">
         					<input type="radio" className="hide" name="navbar-menu" id="navbarDropHide" defaultChecked></input>
-                                <ActiveLink href="/" > Home </ActiveLink>
-                                <ActiveLink href="/blog" >
-                                    Blog
-                                </ActiveLink>
-                                <ActiveLink href="/contact" >
-                                    Contact
-                                </ActiveLink>
-                                <ActiveLink href="/aboutme" >
-                                    About Me
-                                </ActiveLink>
+                                <Link href="/" >
+                                    <a> {t("common:navhome")} </a>
+                                </Link>
+                                <Link href="/blog" >
+                                    <a> {t("common:navblog")} </a>
+                                </Link>
+                                <Link href="/contact" >
+                                    <a> {t("common:navcontact")} </a>
+                                </Link>
+                                <Link href="/aboutme" >
+                                    <a> {t("common:navaboutme")} </a>
+                                </Link>
 
-                                <ActiveLink href="/projects" >
-                                    Projecten
-                                </ActiveLink>
+                                <Link href="/projects" >
+                                    <a> {t("common:navprojects")} </a>
+                                </Link>
                         </div>
         			</nav>
-                    <div className="col-3 col-1-md flag">
-                        English
+
+                    <div>
+                    <LangFlag lang={lang} />
                     </div>
         		</div>
-
     	    </header>
         <div className="fixed-nav-space" id="top"></div>
-        </div>);
+        </>
+    );
 };
 
-export default Navigation;
+const LangFlag = ({lang}) => {
 
-//// <LocaleSwitcher />
+    return (
+        <Link href="/" lang={lang === 'en' ? "nl" : "en"} >
+            <a>
+                <img src={`/static/${lang === 'en' ? 'netherlands' : 'united-kingdom'}-flag-icon-64.png`}
+                 alt={lang === 'en' ? "Nederlandse vlag" : "Union Jack"} />
+            </a>
+        </Link>
+    );
+
+}
+
+export default Navigation;

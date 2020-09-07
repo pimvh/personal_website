@@ -1,25 +1,23 @@
-import Header from './header';
 import HeadCarousel from './carousel';
 import Navigation from './navigation';
 import Footer from './footer';
 
 import { Router } from 'next/router';
 
-export default class Main extends React.Component {
+export default class Layout extends React.Component {
     constructor(props) {
         super(props);
         this.title = props.title;
-        // TO DO
-        this.showFooter = props.hideFooter;
+        this.noFooter = props.noFooter;
     }
 
     render() {
 
         return (
             <>
-            <Header title={this.title || 'Pim van Helvoirt'} />
+
             <div className='root' >
-                <Navigation title={this.title} />
+                <Navigation />
                 <HeadCarousel />
                 <div className= "panel padding-xm">
                     <div className = "panel-body padding-xm">
@@ -31,7 +29,7 @@ export default class Main extends React.Component {
                     </div>
                 </div>
                 <div className='panel-footer' >
-                    {this.showFooter && <Footer />}
+                    {<Footer />}
                 </div>
             </div>
             </>

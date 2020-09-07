@@ -1,18 +1,24 @@
-import React, {Component} from 'react';
-import Markdown from 'react-markdown'
+import Link from 'next-translate/Link';
 
-export default function Footer () {
+import useTranslation from 'next-translate/useTranslation';
 
-    
+const Footer = () => {
+
+    const { t, lang } = useTranslation();
+
     return (
+        <>
+        <div className='panel-footer' >
             <div className="flex-grid">
                 <div className= "col-12 padding-xl text-center .fixed">
-                <Markdown source={`
-Op zoek naar mijn contactgegevens?
-
-[Klik hier](/contact)
-`} />
+                <Link href="/contact" >
+                    <a> {t("common:footer")} </a>
+                </Link>
                 </div>
             </div>
+        </div>
+        </>
     );
 }
+
+export default Footer
