@@ -1,0 +1,27 @@
+{
+"data": [
+{"id" : 1, "title" : "Privacytools.io - Bron voor online privacy.", "categorie" : "privacy",
+"content": "The website [privacytools.io](https://PrivacyTools.io) provides a good start to strengthen your online security. Additionally this website provides argumentation on why internetprivacy is important (at all), for example by answering the 'I have nothing to hide'-argumentation.  \n\nAdditionally A detailed list of services can be found on this website regarding different services that care more about your online privacy, like browsers, emailclients and messaging apps.  \n\nIf you use firefox, be sure to checkout the sections of recommended add-ons. These all are quite easy to install and add to your browser."
+},
+
+{"id" : 4, "title" : "Mozilla Privacy Not Included - Een gids voor privacyveilige aankopen.", "categorie" : "privacy",
+"content": "The [Mozilla Privacy buyer guide](https://foundation.mozilla.org/en/privacynotincluded/) shows a different perspective on a number of products. Within this guide a number of product, like headphones and cameras, are ranked on a scale on how privacy friendly they are."
+},
+
+{"id" : 5, "title" : "Firefox Send - een free safe filesender", "categorie" : "productiviteit",
+"content": "[Firefox Send](https://send.firefox.com/) can be used to send files of a maximum of 1GB securely to another person (2.5GB if you login to a firefox account) by using a link."
+},
+
+{"id" : 7, "title" : "Security Checklist - Be safe on the internet.", "categorie" : "privacy",
+"content": "With the [Security Checklist](https://securitycheckli.st/) you can walk through a simple checklist to increase your online life, and just as privacytools.io it recommends the use of a passwordmangers, 2-factor authentication and other apps. Additionally ever step has sources below it, with additional explanation."
+},
+
+{"id" : 9, "title" : "Online Meeting tool - Jitsi.", "categorie" : "productiviteit",
+"content": "[Jitsi](https://meet.jit.si/) is an open source tool which you can use to have free online meetings and videocalls. Without installing new software, you can talk online to another person. \n\nThe tool works well on different browsers, and videocalls are easy to secury with a password."
+},
+
+{"id" : 10, "title" : "Datasafety - Have I been PWND?", "categorie" : "privacy",
+"content": "[Have I been PWND?](https://haveibeenpwned.com/) is an open database on the internet in which you search whether your own emailadress has been part of a databreach. This database is based on data that has been released by hackers. \n\nThe tool is very handy for looking up recent breaches and whether to take action by chancing your password. Nowdays companies are required to notify users that they accountinformation was compromised, but that hasn't always happened in the past. This tool provides additional support for that."
+}
+]
+}

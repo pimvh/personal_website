@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next-translate/Link';
 
+import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 
 export const Navigation = () => {
@@ -24,7 +25,7 @@ export const Navigation = () => {
                         </a>
         			</div>
 
-        			<nav className="col-7 col-12-md navbar-right" id="topMenuNav">
+        			<nav className="col-6 col-12-md navbar-right" id="topMenuNav">
         				<div className="navbar-links">
         					<input type="radio" className="hide" name="navbar-menu" id="navbarDropHide" defaultChecked></input>
                                 <Link href="/" >
@@ -43,12 +44,20 @@ export const Navigation = () => {
                                 <Link href="/projects" >
                                     <a> {t("common:navprojects")} </a>
                                 </Link>
+
+                                <Link href="/resources" >
+                                    <a> {t("common:navresources")} </a>
+                                </Link>
                         </div>
+
         			</nav>
 
-                    <div>
+                    <div className="col-2 col-1-md" id="flag">
+
                     <LangFlag lang={lang} />
+
                     </div>
+
         		</div>
     	    </header>
         <div className="fixed-nav-space" id="top"></div>
@@ -58,8 +67,13 @@ export const Navigation = () => {
 
 const LangFlag = ({lang}) => {
 
+    const { pathname } = useRouter();
+
     return (
-        <Link href="/" lang={lang === 'en' ? "nl" : "en"} >
+
+
+
+        <Link href={pathname.replace(`/${lang}`, '') || '/'} lang={lang === 'en' ? "nl" : "en"} >
             <a>
                 <img src={`/static/${lang === 'en' ? 'netherlands' : 'united-kingdom'}-flag-icon-64.png`}
                  alt={lang === 'en' ? "Nederlandse vlag" : "Union Jack"} />

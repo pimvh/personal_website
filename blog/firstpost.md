@@ -1,6 +1,7 @@
 ---
 title: "Mijn scriptie"
 date: "2020-08-06"
+postlang: "nl"
 ---
 Hallo Internet! Welkom op mijn allereerste blogpost. In deze blogpost wil ik het hebben over mijn scriptie het benchmarken van *Deep Neural Networks*.
 

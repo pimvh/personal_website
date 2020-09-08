@@ -10,6 +10,8 @@
     "/aboutme" : ["aboutme"],
     "/contact" : ["contact"],
     "/blog" : ["blog"],
-    "/projects" : ["projects"]
+    "/projects" : ["projects"],
+    "/resources" : ["resources"],
+    "/blog/[id]" : ["blog"]
     }
 }

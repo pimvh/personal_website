@@ -1,10 +1,11 @@
 {
   "title": "Pim van Helvoirt - Home",
-  "footer" : "Op zoek naar mijn contactgegevens?",
+  "footer" : "Looking for my contact details? \n\n[Click here](/nl/contact)",
   "navhome" : "Home",
   "navblog" : "Blog",
   "navcontact" : "Contact Info",
   "navaboutme" : "About me",
   "navprojects" : "Projects",
+  "navresources" : "Resources",
   "back" : "Back to blog."
 }
