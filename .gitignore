@@ -1,8 +1,6 @@
 node_modules/*
 package-lock.json
 .next/*
-*.png
-*.jpg
 v1-master
-*.txt
+notes.md
 pages/*
