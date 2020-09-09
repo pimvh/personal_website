@@ -1,3 +1,5 @@
+import Markdown from 'react-markdown';
+
 import Link from 'next-translate/Link';
 
 import useTranslation from 'next-translate/useTranslation';
@@ -11,9 +13,8 @@ const Footer = () => {
         <div className='panel-footer' >
             <div className="flex-grid">
                 <div className= "col-12 padding-xl text-center .fixed">
-                <Link href="/contact" >
-                    <a> {t("common:footer")} </a>
-                </Link>
+
+                <Markdown source={t("common:footer")} />
                 </div>
             </div>
         </div>

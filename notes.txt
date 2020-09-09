@@ -13,9 +13,6 @@ Je kunt gewoon met behulp van Next.js images laden (zet images in een dir genaam
 
 Next js:
 
-https://medium.com/hackernoon/how-to-use-react-context-to-build-a-multilingual-website-pt-2-81b2170ab736
-
-
 Toe te voegen aan resources:
 https://www.openstreetmap.org/ --> still active
 
@@ -43,9 +40,9 @@ https://www.bellingcat.com/
 https://ninite.com/
 http://www.scientistswarning.org/
 
-
-
 https://www.opensans.com/
+
+https://draw.io
 
 https://matrixcalc.org/en/ http://www.integral-calculator.com/
 
@@ -61,4 +58,17 @@ https://www.2doc.nl/
 https://jsonchecker.com/
 
 https://haveibeenpwned.com/
-"Website "
+
+Resources
+
+{"id" : 8, "title" : "Programmeertaal - Haskell.", "categorie" : "programeertalen",
+"content": "Op [Learn you a haskell](http://learnyouahaskell.com/) is een gratis boek (ook te kopen) te vinden waarmee je Haskell online kunt leren. Haskell is een lui-evaluerende pure functionele programmeertaal. \n\nHet is bijvoorbeeld mogelijk om een eindeloze lange lijst (i.e. van 1 tot oneindig) te definiëren, maar ook meervoudige list-comprehension te schrijven om rechthoekige driehoeken te zoeken met een omtrek van 24 cm: `let triangles = [(a, b, c) | a <- [1..20], b <- [1..20], c <- [1..20], a + b + c == 24, a^2 + b^2 == c^2]` \n\nAl met al een interessante programmeertaal."
+},
+
+{"id" : 2, "title" : "Rank a Brand - Merken vergelijken qua duurzaamheid.", "categorie" : "duurzaamheid",
+"content": "De website [Rank a Brand](https://rankabrand.org/) is een website, grotendeels op basis van vrijwilligers, die de duurzaamheid van allerlei soorten merken test.  \n\nDe labels kloppen niet altijd (of zijn niet altijd beschikbaar), maar mocht je van plan zijn om nieuwe spullen te kopen, dan is dit altijd een goede website om van tevoren te even te controleren."
+},
+
+{"id" : 3, "title" : "Todoist - Handige takenlijst.", "categorie" : "productiviteit",
+"content": "De Takenlijst app [Todoist](https://todoist.com), is handig om je taken bij te houden. De kosten van deze app blijven erg beperkt (~15 eu per jaar). De app is ook multiplatform (helaas niet op Ubuntu) en via het internet beschikbaar.  \n\nHiernaast heeft de website verschillende tutorials/templates voor het maken van lijstjes om je gestelde doelen te behalen."
+},
