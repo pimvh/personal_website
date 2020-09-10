@@ -1,18 +1,25 @@
-Voor het schrijven van deze website had ik geen ervaring met Javascript, hiervoor heb ik vooral met Python gewerkt.
+## Andere handige tips
+- url loader en file loader miste om images in js te laden (https://stackoverflow.com/questions/45848055/image-you-may-need-an-appropriate-loader-to-handle-this-file-type)
+- Je kunt gewoon met behulp van Next.js images laden (zet images in een dir genaamd /static/), gebruik met url(/path-to/img.png)
 
-Voor deze website heb ik gebruikt gemaakt van Next.js (https://nextjs.org/learn/)
+# Todo list
+
+- [__] - static/ reorganiseren.
+- [__] - blogpost afmaken
+- [__] - nadenken over webanalytics (http://www.openwebanalytics.com/ ??)
+
+# # Roadmap
+
+Voor het schrijven van deze website had ik geen ervaring met Javascript, hiervoor heb ik vooral met Python gewerkt. Voor deze website heb ik gebruikt gemaakt van Next.js (https://nextjs.org/learn/)
 
 Eerst heb ik geprobeerd deze op bootstrap 4 te bouwen, maar er is al een lib voor next.js die beter werkt,
 namelijk react strap: https://reactstrap.github.io/
 
 Hoe je bootstrap gebruikt in Next.js: https://www.youtube.com/watch?v=L0uNai3XyKQ
 
-url loader en file loader miste om images in js te laden (https://stackoverflow.com/questions/45848055/image-you-may-need-an-appropriate-loader-to-handle-this-file-type)
+next-translate is een geweldige lib
 
-Je kunt gewoon met behulp van Next.js images laden (zet images in een dir genaamd /static/), gebruik met url(/path-to/img.png)
-
-Next js:
-
+# Toevoegen aan resources (ooit?)
 Toe te voegen aan resources:
 https://www.openstreetmap.org/ --> still active
 
@@ -58,8 +65,6 @@ https://www.2doc.nl/
 https://jsonchecker.com/
 
 https://haveibeenpwned.com/
-
-Resources
 
 {"id" : 8, "title" : "Programmeertaal - Haskell.", "categorie" : "programeertalen",
 "content": "Op [Learn you a haskell](http://learnyouahaskell.com/) is een gratis boek (ook te kopen) te vinden waarmee je Haskell online kunt leren. Haskell is een lui-evaluerende pure functionele programmeertaal. \n\nHet is bijvoorbeeld mogelijk om een eindeloze lange lijst (i.e. van 1 tot oneindig) te definiëren, maar ook meervoudige list-comprehension te schrijven om rechthoekige driehoeken te zoeken met een omtrek van 24 cm: `let triangles = [(a, b, c) | a <- [1..20], b <- [1..20], c <- [1..20], a + b + c == 24, a^2 + b^2 == c^2]` \n\nAl met al een interessante programmeertaal."
