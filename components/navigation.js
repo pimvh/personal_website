@@ -21,7 +21,7 @@ export const Navigation = () => {
         			</label>
         			<div className="col-2 col-10-md logo">
                         <a href="/">
-                        <img src="/static/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="logo" />
+                        <img src="/static/common/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="logo" />
                         </a>
         			</div>
 
@@ -75,7 +75,7 @@ const LangFlag = ({lang}) => {
 
         <Link href={pathname.replace(`/${lang}`, '') || '/'} lang={lang === 'en' ? "nl" : "en"} >
             <a>
-                <img src={`/static/${lang === 'en' ? 'netherlands' : 'united-kingdom'}-flag-icon-64.png`}
+                <img src={`/static/common/${lang === 'en' ? 'netherlands' : 'united-kingdom'}-flag-icon-64.png`}
                  alt={lang === 'en' ? "Nederlandse vlag" : "Union Jack"} />
             </a>
         </Link>

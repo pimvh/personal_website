@@ -1,0 +1,20 @@
+{
+    "data": [
+    {
+        "id": 1,
+        "button_id": "1",
+        "title": "A personal website",
+        "img_link": "/static/projects/nextjs.png",
+        "img_alt": "Next.js",
+        "content": "With the use of [Next.js](https://nextjs.org), a react framework, I've built this website. This website is written in JavaScript in conjuction with CSS from the [Pure CSS Framework](http://purecssframework.com)."
+    },
+    {
+        "id": 2,
+        "button_id": 2,
+        "title": "A Telegram-bot written in Python",
+        "img_link": "/static/projects/pythontelegrambot.png",
+        "img_alt": "Python Telegram wrapper",
+        "content": "On Telegram I've made a bot, by using the [Python-telegram-bot wrapper](https://python-telegram-bot.org/). At the moment it can look up the weather, send you memes from reddit and has several answers to text the user sends it. The bot is reachable on Telegram at [@Rob_Ot](https://t.me/Rob_Ot_bot). The code for it is [avaiable on Github](https://github.com/pimvh/telegrambot_simple)."
+    }
+]
+}
