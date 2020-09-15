@@ -4,3 +4,4 @@ package-lock.json
 v1-master
 notes.md
 pages/*
+.env
