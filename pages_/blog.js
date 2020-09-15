@@ -1,5 +1,4 @@
 import Markdown from 'react-markdown';
-import { useRouter } from 'next/router';
 import { getSortedPostsData, getAllPostIds } from '../lib/posts';
 
 import Layout from '../components/layout';
