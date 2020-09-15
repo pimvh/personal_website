@@ -19,13 +19,14 @@ export const Navigation = () => {
         				<i className="hamburger"></i>
         				<label className="full-screen" htmlFor="mobileMenu"></label>
         			</label>
-        			<div className="col-2 col-10-md logo">
+
+        			<div className="col-1 col-10-md logo">
                         <a href="/">
                         <img src="/static/common/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="logo" />
                         </a>
         			</div>
 
-        			<nav className="col-6 col-12-md navbar-right" id="topMenuNav">
+        			<nav className="col-7 col-12-md navbar-right" id="topMenuNav">
         				<div className="navbar-links">
         					<input type="radio" className="hide" name="navbar-menu" id="navbarDropHide" defaultChecked></input>
                                 <Link href="/" >
@@ -50,15 +51,13 @@ export const Navigation = () => {
                                 </Link>
                         </div>
 
-        			</nav>
 
-                    <div className="col-2 col-1-md" id="flag">
+
+        			</nav>
 
                     <LangFlag lang={lang} />
 
-                    </div>
-
-        		</div>
+            </div>
     	    </header>
         <div className="fixed-nav-space" id="top"></div>
         </>
@@ -70,15 +69,14 @@ const LangFlag = ({lang}) => {
     const { pathname } = useRouter();
 
     return (
-
-
-
+        <div className="flag">
         <Link href={pathname.replace(`/${lang}`, '') || '/'} lang={lang === 'en' ? "nl" : "en"} >
             <a>
                 <img src={`/static/common/${lang === 'en' ? 'netherlands' : 'united-kingdom'}-flag-icon-64.png`}
                  alt={lang === 'en' ? "Nederlandse vlag" : "Union Jack"} />
             </a>
         </Link>
+        </div>
     );
 
 }

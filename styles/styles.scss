@@ -4123,9 +4123,9 @@ display: inline-block;
 }
 
 .flag {
-	margin-top: 30px;
+	margin-top: 3px;
+	height: 40px;
 	float: right;
-	align-content: right;
 }
 
 .navbar-links {
@@ -4261,9 +4261,12 @@ height: 52px;
 top: 18px;
 }
 
+.mobile-menu .right-side {
+	float: right;
+}
+
 /* Show Mobile Menu */
 @media all and (max-width: 1024px) {
-
 
 .navbar {
 	text-align: center;
@@ -4279,11 +4282,6 @@ top: 18px;
 	margin: auto;
 	padding: 0;
 	text-align: center;
-}
-
-.navbar .flag {
-	margin: 2px;
-	float: right;
 }
 
 .mobile-menu {
@@ -4304,7 +4302,7 @@ top: 18px;
 
 .mobile-menu.right-side {
 	left: auto;
-	right: 0;
+	right: 30px;
 }
 
 .mobile-menu i.hamburger {
@@ -4369,9 +4367,8 @@ top: 18px;
 
 
 .mobile-menu i.profile:after {
-	content: "";
 	position: absolute;
-	display: block;
+	display: hidden;
 	height: 8px;
 	width: 12px;
 	border-radius: 50% 50% 0 0;
@@ -4588,12 +4585,11 @@ header .navbar nav#topMenuNav2 {
 	width: 49.5%;
 }
 
-header .navbar .flag {
-	max-height: 40px;
+.flag {
+	margin-top: 1px;
 }
 
 }
-
 
 @media all and (max-width: 375px) {
 

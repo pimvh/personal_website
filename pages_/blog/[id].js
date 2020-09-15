@@ -17,7 +17,7 @@ function Post({ PostData }) {
             <title> {t("blog:title")} </title>
         </Head>
 
-        <Markdown source = {`# ${PostData.title} from ${PostData.date} `} />
+        <Markdown source = {`# ${PostData.title} ${t("blog:from")} ${PostData.date} `} />
 
         <Markdown source= {PostData.PostContent}/>
 

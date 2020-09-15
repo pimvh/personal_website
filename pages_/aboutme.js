@@ -20,7 +20,7 @@ function AboutMe () {
             );
         } else {
             return (
-                <object data={`/static/200801_Pim_van_Helvoirt__Curriculum_Vitae-${lang}.pdf#toolbar=0`} type="application/pdf" width="100%" height='600px'>
+                <object data={`/static/aboutme/200801_Pim_van_Helvoirt__Curriculum_Vitae-${lang}.pdf#toolbar=0`} type="application/pdf" width="100%" height='600px'>
                 <p> {t("aboutme:errormessage")} <a href={`/static/200801_Pim_van_Helvoirt__Curriculum_Vitae-${lang}.pdf`}>link</a>.</p>
                 </object>
             );

@@ -12,7 +12,7 @@ export default function Resources() {
     const { t, lang } = useTranslation();
 
     function getResources() {
-        const data = require(`../public/static/resources-${lang}.json`)["data"];
+        const data = require(`../public/static/resources/resources-${lang}.json`)["data"];
 
         const sorted = _.sortBy(data, 'title');
         return sorted;
