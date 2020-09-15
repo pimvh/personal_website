@@ -1,10 +1,6 @@
 node_modules/*
-package.json
 package-lock.json
-package.json.save
 .next/*
-*.png
-*.jpg
-yarn.lock
 v1-master
-*.txt
+notes.md
+pages/*

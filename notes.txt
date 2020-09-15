@@ -1,18 +1,25 @@
-Voor het schrijven van deze website had ik geen ervaring met Javascript, hiervoor heb ik vooral met Python gewerkt.
+## Andere handige tips
+- url loader en file loader miste om images in js te laden (https://stackoverflow.com/questions/45848055/image-you-may-need-an-appropriate-loader-to-handle-this-file-type)
+- Je kunt gewoon met behulp van Next.js images laden (zet images in een dir genaamd /static/), gebruik met url(/path-to/img.png)
 
-Voor deze website heb ik gebruikt gemaakt van Next.js (https://nextjs.org/learn/)
+# Todo list
 
-Hiervoor heb ik Now ook geinstalleerd (now dev: https://zeit.co/blog/now-dev)
+- [__] - static/ reorganiseren.
+- [__] - blogpost afmaken
+- [__] - nadenken over webanalytics (http://www.openwebanalytics.com/ ??)
+
+# # Roadmap
+
+Voor het schrijven van deze website had ik geen ervaring met Javascript, hiervoor heb ik vooral met Python gewerkt. Voor deze website heb ik gebruikt gemaakt van Next.js (https://nextjs.org/learn/)
 
 Eerst heb ik geprobeerd deze op bootstrap 4 te bouwen, maar er is al een lib voor next.js die beter werkt,
 namelijk react strap: https://reactstrap.github.io/
 
 Hoe je bootstrap gebruikt in Next.js: https://www.youtube.com/watch?v=L0uNai3XyKQ
 
-url loader en file loader miste om images in js te laden (https://stackoverflow.com/questions/45848055/image-you-may-need-an-appropriate-loader-to-handle-this-file-type)
+next-translate is een geweldige lib
 
-Je kunt gewoon met behulp van Next.js images laden (zet images in een dir genaamd /static/), gebruik met url(/path-to/img.png)
-
+# Toevoegen aan resources (ooit?)
 Toe te voegen aan resources:
 https://www.openstreetmap.org/ --> still active
 
@@ -40,9 +47,9 @@ https://www.bellingcat.com/
 https://ninite.com/
 http://www.scientistswarning.org/
 
-
-
 https://www.opensans.com/
+
+https://draw.io
 
 https://matrixcalc.org/en/ http://www.integral-calculator.com/
 
@@ -58,4 +65,15 @@ https://www.2doc.nl/
 https://jsonchecker.com/
 
 https://haveibeenpwned.com/
-"Website "
+
+{"id" : 8, "title" : "Programmeertaal - Haskell.", "categorie" : "programeertalen",
+"content": "Op [Learn you a haskell](http://learnyouahaskell.com/) is een gratis boek (ook te kopen) te vinden waarmee je Haskell online kunt leren. Haskell is een lui-evaluerende pure functionele programmeertaal. \n\nHet is bijvoorbeeld mogelijk om een eindeloze lange lijst (i.e. van 1 tot oneindig) te definiëren, maar ook meervoudige list-comprehension te schrijven om rechthoekige driehoeken te zoeken met een omtrek van 24 cm: `let triangles = [(a, b, c) | a <- [1..20], b <- [1..20], c <- [1..20], a + b + c == 24, a^2 + b^2 == c^2]` \n\nAl met al een interessante programmeertaal."
+},
+
+{"id" : 2, "title" : "Rank a Brand - Merken vergelijken qua duurzaamheid.", "categorie" : "duurzaamheid",
+"content": "De website [Rank a Brand](https://rankabrand.org/) is een website, grotendeels op basis van vrijwilligers, die de duurzaamheid van allerlei soorten merken test.  \n\nDe labels kloppen niet altijd (of zijn niet altijd beschikbaar), maar mocht je van plan zijn om nieuwe spullen te kopen, dan is dit altijd een goede website om van tevoren te even te controleren."
+},
+
+{"id" : 3, "title" : "Todoist - Handige takenlijst.", "categorie" : "productiviteit",
+"content": "De Takenlijst app [Todoist](https://todoist.com), is handig om je taken bij te houden. De kosten van deze app blijven erg beperkt (~15 eu per jaar). De app is ook multiplatform (helaas niet op Ubuntu) en via het internet beschikbaar.  \n\nHiernaast heeft de website verschillende tutorials/templates voor het maken van lijstjes om je gestelde doelen te behalen."
+},

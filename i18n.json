@@ -1,0 +1,17 @@
+{
+    "allLanguages": ["en", "nl"],
+    "defaultLanguage": "en",
+    "currentPagesDir": "pages_",
+    "finalPagesDir": "pages",
+    "localesPath": "locales",
+    "pages": {
+    "*": ["common"],
+    "/": ["index"],
+    "/aboutme" : ["aboutme"],
+    "/contact" : ["contact"],
+    "/blog" : ["blog"],
+    "/projects" : ["projects"],
+    "/resources" : ["resources"],
+    "/blog/[id]" : ["blog"]
+    }
+}

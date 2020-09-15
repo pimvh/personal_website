@@ -1,16 +1,17 @@
 import Markdown from 'react-markdown';
-import Main from '../components/main'
+import Layout from '../components/layout';
 
-export default () => (
-
-    <Main title='Error'>
+export default ErrorPage = () => (
+    <>
+    <Layout>
     <div className = "flex-grid">
         <div className = "col-12 padding-xl">
         <Markdown
           source={`
-Fout. De pagina waar je op gezocht heb bestaat niet. Ga [terug naar de homepage](/).
+Error the page you looked for does not exist. Return to [home](/).
 `} />
         </div>
         </div>
-    </Main>
+    </Layout>
+    </>
 );
