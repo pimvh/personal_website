@@ -1,14 +1,14 @@
 {
 "data": [
-{"id" : 1, "title" : "Privacytools.io - Bron voor online privacy.", "categorie" : "privacy",
+{"id" : 1, "title" : "Privacytools.io - A source for online privacy.", "categorie" : "privacy",
 "content": "The website [privacytools.io](https://PrivacyTools.io) provides a good start to strengthen your online security. Additionally this website provides argumentation on why internetprivacy is important (at all), for example by answering the 'I have nothing to hide'-argumentation.  \n\nAdditionally A detailed list of services can be found on this website regarding different services that care more about your online privacy, like browsers, emailclients and messaging apps.  \n\nIf you use firefox, be sure to checkout the sections of recommended add-ons. These all are quite easy to install and add to your browser."
 },
 
-{"id" : 4, "title" : "Mozilla Privacy Not Included - Een gids voor privacyveilige aankopen.", "categorie" : "privacy",
+{"id" : 4, "title" : "Mozilla Privacy Not Included - A privacyoriented buying guide.", "categorie" : "privacy",
 "content": "The [Mozilla Privacy buyer guide](https://foundation.mozilla.org/en/privacynotincluded/) shows a different perspective on a number of products. Within this guide a number of product, like headphones and cameras, are ranked on a scale on how privacy friendly they are."
 },
 
-{"id" : 5, "title" : "Firefox Send - een free safe filesender", "categorie" : "productiviteit",
+{"id" : 5, "title" : "Firefox Send - a free safe filesender", "categorie" : "productiviteit",
 "content": "[Firefox Send](https://send.firefox.com/) can be used to send files of a maximum of 1GB securely to another person (2.5GB if you login to a firefox account) by using a link."
 },
 
