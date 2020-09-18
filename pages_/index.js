@@ -46,7 +46,7 @@ function Index ({ allPostsData }) {
 
             </div>
 
-            <div className="col-6">
+            <div className="col-5">
                 <img src="/static/me.jpg" alt="Pim met plant" className='picture' />
             </div>
 

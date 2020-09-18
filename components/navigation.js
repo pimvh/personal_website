@@ -20,7 +20,7 @@ export const Navigation = () => {
         				<label className="full-screen" htmlFor="mobileMenu"></label>
         			</label>
 
-        			<div className="col-1 col-10-md logo">
+        			<div className="col-1 col-9-md logo">
                         <a href="/">
                         <img src="/static/common/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="logo" />
                         </a>
@@ -54,8 +54,9 @@ export const Navigation = () => {
 
 
         			</nav>
-
-                    <LangFlag lang={lang} id="mobileMenuLabel" className="mobile-menu right-side" />
+                    <div id="mobileMenuLabel" className="mobile-menu right-side">
+                    <LangFlag lang={lang} />
+                    </div>
 
             </div>
     	    </header>
@@ -69,14 +70,12 @@ const LangFlag = ({lang}) => {
     const { pathname } = useRouter();
 
     return (
-        <div>
         <Link href={pathname.replace(`/${lang}`, '') || '/'} lang={lang === 'en' ? "nl" : "en"} >
             <a>
                 <img src={`/static/common/${lang === 'en' ? 'netherlands' : 'united-kingdom'}-flag-icon-64.png`}
                  alt={lang === 'en' ? "Nederlandse vlag" : "Union Jack"} />
             </a>
         </Link>
-        </div>
     );
 
 }
