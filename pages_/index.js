@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next-translate/Link';
 
-import { getSortedPostsData, getAllPostIds } from '../lib/posts';
+import { getSortedPostsData } from '../lib/posts';
 
 function Index ({ allPostsData }) {
 
@@ -53,15 +53,6 @@ function Index ({ allPostsData }) {
         </Layout>
         </>
     );
-}
-
-export async function getStaticPaths() {
-
-    const paths = getAllPostIds()
-    return {
-        paths,
-        fallback: false,
-    }
 }
 
 export async function getStaticProps({ params }) {

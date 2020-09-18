@@ -1,5 +1,5 @@
 import Markdown from 'react-markdown';
-import { getSortedPostsData, getAllPostIds } from '../lib/posts';
+import { getSortedPostsData } from '../lib/posts';
 
 import Layout from '../components/layout';
 
@@ -33,15 +33,6 @@ function Blog ({ allPostsData }) {
         </Layout>
         </>
     );
-}
-
-export async function getStaticPaths() {
-
-    const paths = getAllPostIds();
-    return {
-        paths,
-        fallback: false,
-    }
 }
 
 export async function getStaticProps({ params }) {
