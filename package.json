@@ -30,7 +30,7 @@
     "react-dom": "^16.13.1",
     "react-markdown": "^4.3.1",
     "sass": "^1.26.10",
-    "serialize-javascript": "^4.0.0",
+    "serialize-javascript": "^5.0.1",
     "yarn": "^1.22.5"
   },
   "devDependencies": {}
