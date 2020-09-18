@@ -2,5 +2,6 @@
     "title" : "Mijn blog",
     "topmessage": "Hieronder is een overzicht te vinden van al mijn posts tot nu toe. Er volgen er meer!",
     "from" : "van",
+    "readingtime": "*Leestijd {{time}} min!*",
     "back" : "Terug naar alle blogposts!"
 }

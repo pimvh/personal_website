@@ -17,9 +17,9 @@ function Post({ PostData }) {
             <title> {t("blog:title")} </title>
         </Head>
 
-        <Markdown source = {`# ${PostData.title} ${t("blog:from")} ${PostData.date} `} />
-
-        <Markdown source= {PostData.PostContent}/>
+        <Markdown source={`# ${PostData.title} ${t("blog:from")} ${PostData.date} `} />
+        <Markdown source={t("blog:readingtime", {time: Math.round(PostData.wordcount / 250) })} />
+        <Markdown source={PostData.PostContent} />
 
         <Link href="/blog" >
             {t("blog:back")}

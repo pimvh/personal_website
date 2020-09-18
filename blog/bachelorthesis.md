@@ -2,7 +2,7 @@
 title: "My bachelor thesis"
 date: "2020-09-11"
 postlang: "en"
-wordcount: ""
+wordcount: "1389"
 ---
 Hello Internet! Welcome to my very first post on my bachelor thesis, *Benchmarking Deep Neural Networks*.
 

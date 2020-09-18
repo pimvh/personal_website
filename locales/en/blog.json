@@ -2,5 +2,6 @@
     "title" : "My blog",
     "topmessage": "Below an oversight can be found of all my post up until now. More will follow!",
     "from" : "from",
+    "readingtime": "*Reading time {{time}} min!*",
     "back" : "Back to all blogpost!"
 }

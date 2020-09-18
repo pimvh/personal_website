@@ -2,7 +2,7 @@
 title: "Mijn bachelor scriptie"
 date: "2020-08-11"
 postlang: "nl"
-wordcount: ""
+wordcount: "1433"
 ---
 Hallo Internet! Welkom bij mijn allereerste post over mijn bachelorscriptie, *Het benchmarken van Deep Neural Networks*.
 

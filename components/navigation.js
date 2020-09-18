@@ -8,6 +8,17 @@ export const Navigation = () => {
 
     const { t, lang } = useTranslation();
 
+    const router = useRouter();
+
+    function isActive(href) {
+
+        if (router.pathname === href) {
+            return 'active';
+        }
+
+        return '';
+    }
+
     return (
             <>
             <header className="main-container header fixed ">
@@ -30,24 +41,24 @@ export const Navigation = () => {
         				<div className="navbar-links">
         					<input type="radio" className="hide" name="navbar-menu" id="navbarDropHide" defaultChecked></input>
                                 <Link href="/" >
-                                    <a> {t("common:navhome")} </a>
+                                    <a className={isActive("/")}> {t("common:navhome")} </a>
                                 </Link>
-                                <Link href="/blog" >
-                                    <a> {t("common:navblog")} </a>
+                                <Link href="/blog"  >
+                                    <a className={isActive("/blog")}> {t("common:navblog")} </a>
                                 </Link>
-                                <Link href="/contact" >
-                                    <a> {t("common:navcontact")} </a>
+                                <Link href="/contact">
+                                    <a  className={isActive("/contact")}> {t("common:navcontact")} </a>
                                 </Link>
-                                <Link href="/aboutme" >
-                                    <a> {t("common:navaboutme")} </a>
+                                <Link href="/aboutme"  >
+                                    <a className={isActive("/aboutme")}> {t("common:navaboutme")} </a>
                                 </Link>
 
                                 <Link href="/projects" >
-                                    <a> {t("common:navprojects")} </a>
+                                    <a className={isActive("/projects")}> {t("common:navprojects")} </a>
                                 </Link>
 
-                                <Link href="/resources" >
-                                    <a> {t("common:navresources")} </a>
+                                <Link href="/resources">
+                                    <a className={isActive("/resources")}> {t("common:navresources")} </a>
                                 </Link>
                         </div>
 
