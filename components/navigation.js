@@ -55,7 +55,7 @@ export const Navigation = () => {
 
         			</nav>
 
-                    <LangFlag lang={lang} />
+                    <LangFlag lang={lang} id="mobileMenuLabel" className="mobile-menu right-side" />
 
             </div>
     	    </header>
@@ -69,7 +69,7 @@ const LangFlag = ({lang}) => {
     const { pathname } = useRouter();
 
     return (
-        <div className="flag">
+        <div>
         <Link href={pathname.replace(`/${lang}`, '') || '/'} lang={lang === 'en' ? "nl" : "en"} >
             <a>
                 <img src={`/static/common/${lang === 'en' ? 'netherlands' : 'united-kingdom'}-flag-icon-64.png`}

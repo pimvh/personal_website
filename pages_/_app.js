@@ -5,21 +5,15 @@ import Head from 'next/head';
 
 import Router from 'next/router';
 
-import HeadCarousel from '../components/carousel';
-import Navigation from '../components/navigation';
-import Footer from '../components/footer';
+import Layout from '../components/layout';
 
-// Router.events.on('routeChangeStart', (url) => {
-//     console.log(`Loading: ${url}`)
-// });
-//
-// Router.events.on('routeChangeComplete', () => {
-//     console.log('done!')
-// });
-//
-// Router.events.on('routeChangeError', () => {
-//     console.log('done!')
-// });
+Router.events.on('routeChangeStart', (url) => {
+    return (
+        <Layout>
+            <i class="loading-v2"></i> Loading
+        </Layout>
+    );
+});
 
 // This default export is required in a new `pages/_app.js` file.
 class MyApp extends App {

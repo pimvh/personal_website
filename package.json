@@ -11,7 +11,7 @@
     "profile": "next build"
   },
   "keywords": [],
-  "author": "",
+  "author": "pimvh",
   "license": "ISC",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",

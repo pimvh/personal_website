@@ -24,9 +24,6 @@ function Index ({ allPostsData }) {
 
         <div className = "flex-grid">
 
-            <div className="col-4">
-                <img src="/static/me.jpg" alt="Pim met plant" className='picture' />
-            </div>
             <div className="col-6">
             <Markdown
               source={t("index:topcontent")} />
@@ -48,6 +45,11 @@ function Index ({ allPostsData }) {
               source={t("index:botcontent")} />
 
             </div>
+
+            <div className="col-6">
+                <img src="/static/me.jpg" alt="Pim met plant" className='picture' />
+            </div>
+
         </div>
 
         </Layout>
