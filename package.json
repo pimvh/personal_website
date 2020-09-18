@@ -20,7 +20,7 @@
     "core-js": "^3.6.5",
     "fs": "0.0.1-security",
     "gray-matter": "^4.0.2",
-    "image-webpack-loader": "^6.0.0",
+    "image-webpack-loader": "^7.0.1",
     "lodash": "^4.17.20",
     "mkdirp": "^1.0.4",
     "next": "^9.5.3",
