@@ -1,6 +1,6 @@
 ---
 title: "My bachelor thesis"
-date: "2020-09-11"
+date: "the 11th of September 2020"
 postlang: "en"
 wordcount: "1389"
 ---

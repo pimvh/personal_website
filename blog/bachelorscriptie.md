@@ -1,6 +1,6 @@
 ---
 title: "Mijn bachelor scriptie"
-date: "2020-08-11"
+date: "11 September 2020"
 postlang: "nl"
 wordcount: "1433"
 ---

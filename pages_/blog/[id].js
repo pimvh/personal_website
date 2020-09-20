@@ -10,6 +10,10 @@ function Post({ PostData }) {
 
     const { t, lang } = useTranslation();
 
+    function calcReadingTime(time) {
+        return Math.round(time / 250);
+    }
+
     return (
         <>
         <Layout>
@@ -17,8 +21,8 @@ function Post({ PostData }) {
             <title> {t("blog:title")} </title>
         </Head>
 
-        <Markdown source={`# ${PostData.title} ${t("blog:from")} ${PostData.date} `} />
-        <Markdown source={t("blog:readingtime", {time: Math.round(PostData.wordcount / 250) })} />
+        <Markdown source={`# ${PostData.title}`}/>
+        <Markdown source={`\n###### ${t("blog:from")} ${PostData.date} --- ${t("blog:readingtime", {time: calcReadingTime(PostData.wordcount)})}`} />
         <Markdown source={PostData.PostContent} />
 
         <Link href="/blog" >
