@@ -9,9 +9,9 @@ module.exports = {
     /* config options here */
     webpack: (config, { isServer }) => {
         if (isServer) {
-          require('./lib/generate-sitemap')
+          require('./lib/generate-sitemap');
         }
 
-        return config
+        return config;
     },
 }
