@@ -35,6 +35,17 @@ class MyApp extends App {
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                 <meta name="theme-color" content="#ffffff" />
 
+                {/* Open Graph */}
+
+                <meta property="og:title" content="pimvanhelvoirt.nl" />
+                <meta property="og:type" content="website" />
+                <meta property="og:description" content="welcome to my personal website" />
+                <meta property="og:image" content="https://pimvanhelvoirt.nl/static/common/unicorn_icon.jpg" />
+                <meta property="og:image:secure_url" content="https://pimvanhelvoirt.nl/static/common/unicorn_icon.jpg" />
+                <meta property="og:image:width" content="400" />
+                <meta property="og:image:height" content="300" />
+                <meta property="og:image:alt" content="A lovely unicorn" />
+
             </Head>
 
             <Component {...pageProps} />
