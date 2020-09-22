@@ -1,10 +1,12 @@
 import Markdown from 'react-markdown';
-import { getAllPostIds, getPostData } from '../../lib/posts';
+
+import Header from '../../components/header';
 import Layout from '../../components/layout';
-import Head from 'next/head';
 
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next-translate/Link';
+
+import { getAllPostIds, getPostData } from '../../lib/posts';
 
 function Post({ PostData }) {
 
@@ -16,10 +18,11 @@ function Post({ PostData }) {
 
     return (
         <>
+
+        <Header title={PostData.title} description={PostData.description}
+                imageUrl={PostData.image} imageAlt={PostData.imagealt}/>
+
         <Layout>
-        <Head>
-            <title> {t("blog:title")} </title>
-        </Head>
 
         <Markdown source={`# ${PostData.title}`}/>
         <Markdown source={`\n###### ${t("blog:from")} ${PostData.date} --- ${t("blog:readingtime", {time: calcReadingTime(PostData.wordcount)})}`} />

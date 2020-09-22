@@ -1,6 +1,7 @@
 import Markdown from 'react-markdown';
 
 import Layout from '../components/layout';
+import Header from '../components/header';
 
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next-translate/Link';
@@ -29,7 +30,10 @@ export default function Resources() {
     );
 
     return (
-    <>
+        <>
+
+        <Header title={t('resources:title')} description={t('resources:description')} />
+
         <Layout>
             <Markdown
               source={t("resources:top")} />
@@ -37,6 +41,6 @@ export default function Resources() {
                 <Resource key={resource.id} resource={resource} />
             ))}
         </Layout>
-    </>
+        </>
     );
 }

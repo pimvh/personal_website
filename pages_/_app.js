@@ -28,9 +28,10 @@ class MyApp extends App {
                 <meta name="title" />
                 <title> Pim van Helvoirt </title>
                 <meta charSet="UTF-8" />
-                <meta name="description" content="Persoonlijke website van Pim van Helvoirt" />
                 <meta name="author" content="Pim van Helvoirt" />
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+                {/* Creating Favicons */}
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                 <meta name="theme-color" content="#ffffff" />

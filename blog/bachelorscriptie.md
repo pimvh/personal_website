@@ -1,5 +1,8 @@
 ---
 title: "Mijn bachelor scriptie"
+description: "Deze blogpost gaat over mijn bachelorscriptie het Benchmarken van Diepe Neurale Netwerken."
+image: "blog/nn.jpeg"
+imagealt: "Een simpel neuraal netwerk"
 date: "11 September 2020"
 postlang: "nl"
 wordcount: "1433"

@@ -1,10 +1,12 @@
 import Markdown from 'react-markdown';
-import { getSortedPostsData } from '../lib/posts';
 
+import Header from '../components/header';
 import Layout from '../components/layout';
 
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next-translate/Link';
+
+import { getSortedPostsData } from '../lib/posts';
 
 function Blog ({ allPostsData }) {
 
@@ -12,6 +14,9 @@ function Blog ({ allPostsData }) {
 
     return (
         <>
+
+        <Header title={t('blog:title')} description={t('blog:description')} />
+
         <Layout>
         <div className = "flex-grid">
             <div className = "col-12 padding-xl">

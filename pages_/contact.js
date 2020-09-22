@@ -1,6 +1,7 @@
 import Markdown from 'react-markdown';
 
 import Layout from '../components/layout';
+import Header from '../components/header';
 
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next-translate/Link';
@@ -50,25 +51,28 @@ function Contact () {
     }
 
     return (
-    <>
-    <Layout>
-        <div className = "flex-grid">
-            <div className = "col-12 padding-xl">
-            <div>
-            <Markdown
-              source={t("contact:message")} />
+        <>
+
+        <Header title={t('contact:title')} description={t('contact:description')} />
+
+        <Layout>
+            <div className = "flex-grid">
+                <div className = "col-12 padding-xl">
+                <div>
+                <Markdown
+                  source={t("contact:message")} />
+                </div>
+                <table className='tbl striped-odd'>
+                    <tbody>
+                    {getContactDetails().map(contact => (
+                        <ContactRow key={contact.service} contact={contact} lang={lang}/>
+                    ))}
+                    </tbody>
+                </table>
+                </div>
             </div>
-            <table className='tbl striped-odd'>
-                <tbody>
-                {getContactDetails().map(contact => (
-                    <ContactRow key={contact.service} contact={contact} lang={lang}/>
-                ))}
-                </tbody>
-            </table>
-            </div>
-        </div>
-    </Layout>
-    </>
+        </Layout>
+        </>
 );
 }
 

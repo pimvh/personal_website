@@ -1,8 +1,7 @@
-import React from 'react';
 import Markdown from 'react-markdown';
-import Head from 'next/head';
+
+import Header from '../components/header';
 import Layout from '../components/layout';
-import OpenGraph from '../components/opengraph';
 
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next-translate/Link';
@@ -15,15 +14,9 @@ function Index ({ allPostsData }) {
 
     return (
         <>
-        <Head>
-            <meta name="title" content={t('index:title')} />
-            <title> {t('index:title')} </title>
-
-            <OpenGraph title="Pim van Helvoirt - Home" />
-
-        </Head>
-
-        <Layout >
+        <Header title={t('index:title')} description={t('index:description')} />
+        
+        <Layout>
 
         <div className = "flex-grid">
 

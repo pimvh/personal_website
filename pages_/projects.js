@@ -1,7 +1,7 @@
 import Markdown from 'react-markdown';
 
-import Head from 'next/head';
 import Layout from '../components/layout';
+import Header from '../components/header';
 
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next-translate/Link';
@@ -39,9 +39,9 @@ function Projects () {
 
     return (
         <>
-        <Head>
-            <title> {t("projects:title")} </title>
-        </Head>
+
+        <Header title={t('projects:title')} description={t('projects:description')} />
+
         <Layout>
         <div className = 'project_container'>
 
