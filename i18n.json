@@ -1,6 +1,6 @@
 {
     "allLanguages": ["en", "nl"],
-    "defaultLanguage": "en",
+    "defaultLanguage": "nl",
     "currentPagesDir": "pages_",
     "finalPagesDir": "pages",
     "localesPath": "locales",

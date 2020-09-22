@@ -2,6 +2,7 @@ import React from 'react';
 import Markdown from 'react-markdown';
 import Head from 'next/head';
 import Layout from '../components/layout';
+import OpenGraph from '../components/opengraph';
 
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next-translate/Link';
@@ -17,7 +18,9 @@ function Index ({ allPostsData }) {
         <Head>
             <meta name="title" content={t('index:title')} />
             <title> {t('index:title')} </title>
-            <link rel="alternate" href={"fill in "} hrefLang="x-default" />
+
+            <OpenGraph title="Pim van Helvoirt - Home" />
+
         </Head>
 
         <Layout >
