@@ -6,7 +6,7 @@ export default function Header ({title, description, imageUrl, imageAlt }) {
 
     const titledef = title? title : "pimvanhelvoirt.nl";
     const descriptiondef = description? description : "welcome to my personal website";
-    const imageUrldef = `https://pimvanhelvoirt.nl/static/common/${imageUrl ? imageUrl : "unicorn_icon.jpg"}`;
+    const imageUrldef = `https://pimvanhelvoirt.nl/static/${imageUrl ? imageUrl : "common/unicorn_icon.jpg"}`;
     const imageAltdef = imageAlt ? imageAlt : "A lovely unicorn";
 
     return (
