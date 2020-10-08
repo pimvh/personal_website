@@ -23,7 +23,7 @@
     "image-webpack-loader": "^7.0.1",
     "lodash": "^4.17.20",
     "mkdirp": "^1.0.4",
-    "next": "^9.5.3",
+    "next": "^9.5.4",
     "next-translate": "^0.17.2",
     "node": "^14.13.0",
     "node-fetch": "^2.6.1",
