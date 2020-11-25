@@ -5,7 +5,7 @@ import Header from '../components/header';
 import Layout from '../components/layout';
 
 import useTranslation from 'next-translate/useTranslation';
-import Link from 'next-translate/Link';
+import Link from 'next/link';
 
 function AboutMe () {
 

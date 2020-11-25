@@ -1,7 +1,4 @@
 import Markdown from 'react-markdown';
-
-import Link from 'next-translate/Link';
-
 import useTranslation from 'next-translate/useTranslation';
 
 const Footer = () => {

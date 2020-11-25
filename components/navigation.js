@@ -1,8 +1,12 @@
 import React from 'react';
-import Link from 'next-translate/Link';
+import Link from 'next/link';
 
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
+
+import i18nConfig from '../i18n.json';
+
+const { locales } = i18nConfig;
 
 export const Navigation = () => {
 
@@ -81,7 +85,7 @@ const LangFlag = ({lang}) => {
     const { pathname } = useRouter();
 
     return (
-        <Link href={pathname.replace(`/${lang}`, '') || '/'} lang={lang === 'en' ? "nl" : "en"} >
+        <Link href={pathname.replace(`/${lang}`, '') || '/'} locale={lang === 'en' ? "nl" : "en"} key={lang} >
             <a>
                 <img src={`/static/common/${lang === 'en' ? 'netherlands' : 'united-kingdom'}-flag-icon-64.png`}
                  alt={lang === 'en' ? "Nederlandse vlag" : "Union Jack"} />

@@ -1,3 +1,4 @@
+import React from 'react';
 import HeadCarousel from './carousel';
 import Navigation from './navigation';
 import Footer from './footer';

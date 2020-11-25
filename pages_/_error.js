@@ -1,3 +1,4 @@
+import React from 'react';
 import Markdown from 'react-markdown';
 import Layout from '../components/layout';
 

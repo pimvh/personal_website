@@ -5,6 +5,8 @@
 // const withSourceMaps = require('@zeit/next-source-maps')();
 // withSourceMaps(
 
+const { locales, defaultLocale } = require('./i18n.json')
+
 module.exports = {
     /* config options here */
     webpack: (config, { isServer }) => {
@@ -14,4 +16,6 @@ module.exports = {
 
         return config;
     },
+
+    i18n: { locales, defaultLocale },
 }
