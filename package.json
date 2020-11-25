@@ -29,7 +29,7 @@
     "node-fetch": "^2.6.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-markdown": "^5.0.2",
+    "react-markdown": "^5.0.3",
     "sass": "^1.27.0",
     "serialize-javascript": "^5.0.1",
     "yarn": "^1.22.10"
