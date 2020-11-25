@@ -41,7 +41,7 @@ function AboutMe () {
               source={t("aboutme:topcontent")} />
             </div>
 
-            <CVdisplay />
+            {/* <CVdisplay /> */}
         </Layout>
         </>
 );}
