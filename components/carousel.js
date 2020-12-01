@@ -1,36 +1,36 @@
-import React from 'react'
+import React from 'react';
 
 export default function HeadCarousel () {
 
     function getItems() {
     return [
       {
-        id: 1,
-        src: '/static/garden.png',
+        id: 'img1',
+        src: '/static/common/garden.png',
         altText: 'Garden',
         caption: ''
       },
       {
-        id: 2,
-        src: '/static/snowymountains.png',
+        id: 'img2',
+        src: '/static/common/snowymountains.png',
         altText: 'Sneeuwbergen',
         caption: ''
       },
       {
-        id: 3,
-        src: '/static/dunes.png',
+        id: 'img3',
+        src: '/static/common/dunes.png',
         altText: 'Duinen',
         caption: ''
       },
       {
-        id: 4,
-        src: '/static/dog-back.png',
+        id: 'img4',
+        src: '/static/common/dog-back.png',
         altText: 'Dog',
         caption: ''
       },
       {
-        id: 5,
-        src: '/static/garden.png',
+        id: 'img5',
+        src: '/static/common/garden.png',
         altText: 'Garden',
         caption: ''
       }];

@@ -1,39 +1,37 @@
 {
   "name": "personalwebsite-next",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "My own personal website!",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
+    "dev": "next-translate && next dev",
+    "build": "next-translate && next build --debug",
     "start": "next start",
-    "profile": "next build --profile"
+    "profile": "next build"
   },
   "keywords": [],
-  "author": "",
+  "author": "pimvh",
   "license": "ISC",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "chokidar": "^3.4.2",
-    "core-js": "^3.6.5",
-    "file-system": "^2.2.2",
+    "@zeit/next-source-maps": "0.0.3",
+    "bl": "^4.0.3",
+    "core-js": "^3.7.0",
     "fs": "0.0.1-security",
     "gray-matter": "^4.0.2",
-    "image-webpack-loader": "^6.0.0",
+    "image-webpack-loader": "^7.0.1",
     "lodash": "^4.17.20",
     "mkdirp": "^1.0.4",
-    "next": "^9.5.2",
-    "node": "^14.8.0",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-markdown": "^4.3.1",
-    "sass": "^1.26.10",
-    "serialize-javascript": "^4.0.0",
-    "yarn": "^1.22.4"
-  },
-  "devDependencies": {
-    "webpack": "^4.44.1"
+    "next": "^10.0.3",
+    "next-translate": "^0.20.2",
+    "node": "^15.2.1",
+    "node-fetch": "^2.6.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-markdown": "^5.0.3",
+    "sass": "^1.27.0",
+    "serialize-javascript": "^5.0.1",
+    "yarn": "^1.22.10"
   }
 }

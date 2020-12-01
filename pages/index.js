@@ -1,26 +1,56 @@
-import React, { useEffect } from 'react'
-import Head from '../components/header'
-import { useRouter } from 'next/router'
-import getInitialLocale from '../lib/translations/getInitialLocale'
+import React from 'react';
 
-export default function Refer () {
-    const router = useRouter();
+import Head from 'next/head';
+import Router from 'next/router';
 
-    useEffect(() => {
+import { GetServerSideProps } from 'next';
+import i18nConfig from '../i18n.config';
+import { GetI18nProps, getI18nCookieFromUnparsedCookieHeader } from '../lib/i18n';
 
-        const initLocale = getInitialLocale();
+const { defaultLanguage } = i18nConfig;
 
-        router.push(`/[lang]`, `/${initLocale}`)}
-    )
+function Refer ({ language }) {
+
+    React.useEffect(() => {
+        Router.replace(`/${language}`);
+    }, []);
 
     return (
-        <>
         <Head>
             <meta name="robots" content="noindex, nofollow" />
         </Head>
-        <div className = "flex-grid">
-            loading...
-        </div>
-        </>
-    )
-}
+    );
+};
+
+export async function getServerSideProps({ req, res }){
+    const preferredLanguage = getI18nCookieFromUnparsedCookieHeader(req.headers.cookie || '');
+
+    const acceptLanguageHeader = req.headers['accept-language'] | undefined || req.headers['Accept-Language'] | undefined;
+
+    const acceptLanguageSub = acceptLanguageHeader ? acceptLanguageHeader.substring(0, 2) : undefined;
+
+    const acceptLanguage = acceptLanguageSub === 'en' ? acceptLanguageSub : 'nl';
+
+    // 1st priority: language in cookie
+    // 2nd priority: accept-language header
+    // 3rd priority: default language
+    const finalLanguage = preferredLanguage || acceptLanguage || defaultLanguage.prefix;
+
+    // https://github.com/vercel/next.js/discussions/14547#discussion-7687
+    // https://github.com/vercel/next.js/discussions/14890
+    // https://github.com/vercel/next.js/discussions/11281
+    if (typeof window === 'undefined') {
+        res.statusCode = 302;
+        res.setHeader('Location', `/${finalLanguage}`);
+        res.end();
+    }
+
+    return {
+        props: {
+          language: finalLanguage,
+          translations: {},
+        },
+    };
+};
+
+export default Refer;

@@ -1,0 +1,8 @@
+{
+    "title" : "Pim's blog",
+    "description" : "Welkom op mijn blog, je kunt al mijn posts hier lezen.",
+    "topmessage": "Hieronder is een overzicht te vinden van al mijn posts tot nu toe. Er volgen er meer!",
+    "from" : "van",
+    "readingtime": "*Leestijd {{time}} min!*",
+    "back" : "Terug naar alle blogposts!"
+}
