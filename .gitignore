@@ -3,6 +3,5 @@ package-lock.json
 .next/*
 v1-master
 notes.md
-pages/**
 public/sitemap.xml
 .env
