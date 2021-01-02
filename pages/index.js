@@ -3,14 +3,25 @@ import Markdown from 'react-markdown';
 import Header from '../components/header';
 import Layout from '../components/layout';
 
+
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { getSortedPostsData } from '../lib/posts';
 
 function Index ({ allPostsData }) {
 
     const { t, lang } = useTranslation();
+
+    const PostLinks = allPostsData.filter(post => post.postlang == lang)
+                 .map(({id, date, title }) => (
+        <li key={id} >
+        <Link href={`blog/${id}`}>
+            <a> {date} - {title} </a>
+        </Link>
+        </li>
+    ));
 
     return (
         <>
@@ -20,31 +31,21 @@ function Index ({ allPostsData }) {
 
         <div className = "flex-grid">
 
-            <div className="col-6">
-            <Markdown
-              source={t("index:topcontent")} />
+        <div className="col-3">
+            <Image src="/static/me.jpg" alt="Pim met plant" width='300px' height='400px' className='picture' />
+        </div>
 
-            <ul>
-            {allPostsData.filter(post => post.postlang == lang)
-                         .map(({ id, date, title }) => (
-                <>
-                <li key={id} >
-                <Link href={`blog/${id}`}>
-                    <a> {date} - {title} </a>
-                </Link>
-                </li>
-                </>
-            ))}
-            </ul>
+          <div className="col-6">
+          <Markdown
+            source={t("index:topcontent")} />
 
-            <Markdown
-              source={t("index:botcontent")} />
+          <ul>
+            {PostLinks}
+          </ul>
 
-            </div>
-
-            <div className="col-5">
-                <img src="/static/me.jpg" alt="Pim met plant" className='picture' />
-            </div>
+          <Markdown
+            source={t("index:botcontent")} />
+          </div>
 
         </div>
 

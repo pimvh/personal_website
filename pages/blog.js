@@ -12,6 +12,15 @@ function Blog ({ allPostsData }) {
 
     const { t, lang } = useTranslation();
 
+    const PostLinks = allPostsData.filter(post => post.postlang == lang)
+                 .map(({id, date, title }) => (
+        <li key={id} >
+        <Link href={`blog/${id}`}>
+            <a> {date} - {title} </a>
+        </Link>
+        </li>
+    ));
+
     return (
         <>
 
@@ -23,15 +32,7 @@ function Blog ({ allPostsData }) {
             <Markdown
               source={t("blog:topmessage")} />
               <ul>
-
-              {allPostsData.filter(post => post.postlang == lang)
-                           .map(({id, date, postlang, title }) => (
-                  <li key={id}>
-                      <Link href={`blog/${id}`} >
-                         <a> {date} - {title} </a>
-                      </Link>
-                  </li>
-              ))}
+                {PostLinks}
               </ul>
             </div>
         </div>
