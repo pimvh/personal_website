@@ -16,4 +16,17 @@ module.exports = nextTranslate({
 
         return config;
     },
+
+    async rewrites() {
+    return [
+      {
+        source: '/blog/bachelorthesis',
+        destination: '/en/blog/bachelorthesis'
+      },
+      {
+        source: '/blog/howtopihole',
+        destination: '/en/blog/howtopihole'
+      }
+    ];
+  }
 });

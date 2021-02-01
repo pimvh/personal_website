@@ -1,14 +1,23 @@
 import Markdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 
 import Header from '../../components/header';
 import Layout from '../../components/layout';
 
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
 function Post({ PostData }) {
+
+    const renderers = {
+      code: ({language, value}) => {
+        return <SyntaxHighlighter language={language} children={value} />
+      }
+    }
 
     const { t, lang } = useTranslation();
 
@@ -20,13 +29,18 @@ function Post({ PostData }) {
         <>
 
         <Header title={PostData.title} description={PostData.description}
-                imageUrl={PostData.image} imageAlt={PostData.imagealt}/>
+                imageUrl={PostData.previewimage} imageAlt={PostData.previewimagealt}/>
 
         <Layout>
 
-        <Markdown source={`# ${PostData.title}`}/>
-        <Markdown source={`\n###### ${t("blog:from")} ${PostData.date} --- ${t("blog:readingtime", {time: calcReadingTime(PostData.wordcount)})}`} />
-        <Markdown source={PostData.PostContent} />
+        <ReactMarkdown children={`# ${PostData.title}`} />
+        <ReactMarkdown children={`\n###### ${t("blog:from")} ${PostData.date} --- ${t("blog:readingtime", {time: calcReadingTime(PostData.wordcount)})}`} />
+
+        <Link href="/blog" >
+            {t("blog:back")}
+        </Link> <br />
+
+        <ReactMarkdown renderers={renderers} children={PostData.PostContent} />
 
         <Link href="/blog" >
             {t("blog:back")}

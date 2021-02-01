@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-// import documentLang from 'next-translate/documentLang'
 
 export default class MyDocument extends Document {
     render() {
@@ -15,5 +14,3 @@ export default class MyDocument extends Document {
         )
     }
 }
-
-// <Html lang={documentLang(this.props)}>

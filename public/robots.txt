@@ -1,1 +1,3 @@
-User-agent: * Disallow: /static
+User-agent: *
+Disallow: /static
+Sitemap: https://www.pimvanhelvoirt.nl/sitemap.xml

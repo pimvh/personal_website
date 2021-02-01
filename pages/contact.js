@@ -16,7 +16,7 @@ function Contact () {
         {contact.service}:
         </td>
         <td>
-        <a href={`${contact.link}`} >{contact.text[lang]}</a>
+        <a href={contact.link}> {contact.text[lang]} </a>
         </td>
 
         <style jsx>{`
@@ -32,18 +32,14 @@ function Contact () {
         </tr>
     );
 
-
     function getContactDetails() {
         return [
-            {service: 'MeetMe', link: 'https://doodle.com/pimvanhelvoirt',
-             text: {nl: 'Maak hier een afspraak met mij.',
-                    en: 'You can make an appointment with me using this service'}},
             {service: 'Linked-in', link: 'https://nl.linkedin.com/in/pim-van-helvoirt',
              text: {nl: 'pim-van-helvoirt',
                     en: 'pim-van-helvoirt'}},
             {service: 'E-mail', link: 'mailto:pim.van.helvoirt@home.nl',
-             text: {nl: 'pim.van.helvoirt@home.nl',
-                    en: 'pim.van.helvoirt@home.nl'}},
+             text: {nl: 'Email mij!',
+                    en: 'Email me!'}},
             {service: 'Github', link: 'https://github.com/pimvh',
              text: {nl: 'pimvh',
                     en: 'pimvh'}}

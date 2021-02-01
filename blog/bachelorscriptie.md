@@ -1,8 +1,8 @@
 ---
 title: "Mijn bachelor scriptie"
 description: "Deze blogpost gaat over mijn bachelorscriptie het Benchmarken van Diepe Neurale Netwerken."
-image: "blog/nn.jpeg"
-imagealt: "Een simpel neuraal netwerk"
+previewimage: "blog/nn.jpeg"
+previewimagealt: "Een simpel neuraal netwerk"
 date: "11 September 2020"
 postlang: "nl"
 wordcount: "1433"
@@ -21,7 +21,7 @@ In deze post ga ik achtereenvolgens in op wat neurale netwerken zijn, wat bekend
 
 ## Wat zijn Neurale Netwerken?
 
-![Ik](/static/blog/nn.jpeg#blogimg)
+![Neural Network](/static/blog/nn.jpeg#blogimg)
 
 *NB: Dit is een vrij simple neuraal netwerk, tegenwoordig zijn de netwerken vele malen groter.*
 

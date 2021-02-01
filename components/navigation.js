@@ -85,7 +85,9 @@ const LangFlag = ({lang}) => {
     const { pathname } = useRouter();
 
     return (
-        <Link href={pathname.replace(`/${lang}`, '') || '/'} locale={lang === 'en' ? "nl" : "en"} key={lang} >
+
+        // href={pathname.replace(`/${lang}`, '') || '/'} locale={lang === 'en' ? "nl" : "en"}
+        <Link href={'/'} locale={lang === 'en' ? "nl" : "en"} key={lang} >
             <a>
                 <img src={`/static/common/${lang === 'en' ? 'netherlands' : 'united-kingdom'}-flag-icon-64.png`}
                  alt={lang === 'en' ? "Nederlandse vlag" : "Union Jack"} />

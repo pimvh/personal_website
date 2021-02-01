@@ -22,6 +22,10 @@
 
 {"id" : 10, "title" : "Dataveiligheid - Have I been PWND?", "categorie" : "privacy",
 "content": "[Have I been PWND?](https://haveibeenpwned.com/) is een open database op het internet waarin je je eigen email kunt opzoeken. Deze database op basis van vrijgegeven gegevens door hackers. \n\nDe tool is handig om op te zoeken welke recente hacks er zijn geweest en of je actie moet ondernemen in het veranderen van je wachtwoorden. Tegenwoordig zijn bedrijven verplicht om aan te geven dat gebruikers gehackt zijn, maar dat gebeurde vroeger niet altijd. Deze tool helpt daarbij."
+},
+
+{"id" : 11, "title" : "Rank a Brand - Merken vergelijken qua duurzaamheid.", "categorie" : "duurzaamheid",
+"content": "De website [Rank a Brand](https://rankabrand.org/) is een website, grotendeels op basis van vrijwilligers, die de duurzaamheid van allerlei soorten merken test.  \n\nDe labels kloppen niet altijd (of zijn niet altijd beschikbaar), maar mocht je van plan zijn om nieuwe spullen te kopen, dan is dit altijd een goede website om van tevoren te even te controleren."
 }
 ]
 }

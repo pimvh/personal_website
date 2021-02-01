@@ -1,8 +1,8 @@
 ---
 title: "My bachelor thesis"
 description: "Deze blogpost is about my bachelorthesis, the benchmarking of Deep Neural Networks."
-image: "blog/nn.jpeg"
-imagealt: "A simple neural network"
+previewimage: "blog/nn.jpeg"
+previewimagealt: "A simple neural network"
 date: "the 11th of September 2020"
 postlang: "en"
 wordcount: "1389"

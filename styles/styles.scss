@@ -15,6 +15,8 @@ input, select { vertical-align:middle; }
 button {  width:auto; overflow:visible; }
 table { border:0; padding:0; border-spacing:0; }
 
+
+
 $font-stack: 'Open Sans', sans-serif, helvetica;
 $font-size: calc(14px + .05vw);
 $line-height: 1.4em;
@@ -935,7 +937,7 @@ blockquote h1,
 /*** Containers ***/
 
 .main-container {
-	padding: 0 1% 0 1%;
+	padding: 0 4% 0 4%;
 	box-sizing: border-box;
 	width: 100%;
 	margin: 0 auto;
@@ -943,6 +945,7 @@ blockquote h1,
 
 .main-container.max-1170 {
 	max-width: 1170px;
+	padding: 0 1% 0 1%;
 }
 
 .main-container.max-1400 {
@@ -1154,32 +1157,21 @@ h6 small {
 	font-size: calc(9px + .1vw);
 }
 
-
-code {
-	text-shadow: 0 1px white;
- font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
- text-align: left;
- white-space: pre;
- word-spacing: normal;
- word-break: normal;
- word-wrap: normal;
-	display: inline-block;
-	background: #f5f2f0;
-	white-space: normal;
-	padding: 2px 5px 2px 5px;
-	color: #905;
-	color: #690;
-	font-weight: 700;
-	font-size: 12px;
+/* code styling */
+pre code {
+  display: block;
+  background-color: #f2f2f2;
+	width: auto;
+	min-width: 100px;
+	margin-right:auto;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  padding: 0;
 }
 
-code span {
-	color: #905;
-	color: #07a;
-}
-
-code A.code-text {
-	color: #000;
+#terminalpointer {
+	color: #00FF00
 }
 
 .xs, .sm, .md, .lg, .xl {

@@ -22,6 +22,10 @@
 
 {"id" : 10, "title" : "Datasafety - Have I been PWND?", "categorie" : "privacy",
 "content": "[Have I been PWND?](https://haveibeenpwned.com/) is an open database on the internet in which you search whether your own emailadress has been part of a databreach. This database is based on data that has been released by hackers. \n\nThe tool is very handy for looking up recent breaches and whether to take action by chancing your password. Nowdays companies are required to notify users that they accountinformation was compromised, but that hasn't always happened in the past. This tool provides additional support for that."
+},
+
+{"id" : 11, "title" : "Rank a Brand - Ranking Brand on Sustainability.", "categorie" : "duurzaamheid",
+"content": "The website [Rank a Brand](https://rankabrand.org/) is based mostly on volunteers, that rank a number of differnt brands on sustainability. \n\n The labels are sadly not always correct (of are not always available), but if you want to buy new stuff, it can serve as a good starting point."
 }
 ]
 }

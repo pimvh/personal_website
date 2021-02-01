@@ -14,11 +14,14 @@ function Blog ({ allPostsData }) {
 
     const PostLinks = allPostsData.filter(post => post.postlang == lang)
                  .map(({id, date, title }) => (
-        <li key={id} >
-        <Link href={`blog/${id}`}>
-            <a> {date} - {title} </a>
-        </Link>
-        </li>
+        <tr key={id} >
+          <td> {date} </td>
+          <td>
+          <Link href={`/blog/${id}`}>
+              <a> {title} </a>
+          </Link>
+          </td>
+        </tr >
     ));
 
     return (
@@ -31,9 +34,11 @@ function Blog ({ allPostsData }) {
             <div className = "col-12 padding-xl">
             <Markdown
               source={t("blog:topmessage")} />
-              <ul>
+              <table className="tbl row-hover">
+              <tbody>
                 {PostLinks}
-              </ul>
+              </tbody>
+              </table>
             </div>
         </div>
         </Layout>
