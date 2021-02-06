@@ -39,11 +39,11 @@ export const Navigation = () => {
         			<div className="col-1 col-9-md logo">
                         <a href="/">
                         <Image src="/static/common/unicorn_icon.png" alt="Unicorn Icon by Sonja Cirakovic"
-                         width={60} height={40} layout='intrinsic' />
+                         width={60} height={40} />
                         </a>
         			</div>
 
-        			<nav className="col-7 col-12-md navbar-right" id="topMenuNav">
+        			<nav className="col-10 col-12-md navbar-right" id="topMenuNav">
         				<div className="navbar-links">
         					<input type="radio" className="hide" name="navbar-menu" id="navbarDropHide" defaultChecked></input>
                                 <Link href="/" >
@@ -67,20 +67,25 @@ export const Navigation = () => {
                                     <a className={isActive("/resources")}> {t("common:navresources")} </a>
                                 </Link>
                         </div>
-
-
-
         			</nav>
-                    <div id="mobileMenuLabel" className="mobile-menu right-side">
-                    <LangFlag lang={lang} />
-                    </div>
+
+              <div className="col-3-md flag">
+                  <LangFlag lang={lang} />
+              </div>
 
             </div>
     	    </header>
-        <div className="fixed-nav-space" id="top"></div>
+
         </>
     );
 };
+
+
+// <div id="mobileMenuLabel" className="mobile-menu right-side">
+//
+// </div>
+
+//<div className="fixed-nav-space" id="top"></div>
 
 const LangFlag = ({lang}) => {
 
@@ -88,12 +93,11 @@ const LangFlag = ({lang}) => {
 
     return (
 
-        // href={pathname.replace(`/${lang}`, '') || '/'} locale={lang === 'en' ? "nl" : "en"}
         <Link href={'/'} locale={lang === 'en' ? "nl" : "en"} key={lang} >
-            <a>
-                <img src={`/static/common/${lang === 'en' ? 'netherlands' : 'united-kingdom'}-flag-icon-64.png`}
-                 alt={lang === 'en' ? "Nederlandse vlag" : "Union Jack"} />
-            </a>
+          <a>
+                <Image src={`/static/common/${lang === 'en' ? 'netherlands' : 'united-kingdom'}-flag-icon-64.png`}
+                 alt={lang === 'en' ? "Nederlandse vlag" : "Union Jack"} width={70} height={40} />
+          </a>
         </Link>
     );
 
