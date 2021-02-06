@@ -6,31 +6,31 @@ export default function HeadCarousel () {
     return [
       {
         id: 'img1',
-        src: '/static/common/carousel/garden.png',
+        src: '/static/common/carousel/garden.jpg',
         altText: 'Garden',
         caption: ''
       },
       {
         id: 'img2',
-        src: '/static/common/carousel/snowymountains.png',
+        src: '/static/common/carousel/snowymountains.jpg',
         altText: 'Sneeuwbergen',
         caption: ''
       },
       {
         id: 'img3',
-        src: '/static/common/carousel/dunes.png',
+        src: '/static/common/carousel/dunes.jpg',
         altText: 'Duinen',
         caption: ''
       },
       {
         id: 'img4',
-        src: '/static/common/carousel/dog-back.png',
+        src: '/static/common/carousel/dog-back.jpg',
         altText: 'Dog',
         caption: ''
       },
       {
         id: 'img5',
-        src: '/static/common/carousel/garden.png',
+        src: '/static/common/carousel/garden.jpg',
         altText: 'Garden',
         caption: ''
       }];

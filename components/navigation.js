@@ -25,7 +25,7 @@ export const Navigation = () => {
 
     return (
             <>
-            <header className="main-container header fixed ">
+            <header className="main-container header fixed">
     		{/* <!-- Nav Bar with Logo Area --> */}
         		<div className="flex-grid  navbar">
         			{/* <!-- Mobile Menu --> */ }
