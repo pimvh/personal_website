@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/Image';
 
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
@@ -37,7 +38,8 @@ export const Navigation = () => {
 
         			<div className="col-1 col-9-md logo">
                         <a href="/">
-                        <img src="/static/common/unicorn_icon.jpg" alt="Unicorn Icon by Sonja Cirakovic" className="logo" />
+                        <Image src="/static/common/unicorn_icon.png" alt="Unicorn Icon by Sonja Cirakovic"
+                         width={60} height={40} layout='intrinsic' />
                         </a>
         			</div>
 
