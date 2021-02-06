@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function HeadCarousel () {
 
@@ -38,10 +39,12 @@ export default function HeadCarousel () {
 
     const Slide = ({src, alttext}) => (
         <div className = "pcf-carousel-item">
-        <style jsx>{`
-             background-image: url('${src}');
-        `}</style>
-        {/*alttext*/}
+        <Image  alt={alttext}
+          src={`${src}`}
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          />
         </div>
       );
 
