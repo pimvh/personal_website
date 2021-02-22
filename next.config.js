@@ -24,8 +24,8 @@ module.exports = nextTranslate({
         destination: '/en/blog/bachelorthesis'
       },
       {
-        source: '/blog/howtopihole',
-        destination: '/en/blog/howtopihole'
+        source: '/blog/installing-pihole-upbound',
+        destination: '/en/blog/installing-pihole-upbound'
       }
     ];
   }
