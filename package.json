@@ -24,7 +24,7 @@
     "lodash": "^4.17.21",
     "mkdirp": "^1.0.4",
     "next": "^10.0.7",
-    "next-translate": "^1.0.2",
+    "next-translate": "^1.0.3",
     "node": "^15.8.0",
     "node-fetch": "^2.6.1",
     "react": "^17.0.1",
