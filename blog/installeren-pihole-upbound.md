@@ -9,7 +9,7 @@ wordcount: ""
 ---
 Hallo internet, dit is mijn tweede blogpost, ditmaal over het geweldige stuk software [Pi-Hole](https://pi-hole.net/Github), een adblocker op DNS niveau en De DNS-resolver [Upbound](https://nlnetlabs.nl/projects/unbound/about/). Deze kunnen eenvoudig geïnstalleerd worden op een [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-4-desktop-kit/), een minicomputer, die je geheel zelf in kunt richten.
 
-De rest van deze blogpost is verdeeld in onderdelen:
+De rest van deze blogpost is verdeeld in de volgende onderdelen:
 
 1. Woord vooraf
 2. Wat zijn de voordelen?
@@ -41,7 +41,7 @@ Ik vind het belangrijk om het internet een veiligere, meer versleutelde plek te 
 
 ## 3. Boodschappenlijst
 
-Voor de installatie heb je nodig
+Voor de installatie heb je nodig:
 
  - Raspberry Pi 4
  - Een computerscherm (met HDMI-aansluiting ofwel via een HDMI-adapter)
