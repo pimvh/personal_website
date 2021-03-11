@@ -14,16 +14,19 @@ function Index ({ allPostsData }) {
 
     const { t, lang } = useTranslation();
 
+    //.filter(post => post.postlang == lang)
+
     const PostLinks = allPostsData.filter(post => post.postlang == lang)
-                 .map(({id, date, title }) => (
+                 .map(({id, postlang, date, title }) => (
         <tr key={id} >
           <td> {date} </td>
           <td>
-          <Link href={`${lang === 'en' ? "/en" : ""}/blog/${id}`} locale={false}>
+          <Link href={`/blog/${id}`}>
               <a> {title} </a>
           </Link>
           </td>
-        </tr >
+        </tr>
+
     ));
 
     return (

@@ -22,11 +22,14 @@ export default class Layout extends React.Component {
                 <HeadCarousel />
                 <div className= "panel padding-xm">
                     <div className = "panel-body padding-xm">
+
                         <div className = 'main-container'>
 
                         {this.props.children}
 
                         </div>
+
+
                     </div>
                 </div>
                 <div className='panel-footer' >

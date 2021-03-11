@@ -5,10 +5,6 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 
-import i18nConfig from '../i18n.js';
-
-const { locales } = i18nConfig;
-
 export const Navigation = () => {
 
     const { t, lang } = useTranslation();
@@ -87,13 +83,15 @@ export const Navigation = () => {
 
 //<div className="fixed-nav-space" id="top"></div>
 
-const LangFlag = ({lang}) => {
+const LangFlag = () => {
 
-    const { pathname } = useRouter();
+    const router = useRouter();
+
+    const lang = (router.locale === 'en'? 'nl' : 'en');
 
     return (
 
-        <Link href={'/'} locale={lang === 'en' ? "nl" : "en"} key={lang} >
+        <Link href='/' locale={lang} >
           <a>
                 <Image src={`/static/common/${lang === 'en' ? 'netherlands' : 'united-kingdom'}-flag-icon-64.png`}
                  alt={lang === 'en' ? "Nederlandse vlag" : "Union Jack"} width={70} height={40} />

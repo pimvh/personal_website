@@ -13,11 +13,12 @@ function Blog ({ allPostsData }) {
     const { t, lang } = useTranslation();
 
     const PostLinks = allPostsData.filter(post => post.postlang == lang)
-                 .map(({id, date, title }) => (
-        <tr key={id} >
+                 .map(({id, postlang, date, title }) => (
+
+        <tr key={id}>
           <td> {date} </td>
           <td>
-          <Link href={`${lang === 'en' ? "/en" : ""}/blog/${id}`} locale={false}>
+          <Link href={`/blog/${id}`}>
               <a> {title} </a>
           </Link>
           </td>
@@ -29,6 +30,7 @@ function Blog ({ allPostsData }) {
         <>
 
         <Header title={t('blog:title')} description={t('blog:description')} />
+
 
         <Layout>
         <div className = "flex-grid">

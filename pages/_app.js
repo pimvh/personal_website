@@ -19,6 +19,7 @@ Router.events.on('routeChangeStart', (url) => {
 //   console.log(metric)
 // }
 
+
 // This default export is required in a new `pages/_app.js` file.
 class MyApp extends App {
 

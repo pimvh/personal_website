@@ -25,6 +25,8 @@ function Post({ PostData }) {
         return Math.round(time / 250);
     }
 
+    //const PostData = props.PostData;
+
     return (
         <>
 
@@ -50,7 +52,7 @@ function Post({ PostData }) {
     );
 }
 
-export const getStaticPaths = () => {
+export async function getStaticPaths () {
 
     const paths = getAllPostIds();
 
@@ -60,9 +62,9 @@ export const getStaticPaths = () => {
     }
 }
 
-export async function getStaticProps({ params, locale }) {
+export async function getStaticProps(context) {
 
-    const PostData = await getPostData(params?.id, locale)
+    const PostData = await getPostData(context.params?.id, context.locale)
 
     return {
       props: {
