@@ -13,6 +13,13 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 
 function Post({ PostData }) {
 
+    const router = useRouter();
+
+    if (!router.isFallback && !PostData) {
+
+      return <ErrorPage statusCode={404} />
+    }
+
     const renderers = {
       code: ({language, value}) => {
         return <SyntaxHighlighter language={language} children={value} />
@@ -30,10 +37,17 @@ function Post({ PostData }) {
     return (
         <>
 
+        <Layout>
+        {/* If the page is not yet generated, this will be displayed /* }
+        {/* // initially until getStaticProps() finishes running */ }
+
+        {router.isFallback ? (
+          <ReactMarkdown children={`# Loading...`} />
+        ) : (
+
+        <>
         <Header title={PostData.title} description={PostData.description}
                 imageUrl={PostData.previewimage} imageAlt={PostData.previewimagealt}/>
-
-        <Layout>
 
         <ReactMarkdown children={`# ${PostData.title}`} />
         <ReactMarkdown children={`\n###### ${t("blog:from")} ${PostData.date} --- ${t("blog:readingtime", {time: calcReadingTime(PostData.wordcount)})}`} />
@@ -43,6 +57,9 @@ function Post({ PostData }) {
         </Link> <br />
 
         <ReactMarkdown renderers={renderers} children={PostData.PostContent} />
+        </>
+
+        )}
 
         <Link href="/blog" >
             {t("blog:back")}
@@ -58,13 +75,28 @@ export async function getStaticPaths () {
 
     return {
         paths,
-        fallback: false,
+        fallback: true,
     }
 }
 
 export async function getStaticProps(context) {
 
     const PostData = await getPostData(context.params?.id, context.locale)
+
+    if (!PostData) {
+      return {
+        notFound: true,
+        }
+    }
+
+    // if (!PostData) {
+    //  return {
+    //    redirect: {
+    //      destination: '/',
+    //      permanent: false,
+    //    },
+    //  }
+    // }
 
     return {
       props: {
