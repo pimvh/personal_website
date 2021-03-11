@@ -50,18 +50,19 @@ function Post({ PostData }) {
     );
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths = () => {
 
-    const paths = getAllPostIds()
+    const paths = getAllPostIds();
+
     return {
         paths,
         fallback: false,
     }
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, locale }) {
 
-    const PostData = await getPostData(params?.id)
+    const PostData = await getPostData(params?.id, locale)
 
     return {
       props: {

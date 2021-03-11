@@ -9,6 +9,7 @@ const nextTranslate = require("next-translate");
 
 module.exports = nextTranslate({
     /* config options here */
+
     webpack: (config, { isServer }) => {
         if (isServer) {
           require('./lib/generate-sitemap');
@@ -17,16 +18,4 @@ module.exports = nextTranslate({
         return config;
     },
 
-    async rewrites() {
-    return [
-      {
-        source: '/blog/bachelorthesis',
-        destination: '/en/blog/bachelorthesis'
-      },
-      {
-        source: '/blog/howtopihole',
-        destination: '/en/blog/howtopihole'
-      }
-    ];
-  }
 });
