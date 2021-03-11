@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "",
+    "build": "next build --debug",
     "start": "next start",
     "profile": "next build --profile"
   },
