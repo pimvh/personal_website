@@ -19,7 +19,7 @@ function Index ({ allPostsData }) {
         <tr key={id} >
           <td> {date} </td>
           <td>
-          <Link href={`/blog/${id}`}>
+          <Link href={`${lang === 'en' ? "/en" : ""}/blog/${id}`} locale={false}>
               <a> {title} </a>
           </Link>
           </td>

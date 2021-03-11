@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 
-import i18nConfig from '../i18n.json';
+import i18nConfig from '../i18n.js';
 
 const { locales } = i18nConfig;
 
