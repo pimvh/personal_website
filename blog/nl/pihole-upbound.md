@@ -169,4 +169,4 @@ dig github.com ##raspberrypi-adres##:5335
 
 ## 6. Andere interessant software voor de Raspberry Pi
 
-Andere software die je kunt draaien op een raspberry pi is Raspotify van Github user ... . Hiermee werkt je raspberry als lokale Spotify speaker!
+Andere software die je kunt draaien op een raspberry pi is Raspotify van Github user dtcooper. Hiermee werkt je raspberry als lokale Spotify speaker! Je kunt de repo [hier vinden](https://dtcooper.github.io/raspotify/).
