@@ -17,6 +17,7 @@ De rest van deze blogpost is verdeeld in de volgende onderdelen:
 4. Installeren van Raspberry Pi
 5. Installeren van PiHole
 6. Installeren van Unbound
+7. Andere interessant software voor de Raspberry Pi
 
 ## 1. Woord vooraf
 
@@ -145,7 +146,7 @@ Address:  ##googleip-adres##
 
 De Pi-hole werkt nu naar behoren met een upstream DNS server. Mocht je de PiHole niet geïnstalleerd hebben als DHCP-server, dan is het aan te raden om conditional forwarding in the stellen onder Settings --> DNS --> Advanced DNS Settings. Hiermee kan de PiHole de namen van de adressen koppelen aan de ip-adressen in de log, waarmee het duidelijke wordt welk apparaat welke DNS query heeft gestuurd.
 
-## 5. Installeren van Unbound
+## 6. Installeren van Unbound
 
 Pi-hole kan naast met een upstream DNS server dus ook gebruikt wordt als self-contained DNS server. Hiervoor heb ik de volgende stappen gevolgd voor [het installeren van unbound naast een PiHole](https://github.com/anudeepND/pihole-unbound/blob/master/README.md). Bedank Github user _anudeepND_ voor deze configuratie. Loop al deze stappen door.
 
@@ -167,6 +168,6 @@ Om de configuratie te testen, kun je op de Raspberry Pi het volgende commando ui
 dig github.com ##raspberrypi-adres##:5335
 ~~~
 
-## 6. Andere interessant software voor de Raspberry Pi
+## 7. Andere interessant software voor de Raspberry Pi
 
 Andere software die je kunt draaien op een raspberry pi is Raspotify van Github user dtcooper. Hiermee werkt je raspberry als lokale Spotify speaker! Je kunt de repo [hier vinden](https://dtcooper.github.io/raspotify/).
