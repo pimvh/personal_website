@@ -1,13 +1,13 @@
 ---
-title: "Configuren en installeren van Pi-hole met Upbound"
-description: "Deze blogpost gaat over het configureren en installeren van een Pi-hole met Upbound op je thuisnetwerk."
+title: "Configuren en installeren van Pi-hole met Unbound"
+description: "Deze blogpost gaat over het configureren en installeren van een Pi-hole met Unbound op je thuisnetwerk."
 previewimage: "blog/pi-hole-logo.png"
 previewimagealt: "pi-hole logo"
 date: "21 februari 2021"
 postlang: "nl"
 wordcount: "1552"
 ---
-Hallo internet, dit is mijn tweede blogpost, ditmaal over het geweldige stuk software [Pi-Hole](https://pi-hole.net/Github), een adblocker op DNS niveau en De DNS-resolver [Upbound](https://nlnetlabs.nl/projects/unbound/about/). Deze kunnen eenvoudig geïnstalleerd worden op een [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-4-desktop-kit/), een minicomputer, die je geheel zelf in kunt richten.
+Hallo internet, dit is mijn tweede blogpost, ditmaal over het geweldige stuk software [Pi-Hole](https://pi-hole.net/Github), een adblocker op DNS niveau en De DNS-resolver [Unbound](https://nlnetlabs.nl/projects/unbound/about/). Deze kunnen eenvoudig geïnstalleerd worden op een [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-4-desktop-kit/), een minicomputer, die je geheel zelf in kunt richten.
 
 De rest van deze blogpost is verdeeld in de volgende onderdelen:
 
@@ -16,7 +16,7 @@ De rest van deze blogpost is verdeeld in de volgende onderdelen:
 3. De boodschappenlijst
 4. Installeren van Raspberry Pi
 5. Installeren van PiHole
-6. Installeren van Upbound
+6. Installeren van Unbound
 
 ## 1. Woord vooraf
 
@@ -143,11 +143,11 @@ Name:	google.com
 Address:  ##googleip-adres##
 ~~~
 
-De Pi-hole werkt nu naar behoren met een upstream DNS server. Mocht je de PiHole niet geïnstalleerd hebben als DHCP-server, dan is het aan te raden om conditional forwarding in the stellen onder settings --> -->. Hiermee kan de PiHole de namen van de adressen koppelen aan de ip-adressen in de log, waarmee het duidelijke wordt welk apparaat welke DNS query heeft gestuurd.
+De Pi-hole werkt nu naar behoren met een upstream DNS server. Mocht je de PiHole niet geïnstalleerd hebben als DHCP-server, dan is het aan te raden om conditional forwarding in the stellen onder Settings --> DNS --> Advanced DNS Settings. Hiermee kan de PiHole de namen van de adressen koppelen aan de ip-adressen in de log, waarmee het duidelijke wordt welk apparaat welke DNS query heeft gestuurd.
 
-## 5. Installeren van Upbound
+## 5. Installeren van Unbound
 
-Pi-hole kan naast met een upstream DNS server dus ook gebruikt wordt als self-contained DNS server. Hiervoor heb ik de volgende stappen gevolgd voor [het installeren van upbound naast een PiHole](https://github.com/anudeepND/pihole-unbound/blob/master/README.md). Bedank Github user _anudeepND_ voor deze configuratie. Loop al deze stappen door.
+Pi-hole kan naast met een upstream DNS server dus ook gebruikt wordt als self-contained DNS server. Hiervoor heb ik de volgende stappen gevolgd voor [het installeren van unbound naast een PiHole](https://github.com/anudeepND/pihole-unbound/blob/master/README.md). Bedank Github user _anudeepND_ voor deze configuratie. Loop al deze stappen door.
 
 Om automatisch in de installatie genoemde root-hints file te updaten (elke 6 maanden), kun je ook de volgende line:
 

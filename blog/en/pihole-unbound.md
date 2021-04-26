@@ -1,13 +1,13 @@
 ---
-title: "Configuring and installing a Pi-hole with Upbound"
-description: "This blogpost goes into configuring and installing a Pi-hole with Upbound on your home-network."
+title: "Configuring and installing a Pi-hole with Unbound"
+description: "This blogpost goes into configuring and installing a Pi-hole with Unbound on your home-network."
 previewimage: "blog/pi-hole-logo.png"
 previewimagealt: "pi-hole logo"
 date: "the 21st of February 2021"
 postlang: "en"
 wordcount: ""
 ---
-Hello internet, this is my second blog post, this time about the amazing piece of software [Pi-Hole](https://pi-hole.net/Github), a DNS level adblocker and The DNS resolver [Upbound](https://nlnetlabs.nl/projects/unbound/about/). These can be easily installed on a [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-4-desktop-kit/), a mini-computer, which you can set up entirely by yourself.
+Hello internet, this is my second blog post, this time about the amazing piece of software [Pi-Hole](https://pi-hole.net/Github), a DNS level adblocker and The DNS resolver [Unbound](https://nlnetlabs.nl/projects/unbound/about/). These can be easily installed on a [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-4-desktop-kit/), a mini-computer, which you can set up entirely by yourself.
 
 The rest of this blog post is divided into the following sections:
 
@@ -16,7 +16,8 @@ The rest of this blog post is divided into the following sections:
 3. The shopping list
 4. Installing Raspberry Pi
 5. Installing PiHole
-6. Installing Upbound
+6. Installing Unbound
+7. Other interesting software for the Raspberry Pi
 
 ## 1. Preface
 
@@ -83,9 +84,60 @@ sudo rfkill block wifi
 sudo rfkill block bluetooth
 ~~~
 
-## 5. Installing Upbound
+## 5. Installing PiHole
 
-Pi-hole can be used as a self-contained DNS server in addition to an upstream DNS server. For this I followed the following steps for [installing upbound next to a PiHole](https://github.com/anudeepND/pihole-unbound/blob/master/README.md). Thank Github user _anudeepND_ for this configuration. Walk through all these steps.
+Now we allocate a static ip address to the Raspberry Pi. We log into the Fritz Box via fritz.box or 192.168.178.1, then go to home network --> Network. In this list, assign the pi a static address (depending on your network ipv4/ipv6). This is now the ip address you need to connect to the Raspberry Pi using ssh.
+
+Reboot Raspberry Pi, check the assigned ip config. Then update it and now install [pi-hole](https://github.com/pi-hole/pi-hole).
+
+~~~bash
+wget -O basic-install.sh https://install.pi-hole.net
+sudo bash basic-install.sh
+~~~
+
+Go through the installation wizard, choose as interface eth0 (cable). Which upstream DNS you choose doesn't matter much (we'll change this later), and level of logging is also personal preference. In principle only blocking ads over ipv4 is sufficient. If all goes well, pi-hole is now installed.
+
+Next, start up the http://pi.hole webpage environment, log in with admin password and go to the settings page. Here briefly check the settings of conditional forwarding.
+
+Note: as you can see this is an HTTP connection, but the communication only takes place within your home network. So setting up an HTTPS connection is not necessary, as long as you do not open up your Raspberry Pi to the internet._
+
+Now on the FritzBox (or other router) set the other DNS server under home network --> network --> network settings --> more settings (at the bottom of the page) --> ipv4 configuration --> local DNS server. Enter the static ip address of the raspberry pi here.
+
+If your router doesn't support local DNS server, then you should also set the PiHole as Dynamic Host Configuration Protocol server (_hereafter: DHCP server_). Instead of your router, the PiHole will then distribute your addresses internally.
+
+Next, install on the raspberry pi the tool [Pihole-updatelists](https://github.com/jacklul/pihole-updatelists) and thank Github user _jacklul_ for this tool. This tool manages blocklists for the pi-hole, allowing you to keep up to date without maintenance various lists from [Firebog](https://firebog.net/), a website that manages blocklists for the raspberry pi.  The installation on this Github is self-explanatory, just go through these steps.
+
+It is best to reboot the raspberry pi now, to make sure the static ip address is properly allocated.
+
+~~~bash
+sudo reboot
+~~~
+
+After this you can test the configuration with
+
+~~~bash
+nslookup google.com
+~~~
+
+The result should be similar to the following
+
+~~~bash
+Server:		##piholeip-address##
+Address: ##piholeip-address##
+
+Non-authoritative answer:
+Name: google.com
+Address: ##googleip-address##
+~~~
+
+The PiHole is now working properly with an upstream DNS server. Should you not have the PiHole installed as a DHCP server, it is recommended to set up conditional forwarding under Settings --> DNS --> Advanced DNS Settings. This will allow the PiHole to map the address names to the ip addresses in the log, making it clear which device sent which DNS query.
+
+
+Translated with www.DeepL.com/Translator (free version)
+
+## 5. Installing Unbound
+
+Pi-hole can be used as a self-contained DNS server in addition to an upstream DNS server. For this I followed the following steps for [installing Unbound next to a PiHole](https://github.com/anudeepND/pihole-unbound/blob/master/README.md). Thank Github user _anudeepND_ for this configuration. Walk through all these steps.
 
 To automatically update root hints file mentioned in the installation (every 6 months), you can also use the following line:
 
@@ -105,6 +157,6 @@ To test the configuration, you can run the following command on the Raspberry Pi
 dig github.com ##raspberrypi address##:5335
 ~~~
 
-## 6. Other interesting software for the Raspberry Pi.
+## 6. Other interesting software for the Raspberry Pi
 
 Other software you can run on a raspberry pi is Raspotify from Github user dtcooper. With this, your raspberry works as a local Spotify speaker! You can find the repo [here](https://dtcooper.github.io/raspotify/).
