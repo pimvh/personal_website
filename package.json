@@ -17,7 +17,7 @@
     "@zeit/next-sass": "^1.0.1",
     "@zeit/next-source-maps": "0.0.3",
     "bl": "^5.0.0",
-    "core-js": "^3.11.0",
+    "core-js": "^3.11.1",
     "fs": "0.0.1-security",
     "gray-matter": "^4.0.3",
     "image-webpack-loader": "^7.0.1",
