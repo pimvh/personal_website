@@ -9,7 +9,7 @@ export default function ErrorPage () {
         <div className = "flex-grid">
             <div className = "col-12 padding-xl">
             <Markdown
-              source={`
+              children={`
     Error the page you looked for does not exist. Return to [home](/).
     `} />
             </div>

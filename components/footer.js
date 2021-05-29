@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex-grid">
                 <div className= "col-12 padding-xl text-center .fixed">
 
-                <Markdown source={t("common:footer")} />
+                <Markdown children={t("common:footer")} />
                 </div>
             </div>
         </div>

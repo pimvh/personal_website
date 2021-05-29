@@ -30,7 +30,7 @@ function Projects () {
                         <img src = {project.img_link} alt = {project.img_alt} className="project-img" />
                     </div>
                     <div className="col-8">
-                    <Markdown source={project.content} />
+                    <Markdown children={project.content} />
                     </div>
                 </div>
             </div>
@@ -45,9 +45,9 @@ function Projects () {
         <Layout>
         <div className = 'project_container'>
 
-            <Markdown source={t("projects:top")} />
+            <Markdown children={t("projects:top")} />
 
-            <Markdown source={t("projects:bot")} />
+            <Markdown children={t("projects:bot")} />
 
             {getProjects().map(project => (
                 <Project key={project.id} project={project} />

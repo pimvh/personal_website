@@ -24,7 +24,7 @@ export default function Resources() {
 
         <div className="panel-header"> {resource.title}</div>
         <div className="panel-body">
-        <Markdown source={resource.content} />
+        <Markdown children={resource.content} />
         </div>
         </div>
     );
@@ -36,7 +36,7 @@ export default function Resources() {
 
         <Layout>
             <Markdown
-              source={t("resources:top")} />
+              children={t("resources:top")} />
             {getResources().map(resource => (
                 <Resource key={resource.id} resource={resource} />
             ))}

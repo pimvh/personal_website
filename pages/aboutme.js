@@ -38,7 +38,7 @@ function AboutMe () {
         <Layout>
             <div className = 'project_container'>
             <Markdown
-              source={t("aboutme:topcontent")} />
+              children={t("aboutme:topcontent")} />
             </div>
 
             {/* <CVdisplay /> */}

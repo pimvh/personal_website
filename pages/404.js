@@ -18,7 +18,7 @@ export default function Error404() {
             <div className = "flex-grid">
             <div className = "col-12 padding-xl">
             <Markdown
-              source={t('error:404')} />
+              children={t('error:404')} />
             </div>
             </div>
         </Layout>

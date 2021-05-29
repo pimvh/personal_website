@@ -20,11 +20,9 @@ function Post({ PostData }) {
       return <ErrorPage statusCode={404} />
     }
 
-    const renderers = {
-      code: ({language, value}) => {
-        return <SyntaxHighlighter language={language} children={value} />
-      }
-    }
+    // const renderers = {
+    //   code: ({language, value}) => <SyntaxHighlighter language={language} children={value} />
+    // }
 
     const { t, lang } = useTranslation();
 
@@ -56,7 +54,7 @@ function Post({ PostData }) {
             {t("blog:back")}
         </Link> <br />
 
-        <ReactMarkdown renderers={renderers} children={PostData.PostContent} />
+        <ReactMarkdown children={PostData.PostContent} />
         </>
 
         )}

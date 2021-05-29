@@ -56,7 +56,7 @@ function Contact () {
                 <div className = "col-12 padding-xl">
                 <div>
                 <Markdown
-                  source={t("contact:message")} />
+                  children={t("contact:message")} />
                 </div>
                 <table className='tbl striped-odd'>
                     <tbody>

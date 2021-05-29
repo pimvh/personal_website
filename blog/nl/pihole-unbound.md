@@ -30,7 +30,7 @@ Tegenwoordig is het grootste gedeelte van je internetverkeer versleuteld met Hyp
 ![DNS request -- source ](/static/blog/DNSrequest.jpg#blogimg)
 DNS IMAGE SOURCE?
 
-Voordat HTTPS gebruikt wordt om een verbinding aan te gaan met een website, wordt eerst in het internet verkeer een zogenaamde _Domain Name_ (bijv. _https://google.com_) omgezet worden in een ip-adres. Zonder het ip-adres weet de browser niet op welke plek op het internet een domein te vinden is. Dit ip-adres is the vinden in de DNS, wat het figuurlijke adresboek van het internet is. In de bovenstaande afbeelding is een schematisch weergave van een DNS request. Je internetprovider gaat hier over de pijltjes, hij gaat namelijk over de kabels en dergelijke. Standaard staat de DNS meestal ook van je provider, tenzij je deze anders hebt ingesteld.  Het verkeer van/naar DNS-servers is vaak echter nog onversleuteld. Dit betekent dat je internetprovider kan meelezen met  welke websites je bezoekt. Activiteiten op de website zijn versleuteld en niet zichtbaar. Er zijn veel verschillende DNS servers, de Google Public DNS (8.8.8.8), Cloudflare (1.1.1.1) en OpenDNS (208.67.222.222). Bij het opvragen van het ip-adres van een domein naam staat het de aanbieder van je DNS vrij om je query (vraag) te loggen.
+Voordat HTTPS gebruikt wordt om een verbinding aan te gaan met een website, wordt eerst in het internet verkeer een zogenaamde _Domain Name_ (bijv. _https://google.com_) omgezet worden in een ip-adres. Zonder het ip-adres weet de browser niet op welke plek op het internet een domein te vinden is. Dit ip-adres is the vinden in de DNS, wat het figuurlijke adresboek van het internet is. In de bovenstaande afbeelding is een schematisch weergave van een DNS request. Je internetprovider gaat hier over de pijltjes, hij gaat namelijk over de kabels en dergelijke. Standaard staat de DNS meestal ook van je provider, tenzij je deze anders hebt ingesteld.  Het verkeer van/naar DNS-servers is vaak echter nog onversleuteld. Dit betekent dat je internetprovider kan meelezen met  welke websites je bezoekt. Activiteiten op de website zijn versleuteld en niet zichtbaar. Er zijn veel verschillende DNS servers, bijv. de Google Public DNS (8.8.8.8), Cloudflare (1.1.1.1) en OpenDNS (208.67.222.222). Bij het opvragen van het ip-adres van een domein naam staat het de aanbieder van je DNS vrij om je query (vraag) te loggen.
 
 Volgens het Nederlands recht is je internetprovider verplicht om zes maanden gegevens in verband met internettoegang, e-mail over het internet en internettelefonie te bewaren, zie [https://wetten.overheid.nl/](https://wetten.overheid.nl/jci1.3:c:BWBR0009950&hoofdstuk=13&artikel=13.2a&z=2018-05-01&g=2018-05-01). Een onderdeel hiervan is het loggen van de gebruikte internetdienst. Middels DNS verkeer is gewoon in normale tekst te zien welke websites je allemaal hebt bezocht in de afgelopen zes maanden, dus je internetprovider heeft veel inzicht in je doen en laten op internet.
 
@@ -148,19 +148,185 @@ De Pi-hole werkt nu naar behoren met een upstream DNS server. Mocht je de PiHole
 
 ## 6. Installeren van Unbound
 
-Pi-hole kan naast met een upstream DNS server dus ook gebruikt wordt als self-contained DNS server. Hiervoor heb ik de volgende stappen gevolgd voor [het installeren van unbound naast een PiHole](https://github.com/anudeepND/pihole-unbound/blob/master/README.md). Bedank Github user _anudeepND_ voor deze configuratie. Loop al deze stappen door.
+Pi-hole kan naast met een upstream DNS server dus ook gebruikt wordt als self-contained DNS server. Hiervoor heb ik de volgende stappen gevolgd voor [het installeren van unbound naast een PiHole](https://github.com/anudeepND/pihole-unbound/blob/master/README.md). Bedank Github user _anudeepND_ voor deze configuratiestappen. Loop al deze stappen door.
 
-Om automatisch in de installatie genoemde root-hints file te updaten (elke 6 maanden), kun je ook de volgende line:
-
-~~~bash
-28 3 1 */6 * /usr/bin/wget -O /var/lib/unbound/root.hints https://www.internic.net/domain/named.root
-~~~
-
-toevoegen aan de crontab (een bestand op Linux om taken in te plannen en uit te voeren op vaste tijden), doe dat als volgt:
+In plaats van de configuratie van _anudeepND_ gebruik ik encrypted DNS over HTTPS, met de volgende upbound config:
 
 ~~~bash
-sudo crontab -e
-~~~
+
+    # The  verbosity  number, level 0 means no verbosity, only errors.
+    # Level 1 gives operational information. Level  2  gives  detailed
+    # operational  information. Level 3 gives query level information,
+    # output per query.  Level 4 gives  algorithm  level  information.
+    # Level 5 logs client identification for cache misses.  Default is
+    # level 1.
+    verbosity: 0
+
+    interface: 127.0.0.1
+    port: 5335
+    do-ip4: yes
+    do-udp: yes
+    do-tcp: yes
+
+    # May be set to yes if you have IPv6 connectivity
+    do-ip6: no
+
+    # You want to leave this to no unless you have *native* IPv6. With 6to4 and
+    # Terredo tunnels your web browser should favor IPv4 for the same reasons
+    prefer-ip6: no
+
+    # Use this only when you downloaded the list of primary root servers!
+    # Read  the  root  hints from this file. Make sure to
+    # update root.hints evry 5-6 months.
+    # root-hints: "/var/lib/unbound/root.hints"
+
+    # Trust glue only if it is within the servers authority
+    harden-glue: yes
+
+    # Ignore very large queries.
+    harden-large-queries: yes
+
+    # Require DNSSEC data for trust-anchored zones, if such data is absent, the zone becomes BOGUS
+    # If you want to disable DNSSEC, set harden-dnssec stripped: no
+    harden-dnssec-stripped: yes
+
+    # RFC 6891. Number  of bytes size to advertise as the EDNS reassembly buffer
+    # size. This is the value put into  datagrams over UDP towards peers.
+    # The actual buffer size is determined by msg-buffer-size (both for TCP and
+    # UDP). Do not set higher than that value.
+    # Default  is  1232 which is the DNS Flag Day 2020 recommendation.
+    # Setting to 512 bypasses even the most stringent path MTU problems, but
+    # is seen as extreme, since the amount of TCP fallback generated is
+    # excessive (probably also for this resolver, consider tuning the outgoing
+    # tcp number).
+    edns-buffer-size: 1232
+
+    # Rotates RRSet order in response (the pseudo-random
+    # number is taken from Ensure privacy of local IP
+    # ranges the query ID, for speed and thread safety).  
+    # private-address: 192.168.0.0/16
+    rrset-roundrobin: yes
+
+    # Time to live minimum for RRsets and messages in the cache. If the minimum
+    # kicks in, the data is cached for longer than the domain owner intended,
+    # and thus less queries are made to look up the data. Zero makes sure the
+    # data in the cache is as the domain owner intended, higher values,
+    # especially more than an hour or so, can lead to trouble as the data in
+    # the cache does not match up with the actual data anymore
+    cache-min-ttl: 300
+    cache-max-ttl: 86400
+
+    # Have unbound attempt to serve old responses from cache with a TTL of 0 in
+    # the response without waiting for the actual resolution to finish. The
+    # actual resolution answer ends up in the cache later on.
+    serve-expired: yes
+
+    # Harden against algorithm downgrade when multiple algorithms are
+    # advertised in the DS record.
+    harden-algo-downgrade: yes
+
+    # Ignore very small EDNS buffer sizes from queries.
+    harden-short-bufsize: yes
+
+    # Refuse id.server and hostname.bind queries
+    hide-identity: yes
+
+    # Report this identity rather than the hostname of the server.
+    identity: "DNS"
+
+    # Refuse version.server and version.bind queries
+    hide-version: yes
+
+    # Prevent the unbound server from forking into the background as a daemon
+    do-daemonize: no
+
+    # Number  of  bytes size of the aggressive negative cache.
+    neg-cache-size: 4M
+
+    # Send minimum amount of information to upstream servers to enhance privacy
+    qname-minimisation: yes
+
+    # Deny queries of type ANY with an empty response.
+    # Works only on version 1.8 and above
+    deny-any: yes
+
+    # Do no insert authority/additional sections into response messages when
+    # those sections are not required. This reduces response size
+    # significantly, and may avoid TCP fallback for some responses. This may
+    # cause a slight speedup
+    minimal-responses: yes
+
+    # Perform prefetching of close to expired message cache entries
+    # This only applies to domains that have been frequently queried
+    # This flag updates the cached domains
+    prefetch: yes
+
+    # Fetch the DNSKEYs earlier in the validation process, when a DS record is
+    # encountered. This lowers the latency of requests at the expense of little
+    # more CPU usage.
+    prefetch-key: yes
+
+    # One thread should be sufficient, can be increased on beefy machines. In reality for
+    # most users running on small networks or on a single machine, it should be unnecessary
+    # to seek performance enhancement by increasing num-threads above 1.
+    num-threads: 1
+
+    # more cache memory. rrset-cache-size should twice what msg-cache-size is.
+    msg-cache-size: 50m
+    rrset-cache-size: 100m
+
+    # Faster UDP with multithreading (only on Linux).
+    so-reuseport: yes
+
+    # Ensure kernel buffer is large enough to not lose messages in traffix spikes
+    so-rcvbuf: 4m
+    so-sndbuf: 4m
+
+    # Set the total number of unwanted replies to keep track of in every thread.
+    # When it reaches the threshold, a defensive action of clearing the rrset
+    # and message caches is taken, hopefully flushing away any poison.
+    # Unbound suggests a value of 10 million.
+    unwanted-reply-threshold: 100000
+
+    # Minimize logs
+    # Do not print one line per query to the log
+    # log-queries: no
+    # Do not print one line per reply to the log
+    # log-replies: no
+    # Do not print log lines that say why queries return SERVFAIL to clients
+    # log-servfail: no
+
+    # Do not print log lines to inform about local zone actions
+    #log-local-actions: no
+    # Do not print log lines that say why queries return SERVFAIL to clients
+    logfile: "/var/log/unbound/unbound.log"
+
+    # Only give access to recursion clients from LAN IPs
+    access-control: 127.0.0.1/32 allow
+    access-control: 192.168.0.0/16 allow
+    access-control: 172.16.0.0/12 allow
+    access-control: 10.0.0.0/8 allow
+    # access-control: fc00::/7 allow
+    # access-control: ::1/128 allow    
+
+    # Ensure privacy of local IP ranges
+    private-address: 192.168.0.0/16
+    private-address: 169.254.0.0/16
+    private-address: 172.16.0.0/12
+    private-address: 10.0.0.0/8
+    private-address: fd00::/8
+    private-address: fe80::/10
+
+    tls-cert-bundle:"etc/ssl/certs/ca-certificates.crt"
+
+forward-zone:
+        name: "."
+	forward-addr:116.202.176.26@853 #https://libredns.gr/
+        forward-addr:94.140.14.14@853 #https://adguard.com/
+	forward-tls-upstream: yes
+ ~~~
+
+ kijk om de zoveel tijd of er 'goede' DNS provider bij zijn gekomen op de [aangeraden DNS servers op Privacytools](https://privacytools.io/providers/dns/)
 
 Om de configuratie te testen, kun je op de Raspberry Pi het volgende commando uitvoeren:
 

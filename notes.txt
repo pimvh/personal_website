@@ -1,12 +1,9 @@
 ## Andere handige tips
-- url loader en file loader miste om images in js te laden (https://stackoverflow.com/questions/45848055/image-you-may-need-an-appropriate-loader-to-handle-this-file-type)
 - Je kunt gewoon met behulp van Next.js images laden (zet images in een dir genaamd /static/), gebruik met url(/path-to/img.png)
 
 # Todo list
 
-- [__] - static/ reorganiseren.
-- [__] - blogpost afmaken
-- [__] - nadenken over webanalytics (http://www.openwebanalytics.com/ ??)
+
 
 # # Roadmap
 
@@ -17,63 +14,126 @@ namelijk react strap: https://reactstrap.github.io/
 
 Hoe je bootstrap gebruikt in Next.js: https://www.youtube.com/watch?v=L0uNai3XyKQ
 
-next-translate is een geweldige lib
-
-# Toevoegen aan resources (ooit?)
-Toe te voegen aan resources:
-https://www.openstreetmap.org/ --> still active
-
-http://programmingexcuses.com/
-
-http://www.phrasebank.manchester.ac.uk/
-"De [__phrasebank__ van de universiteit van Manchester](http://www.phrasebank.manchester.ac.uk/) heeft verschillende "
-
-http://www.fipradio.fr/player
-
-http://www.nationalemediasite.nl/rss-feeds.php
-https://www.samharris.org/
-http://learnyouahaskell.com/
-https://www.libreoffice.org/about-us/who-are-we/
-http://www.muji.eu/pages/online.asp?Sec=14
-
-https://lmgtfy.com/
-https://www.vpro.nl/programmas/de-snijtafel.html
-http://www.textreverse.com/
-http://www.tablesgenerator.com/
-
-http://www.madebyevan.com/fsm/ - Finite State Machine
-https://www.bellingcat.com/
-
-https://ninite.com/
-http://www.scientistswarning.org/
-
-https://www.opensans.com/
-
-https://draw.io
-
-https://matrixcalc.org/en/ http://www.integral-calculator.com/
-
-https://protonmail.com/
-https://zapier.com/
-http://www.moleskine.com/en/
-
-http://woordenlijst.org/#/
-
-https://alternativeto.net/
-https://www.2doc.nl/
-
-https://jsonchecker.com/
-
-https://haveibeenpwned.com/
+next-translate is een geweldige lib :o
 
 {"id" : 8, "title" : "Programmeertaal - Haskell.", "categorie" : "programeertalen",
 "content": "Op [Learn you a haskell](http://learnyouahaskell.com/) is een gratis boek (ook te kopen) te vinden waarmee je Haskell online kunt leren. Haskell is een lui-evaluerende pure functionele programmeertaal. \n\nHet is bijvoorbeeld mogelijk om een eindeloze lange lijst (i.e. van 1 tot oneindig) te definiëren, maar ook meervoudige list-comprehension te schrijven om rechthoekige driehoeken te zoeken met een omtrek van 24 cm: `let triangles = [(a, b, c) | a <- [1..20], b <- [1..20], c <- [1..20], a + b + c == 24, a^2 + b^2 == c^2]` \n\nAl met al een interessante programmeertaal."
 },
 
-{"id" : 2, "title" : "Rank a Brand - Merken vergelijken qua duurzaamheid.", "categorie" : "duurzaamheid",
-"content": "De website [Rank a Brand](https://rankabrand.org/) is een website, grotendeels op basis van vrijwilligers, die de duurzaamheid van allerlei soorten merken test.  \n\nDe labels kloppen niet altijd (of zijn niet altijd beschikbaar), maar mocht je van plan zijn om nieuwe spullen te kopen, dan is dit altijd een goede website om van tevoren te even te controleren."
-},
+import Particles from 'react-particles-js';
+import particlesConfig from '../particles.json';
 
-{"id" : 3, "title" : "Todoist - Handige takenlijst.", "categorie" : "productiviteit",
-"content": "De Takenlijst app [Todoist](https://todoist.com), is handig om je taken bij te houden. De kosten van deze app blijven erg beperkt (~15 eu per jaar). De app is ook multiplatform (helaas niet op Ubuntu) en via het internet beschikbaar.  \n\nHiernaast heeft de website verschillende tutorials/templates voor het maken van lijstjes om je gestelde doelen te behalen."
-},
+<div style={{ position: 'absolute'}}>
+  <Particles height="100vh" width="100vw" params={particlesConfig} />
+</div>
+
+{
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#d8d8d8"
+    },
+    "shape": {
+      "type": "polygon",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 10,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 80,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 300,
+      "color": "#d8d8d8",
+      "opacity": 0.4,
+      "width": 2
+    },
+    "move": {
+      "enable": true,
+      "speed": 3,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 800,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 800,
+        "size": 80,
+        "duration": 2,
+        "opacity": 0.8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 400,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}

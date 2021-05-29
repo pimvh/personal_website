@@ -36,7 +36,7 @@ function Blog ({ allPostsData }) {
         <div className = "flex-grid">
             <div className = "col-12 padding-xl">
             <Markdown
-              source={t("blog:topmessage")} />
+              children={t("blog:topmessage")} />
               <table className="tbl row-hover">
               <tbody>
                 {PostLinks}

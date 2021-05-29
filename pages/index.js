@@ -43,7 +43,7 @@ function Index ({ allPostsData }) {
 
           <div className="col-6">
           <Markdown
-            source={t("index:topcontent")} />
+            children={t("index:topcontent")} />
 
           <table className="tbl row-hover">
           <tbody>
@@ -52,7 +52,7 @@ function Index ({ allPostsData }) {
           </table>
 
           <Markdown
-            source={t("index:botcontent")} />
+            children={t("index:botcontent")} />
           </div>
 
         </div>
@@ -72,10 +72,3 @@ export async function getStaticProps({ params }) {
 };
 
 export default Index;
-
-/*
-
-<Markdown source={translate('index')['topmessage']} />
-
-<Markdown source={translate('index')['botmessage']} />
-*/
