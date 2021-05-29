@@ -19,7 +19,7 @@
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "next": "^10.2.3",
-    "next-translate": "^1.0.6",
+    "next-translate": "^1.0.7",
     "node": "^16.1.0",
     "postcss": "^8.3.0",
     "react": "^17.0.2",
