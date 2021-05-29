@@ -150,9 +150,9 @@ De Pi-hole werkt nu naar behoren met een upstream DNS server. Mocht je de PiHole
 
 Pi-hole kan naast met een upstream DNS server dus ook gebruikt wordt als self-contained DNS server. Hiervoor heb ik de volgende stappen gevolgd voor [het installeren van unbound naast een PiHole](https://github.com/anudeepND/pihole-unbound/blob/master/README.md). Bedank Github user _anudeepND_ voor deze configuratiestappen. Loop al deze stappen door.
 
-In plaats van de configuratie van _anudeepND_ gebruik ik encrypted DNS over HTTPS, met de volgende upbound config:
+In plaats van de configuratie van _anudeepND_ gebruik ik encrypted DNS over HTTPS, met de volgende unbound config:
 
-~~~bash
+~~~config
 
     # The  verbosity  number, level 0 means no verbosity, only errors.
     # Level 1 gives operational information. Level  2  gives  detailed
