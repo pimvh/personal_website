@@ -1,4 +1,5 @@
 import '../styles/styles.scss';
+
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
